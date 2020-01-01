@@ -99,9 +99,18 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 	//var _2 = global._$TATIC_VALUE_SERVER_HTTP_EVTS_REQUEST;
 
 	SUtilHttpServer.evt_request__APIAndFilePath = function( req, res ){
+
+		//----------;
 		//var uri = SUtilHttpServer.getURIFromURL( req.url );
-		var uri = global.decodeURIComponent( SUtilHttpServer.getURIFromURL( req.url ) );
+		var uri;
+		debugger;
+		try{ uri = global.decodeURIComponent( SUtilHttpServer.getURIFromURL( req.url ) ); }
+		catch(er){
+			try{ uri = global.decodeURIComponent( req.url ); }
+			catch( er ){ uri = req.url; }
+		}
 		req.url = uri;
+		//----------;
 
 		global.console.log( Date.now() + " - " + uri );
 		if( ( uri.length - 5 ) == uri.lastIndexOf( ".html" ) )

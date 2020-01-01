@@ -24,11 +24,11 @@ if( console ) console.log( "[ S ] - " + fileNm + "----------" );
  * @const
  * @property
  */
-//var _THIS = window.SYS0310_UI_INTERFACE.interface.Application({});
-var _THIS = window.SYS0310_UI_INTERFACE.interface.Component({});
-//var _THIS = window.SYS0310_UI_INTERFACE.interface.Module({});
-//var _THIS = window.SYS0310_UI_INTERFACE.interface.Page({});
-//var _THIS = window.SYS0310_UI_INTERFACE.interface.Popup({});
+//var _THIS = window.SYS0320_UI_INTERFACE.interface.Application({});
+var _THIS = window.SYS0320_UI_INTERFACE.interface.Component({});
+//var _THIS = window.SYS0320_UI_INTERFACE.interface.Module({});
+//var _THIS = window.SYS0320_UI_INTERFACE.interface.Page({});
+//var _THIS = window.SYS0320_UI_INTERFACE.interface.Popup({});
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -37,16 +37,16 @@ var _THIS = window.SYS0310_UI_INTERFACE.interface.Component({});
 //----------------------------------------------------------------------------------------------------;
 
 (function(){
-	var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0015" );
+	var HOST = window.apis.url.getServerURL_WebServer_SCODE( "SYS0015" );
 
-	var f = window.b2link.util.importJS__Reuse;
+	var f = window.apis.util.importJS__Reuse;
 		//f( HOST + "/libs/FancyGrid/import-js.js" );
 
 	//CSS;
 	var f = SUtilTemplateHTML.addCSS__URLToHead;
 		//f( HOST + "/libs/Leaflet/leaflet.css" );
 	//JS;
-	var f = window.b2link.util.importJS__Reuse;
+	var f = window.apis.util.importJS__Reuse;
 	//var f = SUtilTemplateHTML.addJS__URLToHead;
 		//f( HOST + "/libs/Leaflet/leaflet.js" );
 })();
@@ -95,10 +95,10 @@ var _ELS = (function(){
 		ROOT : window.document.getElementById( _IDS.ROOT )
 	};
 
-	//window.b2link.STATIC.CONST.ROOT_DIV.EL_APPLICATION.appendChild( o.ROOT );
-	//window.b2link.STATIC.CONST.ROOT_DIV.EL_UI_COMPONENT_FIXED.appendChild( o.ROOT );
-	window.b2link.element.mouseEnable( o.ROOT );
-	//window.b2link.element.mouseDisable( o.ROOT );
+	//window.apis.STATIC.CONST.ROOT_DIV.EL_APPLICATION.appendChild( o.ROOT );
+	//window.apis.STATIC.CONST.ROOT_DIV.EL_UI_COMPONENT_FIXED.appendChild( o.ROOT );
+	window.apis.element.mouseEnable( o.ROOT );
+	//window.apis.element.mouseDisable( o.ROOT );
 
 	return o;
 })();
@@ -128,10 +128,10 @@ var _DATA = (function(){
 	if( d.url )
 	{
 		//URI Parameter중 url은 decoding 한다.;
-		d.url = window.b2link.uri.decodeURIComponent( d.url );
+		d.url = window.apis.uri.decodeURIComponent( d.url );
 
 		//비동기 필요 데이터 요청;
-		window.b2link.xhr.req_String( d.url, function( responseData ){
+		window.apis.xhr.req_String( d.url, function( responseData ){
 
 			//ERROR - 데이터가 없음;
 			if( !responseData )
@@ -154,7 +154,7 @@ var _DATA = (function(){
 
 	////[ SAMPLE ] - [ S ] - 자동 삭제;
 	//아무 데이터 없이 호출시 샘플로 들어가는 데이터;
-	//window.b2link.event.INITIALIZED 이벤트 리스너;
+	//window.apis.event.INITIALIZED 이벤트 리스너;
 	_THIS.super.addEvent__INITIALIZED( _ELS.ROOT, function( event ){ _THIS.draw( null, null ); });
 
 	return {
@@ -240,7 +240,7 @@ function initialize()
 		//RESIZE;
 		window.addEventListener( "resize", _evt_resize, false, 0, true );
 
-		//window.b2link.event.DATA_LOAD_COMPLETE Event Listener 추가;
+		//window.apis.event.DATA_LOAD_COMPLETE Event Listener 추가;
 		_THIS.super.addEvent__DATA_LOAD_COMPLETE( function( event ){
 			var EVENT_DATA = event.detail;
 
@@ -248,7 +248,7 @@ function initialize()
 			_redraw( EVENT_DATA.data, null );
 		});
 
-		//_약속된 HTMLElement인 this.T.els.ROOT를 통해 window.b2link.event.INITIALIZED 이벤트를 Dispatch 시킨다.;
+		//_약속된 HTMLElement인 this.T.els.ROOT를 통해 window.apis.event.INITIALIZED 이벤트를 Dispatch 시킨다.;
 		_THIS.super.dispatchCE__INITIALIZED( _THIS );
 
 		initialize._bInit = 1;
@@ -297,7 +297,7 @@ var _dispose = function()
 	//dispose를 위한 각종 로직 삽입;
 
 	//감지가 필요하면 삽입;
-	//window.b2link.event.dispatchCE__DISPOSED_JS( _ELS.ROOT, _THIS );
+	//window.apis.event.dispatchCE__DISPOSED_JS( _ELS.ROOT, _THIS );
 
 	//----------마지막 라인에 필수 삽입;
 	//이 객체에서 조작하는 대상 HTMLElement에 종속된 HTML을 제거한다;
@@ -388,7 +388,7 @@ var _reqData = function( url, cbComplete )
 		_THIS.super.dispatchCE__DATA_LOAD_COMPLETE( json );
 	};
 
-	window.b2link.xhr.req_String( url, FN );
+	window.apis.xhr.req_String( url, FN );
 };
 
 //----------------------------------------------------------------------------------------------------;

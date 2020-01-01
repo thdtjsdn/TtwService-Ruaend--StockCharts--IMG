@@ -106,35 +106,35 @@ FN0.TEMPLATE_DIV = `<div id="{{id}}">
 {{nm}}
 </div>`;
 
-FN0.TEMPLATE_DIV_PAGE = `<include-html>./ui_include/SYS0310/Page/000-----index-----First.html</include-html>
+FN0.TEMPLATE_DIV_PAGE = `<include-html>./ui_include/SYS0320/Page/000-----index-----First.html</include-html>
 <div id="{{id}}">
 {{nm}}
 </div>
 <SCRIPT type="text/javascript">
 	window.initialized = function(){
-		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0320" );
 
 		//JS;
 		var f = SUtilTemplateHTML.addJS__URLToHead;
 			f( HOST + "/{{id}}.js" );
 	};
 </SCRIPT>
-<include-html>./ui_include/SYS0310/Page/000-----index-----Last.html</include-html>`;
+<include-html>./ui_include/SYS0320/Page/000-----index-----Last.html</include-html>`;
 
-FN0.TEMPLATE_DIV_POPUP = `<include-html>./ui_include/SYS0310/Popup/000-----index-----First.html</include-html>
+FN0.TEMPLATE_DIV_POPUP = `<include-html>./ui_include/SYS0320/Popup/000-----index-----First.html</include-html>
 <div id="{{id}}">
 {{nm}}
 </div>
 <SCRIPT type="text/javascript">
 	window.initialized = function(){
-		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" );
+		var HOST = window.b2link.url.getServerURL_WebServer_SCODE( "SYS0320" );
 
 		//JS;
 		var f = SUtilTemplateHTML.addJS__URLToHead;
 			f( HOST + "/{{id}}.js" );
 	};
 </SCRIPT>
-<include-html>./ui_include/SYS0310/Popup/000-----index-----Last.html</include-html>`;
+<include-html>./ui_include/SYS0320/Popup/000-----index-----Last.html</include-html>`;
 
 FN0.TEMPLATE_JS = SUtilFsReadStream.getFile( PATH001 + "THTML - index.thtml의 최상단 div Element에 약속된 id 값 생성 - index.tjs" ).toString();
 

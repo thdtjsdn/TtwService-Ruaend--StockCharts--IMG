@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------------------------;
-//var fileNm = "js/b2link/url/window.b2link.url.getServerURLByServer.js";
+//var fileNm = "js-common/apis/url/window.apis.url.getServerURLByServers.js";
 //if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 //----------------------------------------------------------------------------------------------------;
 
@@ -20,25 +20,26 @@
 		//--------------------------------------------------[ S ] - 공용 서버;
 		//사용하는 곳 목록;
 		//B2LiNK-B2Ker-Dev, B2LiNK-BrandPortal-Dev;
-		SYS0010_APIServer : [ "https://session.b2link.co.kr/router", "https://session.b2link.co.kr/router", "https://session.b2link.co.kr/router" ]//B2LiNK-SessionServer-Dev;
-			, session_server : [ "https://session.b2link.co.kr/router", "https://session.b2link.co.kr/router", "https://session.b2link.co.kr/router" ]//B2LiNK-SessionServer-Dev;
-		, SYS0010_WebServer : [ "https://session.b2link.co.kr/view", "https://session.b2link.co.kr/view", "https://session.b2link.co.kr/view" ]//B2LiNK-SessionServer-Dev;
+		SYS0010_APIServer : [ "http://localhost:30000", "http://localhost:30000", "http://localhost:30000" ]//B2LiNK-SessionServer-Dev;
+			, session_server : [ "http://localhost:30000", "http://localhost:30000", "http://localhost:30000" ]//B2LiNK-SessionServer-Dev;
+		, SYS0010_WebServer : [ "http://localhost:33333", "http://localhost:33333", "http://localhost:33333" ]//B2LiNK-SessionServer-Dev;
 
 		//사용하는 곳 목록;
 		//B2LiNK-SessionServer-Dev;
-		, SYS0011_APIServer : [ "http://222.239.10.122:31000", "http://222.239.10.122:31000", "http://222.239.10.122:31000" ]//B2LiNK-LogServer-Dev;
-		, SYS0011_WebServer : [ "http://222.239.10.122:31333", "http://222.239.10.122:31333", "http://222.239.10.122:31333" ]//B2LiNK-LogServer-Dev;
+		, SYS0011_APIServer : [ "http://localhost:31000", "http://localhost:31000", "http://localhost:31000" ]//B2LiNK-LogServer-Dev;
+		, SYS0011_WebServer : [ "http://localhost:31333", "http://localhost:31333", "http://localhost:31333" ]//B2LiNK-LogServer-Dev;
 
 		//모든 View 서비스에서 사용;
-		, SYS0015_APIServer : [ "https://resource.b2link.co.kr/router", "https://resource.b2link.co.kr/router", "https://resource.b2link.co.kr/router" ]//Development-Components-UI;
-		, SYS0015_WebServer : [ "https://resource.b2link.co.kr/view", "https://resource.b2link.co.kr/view", "https://resource.b2link.co.kr/view" ]//Development-Components-UI;
-		//, SYS0015_WebServer : [ "https://test.resource.b2link.co.kr/view", "https://test.resource.b2link.co.kr/view", "https://test.resource.b2link.co.kr/view" ]//Development-Components-UI;
+		//, SYS0015_APIServer : [ "http://116.33.62.146:49324", "http://116.33.62.146:49324", "http://116.33.62.146:49324" ]//Development-Components-UI;
+		, SYS0015_WebServer : [ "http://116.33.62.146:49323", "http://116.33.62.146:49323", "http://116.33.62.146:49323" ]//Development-Components-UI;
 		//, SYS0015_WebServer : [ "http://localhost:49323", "http://localhost:49323", "http://localhost:49323" ]//Development-Components-UI;
+		//, SYS0015_APIServer : [ "https://resource.b2link.co.kr/router", "https://resource.b2link.co.kr/router", "https://resource.b2link.co.kr/router" ]//Development-Components-UI;
+		//, SYS0015_WebServer : [ "https://resource.b2link.co.kr/view", "https://resource.b2link.co.kr/view", "https://resource.b2link.co.kr/view" ]//Development-Components-UI;
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-B2Ker-Dev, B2LiNK-BrandPortal-Dev...;
-		, SYS0040_APIServer : [ "https://api.b2link.co.kr/b2ker/file/router", "https://api.b2link.co.kr/b2ker/file/router" ]
-			, file_server : [ "https://api.b2link.co.kr/b2ker/file/router", "https://api.b2link.co.kr/b2ker/file/router" ]
+		, SYS0040_APIServer : [ "http://localhost:49322", "http://localhost:49322" ]
+			, file_server : [ "http://localhost:49322", "http://localhost:49322" ]
 
 		//사용하는 곳 목록;
 		//B2LiNK-B2Ker-Dev, ...;
@@ -58,150 +59,150 @@
 
 		//사용하는 곳 목록;
 		//B2LiNK-B2Ker-Dev, B2LiNK-BrandPortal-Dev, ...;
-		, SYS0070_APIServer : [ "https://api.b2link.co.kr/b2ker/excel/router", "https://api.b2link.co.kr/b2ker/excel/router" ]
-			, excel_server : [ "https://api.b2link.co.kr/b2ker/excel/router", "https://api.b2link.co.kr/b2ker/excel/router" ]
-		, SYS0070_WebServer : [ "https://api.b2link.co.kr/b2ker/excel/view", "https://api.b2link.co.kr/b2ker/excel/view" ]
-			, excel_web_server : [ "https://api.b2link.co.kr/b2ker/excel/view", "https://api.b2link.co.kr/b2ker/excel/view" ]
+		, SYS0070_APIServer : [ "http://localhost:48320", "http://localhost:48320" ]
+			, excel_server : [ "http://localhost:48320", "http://localhost:48320" ]
+		, SYS0070_WebServer : [ "http://localhost:48321", "http://localhost:48321" ]
+			, excel_web_server : [ "http://localhost:48321", "http://localhost:48321" ]
 
 		//사용하는 곳 목록;
 		//B2LiNK-BrandPortal-Dev, ...;
-		, SYS0120_APIServer : [ "http://222.239.10.122:49520", "http://222.239.10.122:49520" ]
-		, SYS0120_WebServer : [ "http://222.239.10.122:49521", "http://222.239.10.122:49521" ]
+		, SYS0120_APIServer : [ "http://localhost:49520", "http://localhost:49520" ]
+		, SYS0120_WebServer : [ "http://localhost:49521", "http://localhost:49521" ]
 
 		//사용하는 곳 목록;
 		//B2LiNK-BrandPortal-Dev, ...;
-		, SYS0130_APIServer : [ "http://222.239.10.122:44520", "http://222.239.10.122:44520" ]
-		, SYS0130_WebServer : [ "http://222.239.10.122:44521", "http://222.239.10.122:44521" ]
+		, SYS0130_APIServer : [ "http://localhost:44520", "http://localhost:44520" ]
+		, SYS0130_WebServer : [ "http://localhost:44521", "http://localhost:44521" ]
 		//--------------------------------------------------[ E ] - 공용 서버;
-
 
 		//--------------------------------------------------[ S ] - 비지니스 시스템 서버;
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-B2Ker-Dev, ...;
-		, SYS0020_APIServer : [ "https://tms.b2link.co.kr/router", "https://tms.b2link.co.kr/router" ]
-			, b2ker_api_server : [ "https://tms.b2link.co.kr/router", "https://tms.b2link.co.kr/router" ]
-		, SYS0020_WebServer : [ "https://tms.b2link.co.kr/view", "https://tms.b2link.co.kr/view" ]
+		, SYS0020_APIServer : [ "http://localhost:49320", "http://localhost:49320" ]
+			, b2ker_api_server : [ "http://localhost:49320", "http://localhost:49320" ]
+		, SYS0020_WebServer : [ "http://localhost:49321", "http://localhost:49321" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-BrandPortal-Dev, ...;
-		//, SYS0030_APIServer : [ "https://onsight.b2link.co.kr/router", "https://onsight.b2link.co.kr/router" ]
-		//	, api_server : [ "https://onsight.b2link.co.kr/router", "https://onsight.b2link.co.kr/router" ]
-		//, SYS0030_WebServer : [ "https://onsight.b2link.co.kr/view", "https://onsight.b2link.co.kr/view" ]
-		, SYS0030_APIServer : [ "https://micro.umma-onsight.com/router", "https://micro.umma-onsight.com/router" ]
-			, api_server : [ "https://micro.umma-onsight.com/router", "https://micro.umma-onsight.com/router" ]
-		, SYS0030_WebServer : [ "https://micro.umma-onsight.com/view", "https://micro.umma-onsight.com/view" ]
+		, SYS0030_APIServer : [ "http://localhost:45320", "http://localhost:45320" ]
+			, api_server : [ "http://localhost:45320", "http://localhost:45320" ]
+		, SYS0030_WebServer : [ "http://localhost:45321", "http://localhost:45321" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-OnSight-Dev, ...;
-		, SYS0031_APIServer : [ "http://222.239.10.122:45420", "http://222.239.10.122:45420" ]
-			, api_server : [ "http://222.239.10.122:45420", "http://222.239.10.122:45420" ]
-		, SYS0031_WebServer : [ "http://222.239.10.122:45421", "http://222.239.10.122:45421" ]
+		, SYS0031_APIServer : [ "http://localhost:45420", "http://localhost:45420" ]
+			, api_server : [ "http://localhost:45420", "http://localhost:45420" ]
+		, SYS0031_WebServer : [ "http://localhost:45421", "http://localhost:45421" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-OnSight-Admin, ...;
-		, SYS0034_APIServer : [ "http://222.239.10.122:45324", "http://222.239.10.122:45324" ]
-		, SYS0034_WebServer : [ "http://222.239.10.122:45322", "http://222.239.10.122:45322" ]
+		, SYS0034_APIServer : [ "http://localhost:45324", "http://localhost:45324" ]
+		, SYS0034_WebServer : [ "http://localhost:45322", "http://localhost:45322" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-OnSight-Tool-SKUMapper, ...;
-		//, SYS0035_APIServer : [ "http://localhost:45325", "http://localhost:45325" ]
-		//, SYS0035_WebServer : [ "http://localhost:45326", "http://localhost:45326" ]
-		, SYS0035_APIServer : [ "http://222.239.10.123:45325", "http://222.239.10.123:45325" ]
-		, SYS0035_WebServer : [ "http://222.239.10.123:45326", "http://222.239.10.123:45326" ]
+		, SYS0035_APIServer : [ "http://localhost:45325", "http://localhost:45325" ]
+		, SYS0035_WebServer : [ "http://localhost:45326", "http://localhost:45326" ]
+		//, SYS0035_APIServer : [ "http://222.239.10.123:45325", "http://222.239.10.123:45325" ]
+		//, SYS0035_WebServer : [ "http://222.239.10.123:45326", "http://222.239.10.123:45326" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//...;
-		//, SYS0037_APIServer : [ "http://localhost:45528", "http://localhost:45528" ]
-		//, SYS0037_WebServer : [ "http://localhost:45527", "http://localhost:45527" ]
-		, SYS0037_APIServer : [ "http://222.239.10.120:45528", "http://222.239.10.120:45528" ]
-		, SYS0037_WebServer : [ "http://222.239.10.120:45527", "http://222.239.10.120:45527" ]
+		, SYS0037_APIServer : [ "http://localhost:45528", "http://localhost:45528" ]
+		, SYS0037_WebServer : [ "http://localhost:45527", "http://localhost:45527" ]
+		//, SYS0037_APIServer : [ "http://192.168.1.230:45528", "http://192.168.1.230:45528" ]
+		//, SYS0037_WebServer : [ "http://192.168.1.230:45527", "http://192.168.1.230:45527" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-ProductServer-Dev ...;
-		, SYS0100_APIServer : [ "https://pims.b2link.co.kr/router", "https://pims.b2link.co.kr/router" ]
-		, SYS0100_WebServer : [ "https://pims.b2link.co.kr/view", "https://pims.b2link.co.kr/view" ]
-		//, SYS0100_APIServer : [ "http://222.239.10.122:44320", "http://222.239.10.122:44320" ]
-		//, SYS0100_WebServer : [ "http://222.239.10.122:44321", "http://222.239.10.122:44321" ]
+		, SYS0100_APIServer : [ "http://localhost:44320", "http://localhost:44320" ]
+		, SYS0100_WebServer : [ "http://localhost:44321", "http://localhost:44321" ]
+		//, SYS0100_APIServer : [ "http://116.33.62.146:44320", "http://116.33.62.146:44320" ]
+		//, SYS0100_WebServer : [ "http://116.33.62.146:44321", "http://116.33.62.146:44321" ]
 		//, SYS0100_APIServer : [ "http://222.239.10.123:44320", "http://222.239.10.123:44320" ]
 		//, SYS0100_WebServer : [ "http://222.239.10.123:44321", "http://222.239.10.123:44321" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-B2B-Platform-Admin ...;
-		//, SYS0210_APIServer : [ "http://localhost:42320", "http://localhost:42320" ]
-		//, SYS0210_WebServer : [ "http://localhost:42321", "http://localhost:42321" ]
-		, SYS0210_APIServer : [ "http://222.239.10.122:42320", "http://222.239.10.122:42320" ]
-		, SYS0210_WebServer : [ "http://222.239.10.122:42321", "http://222.239.10.122:42321" ]
+		, SYS0210_APIServer : [ "http://localhost:42320", "http://localhost:42320" ]
+		, SYS0210_WebServer : [ "http://localhost:42321", "http://localhost:42321" ]
+		//, SYS0210_APIServer : [ "http://116.33.62.146:42320", "http://116.33.62.146:42320" ]
+		//, SYS0210_WebServer : [ "http://116.33.62.146:42321", "http://116.33.62.146:42321" ]
 		//, SYS0210_APIServer : [ "http://222.239.10.123:42320", "http://222.239.10.123:42320" ]
 		//, SYS0210_WebServer : [ "http://222.239.10.123:42321", "http://222.239.10.123:42321" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-B2B-Platform-Dev ...;
-		//, SYS0215_APIServer : [ "http://localhost:42325", "http://localhost:42325" ]
-		//, SYS0215_WebServer : [ "http://localhost:42326", "http://localhost:42326" ]
-		, SYS0215_APIServer : [ "http://222.239.10.122:42325", "http://222.239.10.122:42325" ]
-		, SYS0215_WebServer : [ "http://222.239.10.122:42326", "http://222.239.10.122:42326" ]
+		, SYS0215_APIServer : [ "http://localhost:42325", "http://localhost:42325" ]
+		, SYS0215_WebServer : [ "http://localhost:42326", "http://localhost:42326" ]
+		//, SYS0215_APIServer : [ "http://116.33.62.146:42325", "http://116.33.62.146:42325" ]
+		//, SYS0215_WebServer : [ "http://116.33.62.146:42326", "http://116.33.62.146:42326" ]
 		//, SYS0215_APIServer : [ "http://222.239.10.123:42325", "http://222.239.10.123:42325" ]
 		//, SYS0215_WebServer : [ "http://222.239.10.123:42326", "http://222.239.10.123:42326" ]
 
+		//사용하는 곳 목록;
+		, SYS0310_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
+		, SYS0310_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
+		//, SYS0310_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
+		//, SYS0310_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
+		//, SYS0310_APIServer : [ "http://116.33.62.146:49780", "http://116.33.62.146:49780" ]
+		//, SYS0310_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
 
 		//사용하는 곳 목록;
-		//, SYS0310_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
-		//, SYS0310_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
-		, SYS0310_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
-		, SYS0310_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
-		//, SYS0310_APIServer : [ "http://222.239.10.122:49780", "http://222.239.10.122:49780" ]
-		//, SYS0310_WebServer : [ "http://222.239.10.122:49781", "http://222.239.10.122:49781" ]
+		//, SYS0320_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
+		//, SYS0320_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
+		//, SYS0320_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
+		//, SYS0320_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
+		, SYS0320_APIServer : [ "http://116.33.62.146:49780", "http://116.33.62.146:49780" ]
+		, SYS0320_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
 		//--------------------------------------------------[ E ] - 비지니스 시스템 서버;
-
 
 		//--------------------------------------------------[ S ] - Util;
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-OnSight-Crawler, ...;
-		, SYS0032_APIServer : [ "http://222.239.10.122:45323", "http://222.239.10.122:45323" ]
+		, SYS0032_APIServer : [ "http://localhost:45323", "http://localhost:45323" ]
 		//--------------------------------------------------[ E ] - Util;
-
 
 		//--------------------------------------------------[ S ] - DB Server;
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-OnSight-Crawler-Storage-MongoDB, ...;
-		, SYS0033_APIServer : [ "http://222.239.10.122:45520", "http://222.239.10.122:45520" ]
-		, SYS0033_WebServer : [ "http://222.239.10.122:45521", "http://222.239.10.122:45521" ]
+		, SYS0033_APIServer : [ "http://localhost:45520", "http://localhost:45520" ]
+		, SYS0033_WebServer : [ "http://localhost:45521", "http://localhost:45521" ]
 
 		//[ 폐기 ] - 사용하는 곳 목록;
 		//B2LiNK-China-Crawler-Storage-MongoDB ...;
-		, SYS0110_APIServer : [ "http://222.239.10.122:43320", "http://222.239.10.122:43320" ]
-		, SYS0110_WebServer : [ "http://222.239.10.122:43321", "http://222.239.10.122:43321" ]
+		, SYS0110_APIServer : [ "http://localhost:43320", "http://localhost:43320" ]
+		, SYS0110_WebServer : [ "http://localhost:43321", "http://localhost:43321" ]
 		//--------------------------------------------------[ E ] - DB Server;
-
 
 		//--------------------------------------------------[ S ] - Total.js;
 		//Total.js - SuperAdmin - 사용하는 곳 목록;
-		, SYS4110_APIServer : [ "http://222.239.10.122:40320", "http://222.239.10.122:40320" ]
-		, SYS4110_WebServer : [ "http://222.239.10.122:40320", "http://222.239.10.122:40320" ]
+		, SYS4110_APIServer : [ "http://localhost:40320", "http://localhost:40320" ]
+		, SYS4110_WebServer : [ "http://localhost:40320", "http://localhost:40320" ]
 
 		//Total.js - wiki - 사용하는 곳 목록;
-		, SYS4111_APIServer : [ "http://222.239.10.122:40321", "http://222.239.10.122:40321" ]
-		, SYS4111_WebServer : [ "http://222.239.10.122:40321", "http://222.239.10.122:40321" ]
+		, SYS4111_APIServer : [ "http://localhost:40321", "http://localhost:40321" ]
+		, SYS4111_WebServer : [ "http://localhost:40321", "http://localhost:40321" ]
 
 		//Total.js - HelpDesk - 사용하는 곳 목록;
-		, SYS4112_APIServer : [ "http://222.239.10.122:40322", "http://222.239.10.122:40322" ]
-		, SYS4112_WebServer : [ "http://222.239.10.122:40322", "http://222.239.10.122:40322" ]
+		, SYS4112_APIServer : [ "http://localhost:40322", "http://localhost:40322" ]
+		, SYS4112_WebServer : [ "http://localhost:40322", "http://localhost:40322" ]
 
 		//Total.js - Messanger - 사용하는 곳 목록;
-		, SYS4113_APIServer : [ "http://222.239.10.122:40323", "http://222.239.10.122:40323" ]
-		, SYS4113_WebServer : [ "http://222.239.10.122:40323", "http://222.239.10.122:40323" ]
+		, SYS4113_APIServer : [ "http://localhost:40323", "http://localhost:40323" ]
+		, SYS4113_WebServer : [ "http://localhost:40323", "http://localhost:40323" ]
 
 		//Total.js - OpenPlatform - 사용하는 곳 목록;
-		, SYS4120_APIServer : [ "http://222.239.10.122:40330", "http://222.239.10.122:40330" ]
-		, SYS4120_WebServer : [ "http://222.239.10.122:40330", "http://222.239.10.122:40330" ]
+		, SYS4120_APIServer : [ "http://localhost:40330", "http://localhost:40330" ]
+		, SYS4120_WebServer : [ "http://localhost:40330", "http://localhost:40330" ]
 
 		//Total.js - CMS - 사용하는 곳 목록;
-		, SYS4130_APIServer : [ "http://222.239.10.122:40340", "http://222.239.10.122:40340" ]
-		, SYS4130_WebServer : [ "http://222.239.10.122:40340", "http://222.239.10.122:40340" ]
+		, SYS4130_APIServer : [ "http://localhost:40340", "http://localhost:40340" ]
+		, SYS4130_WebServer : [ "http://localhost:40340", "http://localhost:40340" ]
 
 		//Total.js - Eshop - 사용하는 곳 목록;
-		, SYS4135_APIServer : [ "http://222.239.10.122:40345", "http://222.239.10.122:40345" ]
-		, SYS4135_WebServer : [ "http://222.239.10.122:40345", "http://222.239.10.122:40345" ]
+		, SYS4135_APIServer : [ "http://localhost:40345", "http://localhost:40345" ]
+		, SYS4135_WebServer : [ "http://localhost:40345", "http://localhost:40345" ]
 		//--------------------------------------------------[ E ] - Total.js;
 	};
 
@@ -219,7 +220,7 @@
 	 * @param {String} nm_server
 	 * @return {String} url
 	 */
-	window.b2link.url.getServerURLByServers = function( nm_server )
+	window.apis.url.getServerURLByServers = function( nm_server )
 	{
 		if( !_server[ nm_server ] ) debugger;//없는 서버 이름이 들어옴;
 

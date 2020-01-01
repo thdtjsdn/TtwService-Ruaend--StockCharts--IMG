@@ -52,8 +52,9 @@ window[ "__INITIALIZE-PACKAGE__" ] = function( e, t )
 	//----------;
 	var host;
 	//if( -1 != window.location.href.indexOf( "http://dnsproxy.shop:49781" ) ) host = "http://dnsproxy.shop:49781";
-	if( -1 != window.location.href.indexOf( "http://116.33.62.146:49781" ) ) host = "http://116.33.62.146:49781";
-	else host = window.apis.url.getServerURL_WebServer_Self();
+	if( -1 != window.location.href.indexOf( "http://116.33.62.146" ) ) host = "http://116.33.62.146:49781";
+	//else host = window.apis.url.getServerURL_WebServer_Self();
+	else host = "http://localhost:49781";
 	e( host + "/js-common/" );
 	/*///SCODE Host localhost로 강제 적용;
 	(function(){ var _fn = window.apis.url.getServerURL_WebServer_SCODE; window.apis.url.getServerURL_WebServer_SCODE = function( SCODE ){
@@ -82,8 +83,9 @@ window[ "__INITIALIZE-PACKAGE__" ] = function( e, t )
 
 	var host;
 	//if( -1 != window.location.href.indexOf( "http://dnsproxy.shop:49781" ) ) host = "http://dnsproxy.shop:49781";
-	if( -1 != window.location.href.indexOf( "http://116.33.62.146:49781" ) ) host = "http://116.33.62.146:49781";
-	else host = window.apis.url.getServerURL_WebServer_Self();
+	if( -1 != window.location.href.indexOf( "http://116.33.62.146" ) ) host = "http://116.33.62.146:49781";
+	//else host = window.apis.url.getServerURL_WebServer_Self();
+	else host = "http://localhost:49781";
 	window._$TATIC_CONST_DEBUG = true;
 	window._$TATIC_CONST_DEBUG ? e( host + "/ui_js/" )  : f( host + "/ui_js/___merge_min_all_1_0.js" );
 

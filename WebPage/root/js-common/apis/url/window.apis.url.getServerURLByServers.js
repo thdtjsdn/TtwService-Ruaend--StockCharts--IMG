@@ -149,12 +149,12 @@
 		//, SYS0310_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
 
 		//사용하는 곳 목록;
-		//, SYS0320_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
-		//, SYS0320_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
+		, SYS0320_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
+		, SYS0320_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
 		//, SYS0320_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
 		//, SYS0320_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
-		, SYS0320_APIServer : [ "http://116.33.62.146:49780", "http://116.33.62.146:49780" ]
-		, SYS0320_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
+		//, SYS0320_APIServer : [ "http://116.33.62.146:49780", "http://116.33.62.146:49780" ]
+		//, SYS0320_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
 		//--------------------------------------------------[ E ] - 비지니스 시스템 서버;
 
 		//--------------------------------------------------[ S ] - Util;

@@ -280,11 +280,13 @@ initialize._bInit = 0;
  */
 var _createOptions = function( d )
 {
+	/*/
 	if( !d.data || !d.title || !d.columns )
 	{
 		window.TtwLog.error( "[ ERROR ] - _createOptions : d 가 불충분함" );
 		return;
 	}
+	//*/
 
 	//_OPTIONS 데이터 생성 또는 가감 로직 추가;
 };

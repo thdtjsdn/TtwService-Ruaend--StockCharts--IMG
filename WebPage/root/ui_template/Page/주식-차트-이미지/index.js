@@ -1,14 +1,14 @@
 /*/
-http://localhost:49781/ui/Page/주식-차트-이미지/index.html?width=500&height=500
+http://116.33.62.146:49781/ui/Page/주식-차트-이미지/index.html?width=500&height=500
 
 //사이즈를 %로 적용;
-http://localhost:49781/ui/Page/주식-차트-이미지/index.html?width=100%25&height=500
-http://localhost:49781/ui/Page/주식-차트-이미지/index.html?width=100%25&height=800
+http://116.33.62.146:49781/ui/Page/주식-차트-이미지/index.html?width=100%25&height=500
+http://116.33.62.146:49781/ui/Page/주식-차트-이미지/index.html?width=100%25&height=800
 
 //사이즈를 %로 적용 - Height는 적용 안됨;
-http://localhost:49781/ui/Page/주식-차트-이미지/index.html?width=100%25&height=100%25
+http://116.33.62.146:49781/ui/Page/주식-차트-이미지/index.html?width=100%25&height=100%25
 
-http://localhost:49781/ui/Page/주식-차트-이미지/index.html?url=http://localhost:49781/ui/Page/주식-차트-이미지/index.json
+http://116.33.62.146:49781/ui/Page/주식-차트-이미지/index.html?url=http://116.33.62.146:49781/ui/Page/주식-차트-이미지/index.json
 http://dnsproxy.shop:49781/ui/Page/주식-차트-이미지/index.html?url=http://dnsproxy.shop:49781/ui/Page/주식-차트-이미지/index.json
 //*/
 //----------------------------------------------------------------------------------------------------;

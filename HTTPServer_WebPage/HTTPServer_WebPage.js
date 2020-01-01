@@ -95,7 +95,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 	var _CWD_ROOT = _CWD + "../WebPage/root";
 
 	var _0 = SUtilHttpServer.__evt_request__APIAndFilePath = SUtilHttpServer.evt_request__APIAndFilePath;
-	var _1 = global.process.cwd() + "/../../Development-Browser-Libraries/WebPage/root/";
+	var _1 = global.process.cwd() + "/../../TtwPlatform-00000--JS/WebPage/root/";
 	//var _2 = global._$TATIC_VALUE_SERVER_HTTP_EVTS_REQUEST;
 
 	SUtilHttpServer.evt_request__APIAndFilePath = function( req, res ){
@@ -219,7 +219,7 @@ global.server = global.apis.server_http.newServer__WebServer();
 //*/
 (function(){
 	global.apis.fs.autoLoad_JSs([
-		, [ "JavaScript Import - TtwService-Ruaend--StockCharts--IMG", "./js__SYS0320/", { router : 1, router_external : 1, router_internal : 1 } ]
+		[ "JavaScript Import - TtwService-Ruaend--StockCharts--IMG", "./js__SYS0320/", { router : 1, router_external : 1, router_internal : 1 } ]
 	]);
 })();
 //*/

@@ -101,6 +101,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 	SUtilHttpServer.evt_request__APIAndFilePath = function( req, res ){
 		//var uri = SUtilHttpServer.getURIFromURL( req.url );
 		var uri = global.decodeURIComponent( SUtilHttpServer.getURIFromURL( req.url ) );
+		req.url = uri;
 
 		global.console.log( Date.now() + " - " + uri );
 		if( ( uri.length - 5 ) == uri.lastIndexOf( ".html" ) )

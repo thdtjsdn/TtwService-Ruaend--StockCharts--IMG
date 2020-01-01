@@ -161,7 +161,7 @@ var _DATA = (function(){
 
 		//[ 샘플 ] 데이터 추가;
 
-		, width : ( d.width || 500 )
+		width : ( d.width || 500 )
 		, height : ( d.height || 500 )
 	};
 	////[ SAMPLE ] - [ E ] - 자동 삭제;

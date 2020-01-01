@@ -111,7 +111,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				{
 					var fStr = SUtilFsReadStream.getFile( PATH ).toString();
 
-					if( -1 != fStr.indexOf( "<!=SYS0310." ) ) fStr = fStrreplace( /\<\!\=SYS0310\.HOST\=\!\>/gi, global.apis.url.getServerURL_WebServer_SCODE( "SYS0310" ) );
+					if( -1 != fStr.indexOf( "<!=SYS0320." ) ) fStr = fStrreplace( /\<\!\=SYS0320\.HOST\=\!\>/gi, global.apis.url.getServerURL_WebServer_SCODE( "SYS0320" ) );
 
 					global.apis.response.send_200_HTML( req, res, fStr );
 					return;
@@ -134,7 +134,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				{
 					var fStr = SUtilFsReadStream.getFile( PATH ).toString();
 
-					//if( -1 != fStr.indexOf( "<!=SYS0310." ) ) fStr = fStrreplace( /\<\!\=SYS0310\.HOST\=\!\>/gi, global.apis.url.getServerURL_WebServer_SCODE( "SYS0310" ) );
+					//if( -1 != fStr.indexOf( "<!=SYS0320." ) ) fStr = fStrreplace( /\<\!\=SYS0320\.HOST\=\!\>/gi, global.apis.url.getServerURL_WebServer_SCODE( "SYS0320" ) );
 
 					global.apis.response.send_200_HTML( req, res, fStr );
 					return;

@@ -76,7 +76,7 @@ global._$TATIC_CONST_SERVER_HTTP_MIME_TYPES = {
 	, woff2 : "application/x-font-woff"
 };
 
-global.b2link.fs.autoLoad_JSs([ [ "JavaScript Import", "./js/", { b2link_router : 1, b2link_router_external : 1, b2link_router_internal : 1 } ] ]);
+global.apis.fs.autoLoad_JSs([ [ "JavaScript Import", "./js/", { router : 1, router_external : 1, router_internal : 1 } ] ]);
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -88,7 +88,7 @@ global.b2link.fs.autoLoad_JSs([ [ "JavaScript Import", "./js/", { b2link_router 
 //Browser에서 요청하는 /js/ 경로의 소스 파일들을 공통레파지토리에서 가져와 내려주는 기능;
 //화면소스 개발모드에서만 사용한다.;
 //Release 모드에서는 필요없음;
-global.b2link.server_http.globalServer__setMode__Dev__FileResCommonPath();
+global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 /*/
 (function(){
 	var _CWD = global.process.cwd() + "/";
@@ -111,14 +111,14 @@ global.b2link.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				{
 					var fStr = SUtilFsReadStream.getFile( PATH ).toString();
 
-					if( -1 != fStr.indexOf( "<!=SYS0310." ) ) fStr = fStrreplace( /\<\!\=SYS0310\.HOST\=\!\>/gi, global.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" ) );
+					if( -1 != fStr.indexOf( "<!=SYS0310." ) ) fStr = fStrreplace( /\<\!\=SYS0310\.HOST\=\!\>/gi, global.apis.url.getServerURL_WebServer_SCODE( "SYS0310" ) );
 
-					global.b2link.response.send_200_HTML( req, res, fStr );
+					global.apis.response.send_200_HTML( req, res, fStr );
 					return;
 				}
 				else
 				{
-					global.b2link.response.send_404( req, res );
+					global.apis.response.send_404( req, res );
 					return;
 				}
 			});
@@ -134,14 +134,14 @@ global.b2link.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				{
 					var fStr = SUtilFsReadStream.getFile( PATH ).toString();
 
-					//if( -1 != fStr.indexOf( "<!=SYS0310." ) ) fStr = fStrreplace( /\<\!\=SYS0310\.HOST\=\!\>/gi, global.b2link.url.getServerURL_WebServer_SCODE( "SYS0310" ) );
+					//if( -1 != fStr.indexOf( "<!=SYS0310." ) ) fStr = fStrreplace( /\<\!\=SYS0310\.HOST\=\!\>/gi, global.apis.url.getServerURL_WebServer_SCODE( "SYS0310" ) );
 
-					global.b2link.response.send_200_HTML( req, res, fStr );
+					global.apis.response.send_200_HTML( req, res, fStr );
 					return;
 				}
 				else
 				{
-					global.b2link.response.send_404( req, res );
+					global.apis.response.send_404( req, res );
 					return;
 				}
 			});
@@ -154,8 +154,8 @@ global.b2link.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		else if( 0 == uri.indexOf( "/js/" ) )
 		{
 			//공통 모듈 파일을 가져와서 내려주기;
-			//global.b2link.response.sendStream_200_File_NCallback( req, res, _1 );
-			global.b2link.response.sendStream_200_File_URI_NCallback( req, res, _1, uri );
+			//global.apis.response.sendStream_200_File_NCallback( req, res, _1 );
+			global.apis.response.sendStream_200_File_URI_NCallback( req, res, _1, uri );
 			return;
 		}
 
@@ -189,7 +189,7 @@ global.b2link.server_http.globalServer__setMode__Dev__FileResCommonPath();
 	/*/
 	_[ "/js/index.js" ]
 		= _[ "/js/index_dev_mongodb.js" ]
-		= function( req, res ){ global.b2link.response.sendStream_200_File_NCallback( req, res, global._$TATIC_CONST_SERVER_HTTP_TARGET_PATH ); };
+		= function( req, res ){ global.apis.response.sendStream_200_File_NCallback( req, res, global._$TATIC_CONST_SERVER_HTTP_TARGET_PATH ); };
 	//*/
 
 	//B2LiNK-B2Labs IP 이외 차단 파일 목록;
@@ -204,7 +204,7 @@ global.b2link.server_http.globalServer__setMode__Dev__FileResCommonPath();
 //----------------------------------------------------------------------------------------------------;
 
 //WebServer용 HTTPServer를 생성한다.;
-global.server = global.b2link.server_http.newServer__WebServer();
+global.server = global.apis.server_http.newServer__WebServer();
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -212,13 +212,13 @@ global.server = global.b2link.server_http.newServer__WebServer();
 
 //	JavaScript Import;
 // - ./js/ : 공통모듈, TtwPlatform-00000--NodeJS에 존재한다.;
-// - ./js__b2link__***/ : 각 개별 레파지토리에 존재한다. API 파일 목록은 필요 요소에 따라 다를수 있다.;
+// - ./js___***/ : 각 개별 레파지토리에 존재한다. API 파일 목록은 필요 요소에 따라 다를수 있다.;
 
 //----------------------------------------------------------------------------------------------------;
 
 //*/
 (function(){
-	global.b2link.fs.autoLoad_JSs([
+	global.apis.fs.autoLoad_JSs([
 		, [ "JavaScript Import - TtwService-Ruaend--StockCharts--IMG", "./js__SYS0320/", { router : 1, router_external : 1, router_internal : 1 } ]
 	]);
 })();

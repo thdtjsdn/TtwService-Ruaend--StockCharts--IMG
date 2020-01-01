@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------------------------;
-var fileNm = "js___SYS0320/router_internal/__define/000_define_global.router_internal.js";
+var fileNm = "js__SYS0320/router_internal/__define/000_define_global.router_internal.js";
 if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 //----------------------------------------------------------------------------------------------------;
 

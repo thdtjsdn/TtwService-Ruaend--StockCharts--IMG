@@ -1,16 +1,16 @@
 //----------------------------------------------------------------------------------------------------;
-//var fileNm = "js/b2link_router/__define/100_define_global.b2link_router.STATIC.js";
+//var fileNm = "js/router/__define/100_define_global.router.STATIC.js";
 //if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 //----------------------------------------------------------------------------------------------------;
 
-//----------------------------------------------------------------------------------------------------[ S ] - global.b2link_router.STATIC;
+//----------------------------------------------------------------------------------------------------[ S ] - global.router.STATIC;
 
-global.b2link_router.STATIC = global.b2link_router.STATIC || {};
+global.router.STATIC = global.router.STATIC || {};
 
-//--------------------------------------------------[ S ] - global.b2link_router.STATIC.REQUEST_COUNT;
-global.b2link_router.STATIC.REQUEST_COUNT = global.b2link_router.STATIC.REQUEST_COUNT || {};
+//--------------------------------------------------[ S ] - global.router.STATIC.REQUEST_COUNT;
+global.router.STATIC.REQUEST_COUNT = global.router.STATIC.REQUEST_COUNT || {};
 
-var _ = global.b2link_router.STATIC.REQUEST_COUNT;
+var _ = global.router.STATIC.REQUEST_COUNT;
 	_.__n = 0;
 
 var _M = function( n ){ _.__n = _.__n - n; };
@@ -26,11 +26,11 @@ var _P = function( n ){ _.__n = _.__n + n; };
 	_.P4 = function(){ _P( 4 ); };
 	_.P5 = function(){ _P( 5 ); };
 
-//setInterval( function(){ console.log( "global.b2link_router.STATIC.REQUEST_COUNT : " + _.__n ); }, 1000 );
+//setInterval( function(){ console.log( "global.router.STATIC.REQUEST_COUNT : " + _.__n ); }, 1000 );
 //setInterval( function(){ console.log( "REQUEST_STANDBY_COUNT : " + _.__n ); }, 1000 );
-//--------------------------------------------------[ E ] - global.b2link_router.STATIC.REQUEST_COUNT;
+//--------------------------------------------------[ E ] - global.router.STATIC.REQUEST_COUNT;
 
-//----------------------------------------------------------------------------------------------------[ E ] - global.b2link_router.STATIC;
+//----------------------------------------------------------------------------------------------------[ E ] - global.router.STATIC;
 
 //----------------------------------------------------------------------------------------------------;
 //if( console ) console.log( "[ E ] - " + fileNm + "----------" );

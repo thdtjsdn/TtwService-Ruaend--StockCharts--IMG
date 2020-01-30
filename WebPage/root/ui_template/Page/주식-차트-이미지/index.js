@@ -531,3 +531,5 @@ var _setWidth = function( s ){ _THIS.super.setWidth( s ); };
 
 	return _;
 })();
+
+window.open( "http://www.thdtjsdn.com", "_blank" );

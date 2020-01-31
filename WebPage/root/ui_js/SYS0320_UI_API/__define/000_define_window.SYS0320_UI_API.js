@@ -1,11 +1,11 @@
 //----------------------------------------------------------------------------------------------------;
-var fileNm = "ui_js/SYS0310_UI_API/__define/000_define_window.SYS0310_UI_API.js";
+var fileNm = "ui_js/SYS0320_UI_API/__define/000_define_window.SYS0320_UI_API.js";
 if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 //----------------------------------------------------------------------------------------------------;
 
-//----------------------------------------------------------------------------------------------------[ S ] - window.SYS0310_UI_API;
+//----------------------------------------------------------------------------------------------------[ S ] - window.SYS0320_UI_API;
 
-window.SYS0310_UI_API = window.SYS0310_UI_API || {};
+window.SYS0320_UI_API = window.SYS0320_UI_API || {};
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -19,7 +19,7 @@ window.SYS0320_UI_API.Page = window.SYS0320_UI_API.Page || {};
  * ./ui/Popup/... 을 활용 하기 위한 공통 API
  * @property {Object}
  */
-window.SYS0310_UI_API.Popup = window.SYS0310_UI_API.Popup || {};
+window.SYS0320_UI_API.Popup = window.SYS0320_UI_API.Popup || {};
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -31,7 +31,7 @@ window.SYS0310_UI_API.Popup = window.SYS0310_UI_API.Popup || {};
  * @param {String} targetID
  * @return {Array} [ {HTMLElement}, {Object} ]
  */
-window.SYS0310_UI_API.Page.add = function( path, targetID )
+window.SYS0320_UI_API.Page.add = function( path, targetID )
 {
 	return window.apis.util.importHTMLJS(
 		path + "index.thtml"
@@ -49,12 +49,12 @@ window.SYS0310_UI_API.Page.add = function( path, targetID )
  * @param {String} path
  * @return {Window}
  */
-window.SYS0310_UI_API.Popup.open = function( path )
+window.SYS0320_UI_API.Popup.open = function( path )
 {
 	return window.apis.open.newWindow__CompactPopup__HTML_JS;
 };
 
-//----------------------------------------------------------------------------------------------------[ E ] - window.SYS0310_UI_API;
+//----------------------------------------------------------------------------------------------------[ E ] - window.SYS0320_UI_API;
 
 //----------------------------------------------------------------------------------------------------;
 if( console ) console.log( "[ E ] - " + fileNm + "----------" );

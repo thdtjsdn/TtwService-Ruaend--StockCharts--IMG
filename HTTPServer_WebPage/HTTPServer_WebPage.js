@@ -112,7 +112,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		req.url = uri;
 		//----------;
 
-		global.console.log( Date.now() + " - " + uri );
+		global.console.log( Date.now() + " - " + req.client.remoteAddress + " - " + uri );
 		if( ( uri.length - 5 ) == uri.lastIndexOf( ".html" ) )
 		{
 			var PATH = _CWD_ROOT + uri;

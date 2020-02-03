@@ -53,6 +53,7 @@ var host = "http://" +
 	//"dnsproxy.shop:49323"
 	//"localhost:49323"
 	"thdtjsdn.shop:49323"
+	//www.ruaend.kr:49323
 ;
 el.src = host + "/js-common/" +
 	  "lib.common.js"

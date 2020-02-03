@@ -51,7 +51,8 @@ if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 window.onload = function( evt ){(function(){var el=document.head.appendChild(document.createElement("SCRIPT"));
 var host = "http://" +
 	//"dnsproxy.shop:49323"
-	"localhost:49323"
+	//"localhost:49323"
+	"thdtjsdn.shop:49323"
 ;
 el.src = host + "/js-common/" +
 	  "lib.common.js"

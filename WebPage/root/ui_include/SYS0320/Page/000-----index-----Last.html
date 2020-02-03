@@ -120,6 +120,21 @@ window[ "__INITIALIZE-PACKAGE__" ] = function( e, t )
 	}
 
 	delete window[ "__INITIALIZE-PACKAGE__" ];
+
+	//----------------------------------------------------------------------------------------------------;
+
+	if( window.__B_SEMANTIC_UI )
+	{
+		var el0 = window.document.createElement( "LINK" );
+			el0.rel = "stylesheet";
+			el0.href = "https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css";
+
+		var el1 = window.document.createElement( "SCRIPT" );
+			el1.src = "https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js";
+
+		window.document.head.appendChild( el0 );
+		window.document.head.appendChild( el1 );
+	}
 };
 </SCRIPT>
 

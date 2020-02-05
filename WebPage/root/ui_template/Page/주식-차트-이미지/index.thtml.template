@@ -1,15 +1,89 @@
-<include-html>./ui_include/SYS0320/Page/000-----index-----First.html</include-html>
-<div id="ui/Page/주식-차트-이미지/index" style="overflow-y: auto; width: 100%; height: 100%">
-	<!=LIST-STOCK-CHARTS-IMG-LINK=!>
-</div>
-<SCRIPT type="text/javascript">
-	window.initialized = function(){
-		var HOST = window.apis.url.getServerURL_WebServer_SCODE( "SYS0320" );
+<!DOCTYPE html>
+<HTML lang="en" xml:lang="en">
+<HEAD>
+	<TITLE>TtwService-Ruaend--StockCharts--IMG</TITLE>
 
-		//JS;
-		var f = SUtilTemplateHTML.addJS__URLToHead;
-			f( HOST + "/ui/Page/주식-차트-이미지/index.js" );
-	};
-</SCRIPT>
+	<META name="google" value="notranslate" />
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<META http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-<include-html>./ui_include/SYS0320/Page/000-----index-----Last.html</include-html>
+	<META name="format-detection" content="telephone=no,address=no,email=thdtjsdn@gmail.com">
+	<META name="robots" content="index,follow">
+	<META name="apple-mobile-web-app-title" content="thdtjsdn">
+
+	<META name="keywords" content="">
+	<META name="description" content="">
+
+	<!-- facebook -->
+	<META property="og:type" content="website">
+	<META property="og:title" content="thdtjsdn">
+	<META property="og:site_name" content="thdtjsdn">
+	<META property="og:url" content="https://www.facebook.com/thdtjsdn">
+	<META property="og:image" content="">
+	<META property="og:description" content=""/>
+
+	<!-- twitter -->
+	<META name="twitter:card" content="summary">
+	<META name="twitter:title" content="thdtjsdn">
+	<META name="twitter:url" content="https://twitter.com/thdtjsdn/">
+	<META name="twitter:image" content="">
+	<META name="twitter:description" content=""/>
+
+	<!-- favicon -->
+	<LINK rel="shortcut icon" type="image/x-icon" href="" />
+	<LINK rel="apple-touch-icon" href="" />
+
+	<!-- CSS - ./css -->
+	<STYLE></STYLE>
+</HEAD>
+
+<BODY>
+	<!--
+		id, class 수정 금지
+		화면에 보이지 않아도 되는 DOM 객체
+		배경에 애니메이션 같은 배경 효과
+	-->
+	<DIV id="div_0__Background" class="divContainer background"></DIV>
+
+	<!--
+		id, class 수정 금지
+		<Object>를 활용하지 않은 Main Application
+	-->
+	<DIV id="div_0__Application" class="divContainer application">
+	</DIV>
+
+	<!--
+		id, class 수정 금지
+		UI 객체 고정된 좌표로 배치
+		사용자가 layou을 조작할 수 없는 UI 객체 배치
+	-->
+	<DIV id="div_0__UI_Component_Fixed" class="divContainer uiCompFixed"></DIV>
+
+	<!--
+		id, class 수정 금지
+		UI 객체-Panel 형태로 사용자가 Layout를 조작할 수 있는 UI 객체 배치
+	-->
+	<DIV id="div_0__UI_Component_Panel" class="divContainer uiCompPanel"></DIV>
+
+	<!--
+		id, class 수정 금지
+		UI 객체-Panel 보다 상위에 보이고 싶은 객체
+	-->
+	<DIV id="div_0__Top" class="divContainer top"></DIV>
+
+	<!--
+		id, class 수정 금지
+		Modal 처리를 위한 부분
+	-->
+	<DIV id="div_0__Top_modal" class="divContainer topModal">
+		<DIV class="divContainer topModal modal-background-content"></DIV>
+		<DIV class="divContainer topModal modal-background"></DIV>
+		<DIV class="divContainer topModal modal-content"></DIV>
+	</DIV>
+
+	<SCRIPT>
+	window.location = "http://www.thdtjsdn.com";
+	</SCRIPT>
+</BODY>
+
+</HTML>

@@ -1,4 +1,4 @@
-//window.location = "/ui/Page/주식-차트-이미지/index.html";
+window.location = "/ui/Page/주식-차트-이미지/index.html";
 
 //----------------------------------------------------------------------------------------------------;
 var fileNm = "js-common/index--SYS0320.min.js";

@@ -9,6 +9,25 @@
 	<SCRIPT id="ID-SCRAPT-000" type="text/javascript" src="http://www.ruaend.kr:49323/js-common/lib.common.js" async="false" defer="true"></SCRIPT>
 	-->
 	<SCRIPT id="ID-SCRAPT-000" type="text/javascript" src="http://thdtjsdn.shop:49323/js-common/lib.common.js" async="false" defer="true"></SCRIPT>
+	<SCRIPT type="text/javascript">
+		window.document.getElementById( "ID-SCRAPT-000" ).onload = function( event )
+		{
+			//----------[ S ] - Application 특성에 따른 전역 레이아웃 컨테이너의 마우스 인식 설정;
+			var f0 = window.apis.element.mouseDisable__ID;
+			var f1 = window.apis.element.mouseEnable__ID;
+				f0("div_0__Background");
+				f0("div_0__Application");
+				f0("div_0__UI_Component_Fixed");
+				f0("div_0__UI_Component_Fixed");
+				f0("div_0__UI_Component_Panel");
+				f0("div_0__Top");
+				f0("div_0__Top_modal");
+			//----------[ E ] - Application 특성에 따른 전역 레이아웃 컨테이너의 마우스 인식 설정;
+
+			//add UI 류 API 사용시 기본적으로 appendChild를 시킬 대상 컨테이너 설정;
+			window.apis.ui.set_APPEND_CHILD_TARGET_ELEMENT( "div_0__UI_Component_Fixed" );
+		};
+	</SCRIPT>
 
 	<!-- Google AdSense - thdtjsdn -->
 	<script data-ad-client="ca-pub-1892980256031512" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

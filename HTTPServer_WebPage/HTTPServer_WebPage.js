@@ -200,6 +200,28 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
 	};
 
+	(function(){
+		var FILE_PATH = "";
+		_[ "/getLog" ] = function( req, res ){
+
+			if( FILE_PATH == "" )
+			{
+				var a = SUtilFsReadStream.getList_File_Extension( "./log/", ".txt" );
+					a.forEach( function( item ){ if( -1 != item.indexOf( "log_" ) ) FILE_PATH = "./log/" + item; });
+			}
+
+			try
+			{
+				var fStr = SUtilFsReadStream.getFile( FILE_PATH ).toString()
+				SUtilHttpServerResponse.responseWrite_200_String( res, fStr );
+			}
+			catch( er )
+			{
+				global.console.error( er );
+			}
+		};
+	})();
+
 	/*/
 	_[ "/js/index.js" ]
 		= _[ "/js/index_dev_mongodb.js" ]

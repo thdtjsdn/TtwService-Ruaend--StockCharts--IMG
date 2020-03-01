@@ -255,9 +255,6 @@ function initialize()
 
 		initialize._bInit = 1;
 
-
-		debugger;
-
 		_ELS.IF0
 	}
 	catch( er )

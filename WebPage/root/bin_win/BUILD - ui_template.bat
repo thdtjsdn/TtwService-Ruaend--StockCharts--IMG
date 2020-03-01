@@ -10,4 +10,4 @@ call "XCOPY - ui_template.bat"
 
 call "DELETE - 빌드 파일 삭제 - ui_template.bat"
 
-cmd /k
+:cmd /k

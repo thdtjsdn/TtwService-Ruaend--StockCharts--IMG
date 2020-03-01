@@ -16,6 +16,42 @@ var fileNm = "ui/Page/주식-메인/index.js";
 if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 //----------------------------------------------------------------------------------------------------;
 
+window.onpopstate = null;
+
+(function(){
+	window.document.addEventListener("DOMContentLoaded", function() {
+		var lazyloadImages = window.document.querySelectorAll("img.lazy");
+		var lazyloadThrottleTimeout;
+
+		function lazyload () {
+		if(lazyloadThrottleTimeout) {
+		  clearTimeout(lazyloadThrottleTimeout);
+		}
+
+		lazyloadThrottleTimeout = setTimeout(function() {
+			var scrollTop = window.pageYOffset;
+			lazyloadImages.forEach(function(img) {
+				if(img.offsetTop < (window.innerHeight + scrollTop)) {
+				  img.src = img.dataset.src;
+				  img.classList.remove('lazy');
+				}
+			});
+			if(lazyloadImages.length == 0) {
+			  window.document.removeEventListener("scroll", lazyload);
+			  window.removeEventListener("resize", lazyload);
+			  window.removeEventListener("orientationChange", lazyload);
+			}
+		}, 20);
+		}
+
+		window.document.addEventListener("scroll", lazyload);
+		window.addEventListener("resize", lazyload);
+		window.addEventListener("orientationChange", lazyload);
+	});
+})();
+
+//----------------------------------------------------------------------------------------------------;
+
 /**
  * 이 Private Scope 영역의 메인 객체
  * this 키워드는 사용하지 않는 다.(JS 버전 별 문제 타파)
@@ -101,6 +137,18 @@ var _ELS = (function(){
 	//window.apis.STATIC.CONST.ROOT_DIV.EL_UI_COMPONENT_FIXED.appendChild( o.ROOT );
 	window.apis.element.mouseEnable( o.ROOT );
 	//window.apis.element.mouseDisable( o.ROOT );
+
+	o.ROOT.addEventListener( "click", function( e ){
+		var t = e.target;
+		if( "A" == t.tagName )
+		{
+			var url = t.getAttribute( "data-href" );
+			if( url )
+			{
+				o.IF0.src = url;
+			}
+		}
+	});
 
 	return o;
 })();

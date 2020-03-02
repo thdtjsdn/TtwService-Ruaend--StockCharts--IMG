@@ -145,9 +145,13 @@ var _ELS = (function(){
 		if( "A" == t.tagName )
 		{
 			var url = t.getAttribute( "data-href" );
-			if( url )
+			if( "새창" == t.innerText ) window.open( url, "_blank" );
+			else
 			{
-				o.IF0.src = url;
+				if( url )
+				{
+					o.IF0.src = url;
+				}
 			}
 		}
 	});

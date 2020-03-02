@@ -18,6 +18,7 @@ if( console ) console.log( "[ S ] - " + fileNm + "----------" );
 
 window.onpopstate = null;
 
+/*/
 (function(){
 	window.document.addEventListener("DOMContentLoaded", function() {
 		var lazyloadImages = window.document.querySelectorAll("img.lazy");
@@ -49,6 +50,7 @@ window.onpopstate = null;
 		window.addEventListener("orientationChange", lazyload);
 	});
 })();
+//*/
 
 //----------------------------------------------------------------------------------------------------;
 

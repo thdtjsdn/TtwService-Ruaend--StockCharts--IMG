@@ -220,6 +220,17 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				global.console.error( er );
 			}
 		};
+		_[ "/upload__voice_history_07" ] = function( req, res ){
+			var r = "";
+			req.on( "data", function( chunk ){
+				r += chunk;
+				console.log( "chunk : " + chunk );
+			});
+			req.on( "end", function( chunk ){
+				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 0.7.html", r );
+			});
+			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+		};
 	})();
 
 	/*/
@@ -229,7 +240,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 	//*/
 
 	//B2LiNK-B2Labs IP 이외 차단 파일 목록;
-	require( "../../TtwPlatform-00000--NodeJS/NotAvailableServiceFiles__IP.js" );
+	//require( "../../TtwPlatform-00000--NodeJS/NotAvailableServiceFiles__IP.js" );
 })();
 //*/
 
@@ -252,7 +263,7 @@ global.server = global.apis.server_http.newServer__WebServer();
 
 //----------------------------------------------------------------------------------------------------;
 
-//*/
+/*/
 (function(){
 	global.apis.fs.autoLoad_JSs([
 		[ "JavaScript Import - TtwService-Ruaend--StockCharts--IMG", "./js__SYS0320/", { router : 1, router_external : 1, router_internal : 1 } ]

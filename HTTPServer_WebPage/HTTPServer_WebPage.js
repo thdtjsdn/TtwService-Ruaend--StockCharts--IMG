@@ -58,6 +58,7 @@ global._$TATIC_CONST_SERVER_HTTP_MIME_TYPES = {
 	, jpg : "image/jpeg"
 	, js : "application/javascript"
 	, json : "text/json"
+	, mp3 : "audio/mpeg"
 	, png : "image/png"
 
 	, "server-120-ip" : "application/javascript"

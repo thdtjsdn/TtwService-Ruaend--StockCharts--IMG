@@ -224,7 +224,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			var r = "";
 			req.on( "data", function( chunk ){
 				r += chunk;
-				console.log( "chunk : " + chunk );
+				//console.log( "chunk : " + chunk );
 			});
 			req.on( "end", function( chunk ){
 				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 0.7.html", r );

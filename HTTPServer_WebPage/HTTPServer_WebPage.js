@@ -112,7 +112,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		req.url = uri;
 		//----------;
 
-		if( -1 == uri.indexOf( "/img/" ) )
+		if( ( -1 == uri.indexOf( "/img/" ) ) && ( -1 == uri.indexOf( "음성 기록 통계" ) ) )
 		{
 			global.console.log( Date.now() + " - " + req.client.remoteAddress + " - " + uri );
 		}

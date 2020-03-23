@@ -150,6 +150,9 @@
 		//, SYS0310_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
 		//, SYS0310_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
 		//, SYS0310_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
+
+		, SYS0320_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
+		, SYS0320_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
 		//--------------------------------------------------[ E ] - 비지니스 시스템 서버;
 
 

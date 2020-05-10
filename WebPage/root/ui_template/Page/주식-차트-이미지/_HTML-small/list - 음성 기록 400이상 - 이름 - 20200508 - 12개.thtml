@@ -100,37 +100,39 @@
 <span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">한국테크놀로지그룹</span><a target="_blank" href="http://thdtjsdn.shop/img/stock/charts-kiwoom-uhd/asfasfaf/한국테크놀로지그룹.png"><img onError="https://via.placeholder.com/100/000.png" class="lazy" style="width: 620px !important; height: 979px !important;" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/한국테크놀로지그룹.png"alt="한국테크놀로지그룹.png"></a><a target="_blank" href="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/한국테크놀로지그룹.png"><img onError="https://via.placeholder.com/100/000.png" class="lazy" style="width: 960px !important; height: 979px !important;" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/한국테크놀로지그룹.png"alt="한국테크놀로지그룹.png"></a><br/>
 <br /></div><SCRIPT type="text/javascript">
 (function(){
-window.document.addEventListener("DOMContentLoaded", function() {
-	var lazyloadImages = window.document.querySelectorAll("img.lazy");
+window.document.addEventListener( "DOMContentLoaded", function(){
+	var lazyloadImages = window.document.querySelectorAll( "img.lazy" );
 	var lazyloadThrottleTimeout;
 
-	function lazyload () {
-	if(lazyloadThrottleTimeout) {
-	  clearTimeout(lazyloadThrottleTimeout);
-	}
-
-	lazyloadThrottleTimeout = setTimeout(function() {
-		var scrollTop = window.pageYOffset;
-		lazyloadImages.forEach(function(img){
-			if(img.offsetTop < (window.innerHeight + scrollTop)) {
-				img.classList.remove( 'lazy' );
-				//img.removeAttribute( 'data-src' );
-				img.src = img.dataset.src;
-				img.dataset.src = "";
-			}
-		});
-		if(lazyloadImages.length == 0) {
-		  window.document.removeEventListener("scroll", lazyload);
-		  //window.removeEventListener("resize", lazyload);
-		  //window.removeEventListener("orientationChange", lazyload);
+	function lazyload (){
+		if( lazyloadThrottleTimeout ){
+			clearTimeout( lazyloadThrottleTimeout );
 		}
-	}, 20);
+
+		var lazyloadImages = window.document.querySelectorAll( "img.lazy" );
+
+		lazyloadThrottleTimeout = setTimeout(function() {
+			var scrollTop = window.pageYOffset;
+			lazyloadImages.forEach(function(img){
+				if(img.offsetTop < (window.innerHeight + scrollTop)) {
+					img.classList.remove( 'lazy' );
+					//img.removeAttribute( 'data-src' );
+					img.src = img.dataset.src;
+				}
+			});
+
+			if( lazyloadImages.length == 0 ){
+				window.document.removeEventListener( "scroll", lazyload );
+				window.removeEventListener( "resize", lazyload );
+				window.removeEventListener( "orientationChange", lazyload );
+			}
+		}, 20 );
 	}
 
-	//window.document.addEventListener("click", lazyload);
-	window.document.addEventListener("scroll", lazyload);
-	//window.addEventListener("resize", lazyload);
-	//window.addEventListener("orientationChange", lazyload);
+	//window.document.addEventListener( "click", lazyload );
+	window.document.addEventListener( "scroll", lazyload );
+	//window.addEventListener( "resize", lazyload );
+	//window.addEventListener( "orientationChange", lazyload );
 	setTimeout( lazyload, 10 );
 });
 })();

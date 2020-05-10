@@ -151,8 +151,10 @@ window.document.addEventListener("DOMContentLoaded", function() {
 		var scrollTop = window.pageYOffset;
 		lazyloadImages.forEach(function(img){
 			if(img.offsetTop < (window.innerHeight + scrollTop)) {
-				img.classList.remove('lazy');
+				img.classList.remove( 'lazy' );
+				//img.removeAttribute( 'data-src' );
 				img.src = img.dataset.src;
+				img.dataset.src = "";
 			}
 		});
 		if(lazyloadImages.length == 0) {

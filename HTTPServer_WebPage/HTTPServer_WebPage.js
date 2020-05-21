@@ -221,6 +221,18 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				global.console.error( er );
 			}
 		};
+		_[ "/upload__html" ] = function( req, res ){
+			var q = global.b2link.url.getQueryFromURL( req.url );
+			var r = "";
+			req.on( "data", function( chunk ){
+				r += chunk;
+				//console.log( "chunk : " + chunk );
+			});
+			req.on( "end", function( chunk ){
+				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/" + q.nm + ".html", r );
+			});
+			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+		};
 		_[ "/upload__voice_history_1line" ] = function( req, res ){
 			var r = "";
 			req.on( "data", function( chunk ){

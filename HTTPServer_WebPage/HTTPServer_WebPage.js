@@ -105,7 +105,8 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		//var uri = SUtilHttpServer.getURIFromURL( req.url );
 		var uri;
 		debugger;
-		try{ uri = global.decodeURIComponent( SUtilHttpServer.getURIFromURL( req.url ) ); }
+		///try{ uri = global.decodeURIComponent( SUtilHttpServer.getURIFromURL( req.url ) ); }
+		try{ uri = global.decodeURIComponent( req.url ); }
 		catch(er){
 			try{ uri = global.decodeURIComponent( req.url ); }
 			catch( er ){ uri = req.url; }
@@ -188,6 +189,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 	//Custom URI Example - http://localhost:port/a;
 	_[ "/a" ] = function( req, res ){
 
+		debugger;
 		console.log( 1 );
 		var r = "";
 		req.on( "data", function( chunk ){
@@ -223,6 +225,8 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		};
 		_[ "/upload__html" ] = function( req, res ){
 			var q = global.apis.url.getQueryFromURL( req.url );
+
+			debugger;
 			var r = "";
 			req.on( "data", function( chunk ){
 				r += chunk;

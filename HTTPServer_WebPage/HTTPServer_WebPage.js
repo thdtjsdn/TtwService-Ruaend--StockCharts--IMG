@@ -222,7 +222,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			}
 		};
 		_[ "/upload__html" ] = function( req, res ){
-			var q = global.b2link.url.getQueryFromURL( req.url );
+			var q = global.apis.url.getQueryFromURL( req.url );
 			var r = "";
 			req.on( "data", function( chunk ){
 				r += chunk;

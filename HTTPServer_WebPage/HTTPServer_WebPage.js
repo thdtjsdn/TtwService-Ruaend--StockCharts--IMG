@@ -221,6 +221,17 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				global.console.error( er );
 			}
 		};
+		_[ "/upload__voice_history_1line" ] = function( req, res ){
+			var r = "";
+			req.on( "data", function( chunk ){
+				r += chunk;
+				//console.log( "chunk : " + chunk );
+			});
+			req.on( "end", function( chunk ){
+				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 1line.html", r );
+			});
+			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+		};
 		_[ "/upload__voice_history_05" ] = function( req, res ){
 			var r = "";
 			req.on( "data", function( chunk ){

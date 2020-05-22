@@ -241,7 +241,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		var DATA__upload__voice_history_1line = {
 			txt : ""
 		};
-		_[ "/download__voice_history_1line" ] = function( req, res ){ SUtilHttpServerResponse.responseWrite_200_String( res, DATA__upload__voice_history_1line.txt ); };
+		_[ "/download__voice_history_1line" ] = function( req, res ){ global.apis.response.send_200_String( req, res, DATA__upload__voice_history_1line.txt ); };
 		_[ "/upload__voice_history_1line" ] = function( req, res ){
 			var r = "";
 			req.on( "data", function( chunk ){

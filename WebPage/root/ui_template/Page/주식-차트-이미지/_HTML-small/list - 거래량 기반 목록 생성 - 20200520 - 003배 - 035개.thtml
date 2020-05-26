@@ -86,505 +86,660 @@
 		<div id="list-stock-charts-img">
 			<style>body { overflow-x: none; background-color: black; } img { padding: 0px !important; border: none !important; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; }</style>
 <div id="ID-CONTAINER" style="display: flex; flex-wrap: wrap; overflow-x: none;">
-	<div style="width: 100%">
-		<input type="button" value="뉴스/토론 숨김" onclick="(function(e){ var a = window.document.getElementsByName( 'news' ); var b = window.document.getElementsByName( 'toro' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ b[ i ].style.display = a[ i ].style.display = 'none'; }})();"/>
-		<input type="button" value="뉴스/토론 켜기" onclick="(function(e){ var a = window.document.getElementsByName( 'news' ); var b = window.document.getElementsByName( 'toro' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = a[ i ].style.display = ''; }})();"/>
+	<div style="width: 100%; posotion: absolute; left: 0px; top: 0px; right: 0px;">
+		<input type="button" value="전체 숨김" onclick="(function(e){ var a = window.document.getElementsByName( 'news' ); var b = window.document.getElementsByName( 'toro' ); var c = window.document.getElementsByName( 'IMG-FHD' ); var d = window.document.getElementsByName( 'IMG-FHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ d[ i ].style.display = c[ i ].style.display = b[ i ].style.display = a[ i ].style.display = 'none'; }})();"/>
+		<input type="button" value="전체 켜기" onclick="(function(e){ var a = window.document.getElementsByName( 'news' ); var b = window.document.getElementsByName( 'toro' ); var c = window.document.getElementsByName( 'IMG-FHD' ); var d = window.document.getElementsByName( 'IMG-FHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ d[ i ].style.display = c[ i ].style.display = b[ i ].style.display = a[ i ].style.display = ''; }})();"/>
 		<input type="button" value="뉴스 숨김" onclick="(function(e){ var a = window.document.getElementsByName( 'news' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; }})();"/>
 		<input type="button" value="뉴스 켜기" onclick="(function(e){ var a = window.document.getElementsByName( 'news' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; }})();"/>
 		<input type="button" value="토론 숨김" onclick="(function(e){ var a = window.document.getElementsByName( 'toro' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; }})();"/>
 		<input type="button" value="토론 켜기" onclick="(function(e){ var a = window.document.getElementsByName( 'toro' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; }})();"/>
-	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
+		<input type="button" value="FHD 숨김" onclick="(function(e){ var a = window.document.getElementsByName( 'IMG-FHD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; }})();"/>
+		<input type="button" value="FHD 켜기" onclick="(function(e){ var a = window.document.getElementsByName( 'IMG-FHD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; }})();"/>
+		<input type="button" value="HTS FHD 숨김" onclick="(function(e){ var a = window.document.getElementsByName( 'IMG-FHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; }})();"/>
+		<input type="button" value="HTS FHD 켜기" onclick="(function(e){ var a = window.document.getElementsByName( 'IMG-FHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; }})();"/>
+	</div><div style="height: 30px;"></div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">KMH하이텍</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/KMH하이텍.png" alt="KMH하이텍.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/KMH하이텍.png" alt="KMH하이텍.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/KMH하이텍.png" alt="KMH하이텍.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/KMH하이텍.png" alt="KMH하이텍.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">갤럭시아컴즈</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/갤럭시아컴즈.png" alt="갤럭시아컴즈.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/갤럭시아컴즈.png" alt="갤럭시아컴즈.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/갤럭시아컴즈.png" alt="갤럭시아컴즈.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/갤럭시아컴즈.png" alt="갤럭시아컴즈.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">구영테크</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/구영테크.png" alt="구영테크.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/구영테크.png" alt="구영테크.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/구영테크.png" alt="구영테크.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/구영테크.png" alt="구영테크.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">나노신소재</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/나노신소재.png" alt="나노신소재.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/나노신소재.png" alt="나노신소재.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/나노신소재.png" alt="나노신소재.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/나노신소재.png" alt="나노신소재.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">대모</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/대모.png" alt="대모.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/대모.png" alt="대모.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/대모.png" alt="대모.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/대모.png" alt="대모.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">데일리블록체인</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/데일리블록체인.png" alt="데일리블록체인.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/데일리블록체인.png" alt="데일리블록체인.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/데일리블록체인.png" alt="데일리블록체인.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/데일리블록체인.png" alt="데일리블록체인.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">동원수산</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/동원수산.png" alt="동원수산.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/동원수산.png" alt="동원수산.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/동원수산.png" alt="동원수산.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/동원수산.png" alt="동원수산.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">비디아이</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/비디아이.png" alt="비디아이.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/비디아이.png" alt="비디아이.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/비디아이.png" alt="비디아이.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/비디아이.png" alt="비디아이.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">비에이치</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/비에이치.png" alt="비에이치.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/비에이치.png" alt="비에이치.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/비에이치.png" alt="비에이치.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/비에이치.png" alt="비에이치.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">삼성공조</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/삼성공조.png" alt="삼성공조.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/삼성공조.png" alt="삼성공조.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/삼성공조.png" alt="삼성공조.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/삼성공조.png" alt="삼성공조.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">삼지전자</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/삼지전자.png" alt="삼지전자.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/삼지전자.png" alt="삼지전자.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/삼지전자.png" alt="삼지전자.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/삼지전자.png" alt="삼지전자.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">슈피겐코리아</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/슈피겐코리아.png" alt="슈피겐코리아.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/슈피겐코리아.png" alt="슈피겐코리아.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/슈피겐코리아.png" alt="슈피겐코리아.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/슈피겐코리아.png" alt="슈피겐코리아.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">씨에스베어링</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/씨에스베어링.png" alt="씨에스베어링.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/씨에스베어링.png" alt="씨에스베어링.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/씨에스베어링.png" alt="씨에스베어링.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/씨에스베어링.png" alt="씨에스베어링.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">알티캐스트</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/알티캐스트.png" alt="알티캐스트.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/알티캐스트.png" alt="알티캐스트.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/알티캐스트.png" alt="알티캐스트.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/알티캐스트.png" alt="알티캐스트.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">애니플러스</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/애니플러스.png" alt="애니플러스.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/애니플러스.png" alt="애니플러스.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/애니플러스.png" alt="애니플러스.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/애니플러스.png" alt="애니플러스.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">에프엔에스테크</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/에프엔에스테크.png" alt="에프엔에스테크.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/에프엔에스테크.png" alt="에프엔에스테크.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/에프엔에스테크.png" alt="에프엔에스테크.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/에프엔에스테크.png" alt="에프엔에스테크.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">엔에스엔</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/엔에스엔.png" alt="엔에스엔.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/엔에스엔.png" alt="엔에스엔.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/엔에스엔.png" alt="엔에스엔.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/엔에스엔.png" alt="엔에스엔.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">예스코홀딩스</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/예스코홀딩스.png" alt="예스코홀딩스.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/예스코홀딩스.png" alt="예스코홀딩스.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/예스코홀딩스.png" alt="예스코홀딩스.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/예스코홀딩스.png" alt="예스코홀딩스.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">유나이티드</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/유나이티드.png" alt="유나이티드.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/유나이티드.png" alt="유나이티드.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/유나이티드.png" alt="유나이티드.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/유나이티드.png" alt="유나이티드.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">유진스팩4호</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/유진스팩4호.png" alt="유진스팩4호.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/유진스팩4호.png" alt="유진스팩4호.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/유진스팩4호.png" alt="유진스팩4호.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/유진스팩4호.png" alt="유진스팩4호.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">이노메트리</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/이노메트리.png" alt="이노메트리.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/이노메트리.png" alt="이노메트리.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/이노메트리.png" alt="이노메트리.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/이노메트리.png" alt="이노메트리.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">이녹스</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/이녹스.png" alt="이녹스.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/이녹스.png" alt="이녹스.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/이녹스.png" alt="이녹스.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/이녹스.png" alt="이녹스.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">자이에스앤디</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/자이에스앤디.png" alt="자이에스앤디.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/자이에스앤디.png" alt="자이에스앤디.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/자이에스앤디.png" alt="자이에스앤디.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/자이에스앤디.png" alt="자이에스앤디.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">케이비제20호스팩</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/케이비제20호스팩.png" alt="케이비제20호스팩.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/케이비제20호스팩.png" alt="케이비제20호스팩.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/케이비제20호스팩.png" alt="케이비제20호스팩.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/케이비제20호스팩.png" alt="케이비제20호스팩.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">케이프이에스제4호</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/케이프이에스제4호.png" alt="케이프이에스제4호.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/케이프이에스제4호.png" alt="케이프이에스제4호.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/케이프이에스제4호.png" alt="케이프이에스제4호.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/케이프이에스제4호.png" alt="케이프이에스제4호.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">케이피에스</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/케이피에스.png" alt="케이피에스.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/케이피에스.png" alt="케이피에스.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/케이피에스.png" alt="케이피에스.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/케이피에스.png" alt="케이피에스.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">켐트로스</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/켐트로스.png" alt="켐트로스.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/켐트로스.png" alt="켐트로스.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/켐트로스.png" alt="켐트로스.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/켐트로스.png" alt="켐트로스.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">코스나인</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/코스나인.png" alt="코스나인.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/코스나인.png" alt="코스나인.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/코스나인.png" alt="코스나인.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/코스나인.png" alt="코스나인.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">코이즈</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/코이즈.png" alt="코이즈.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/코이즈.png" alt="코이즈.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/코이즈.png" alt="코이즈.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/코이즈.png" alt="코이즈.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">콤텍시스템</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/콤텍시스템.png" alt="콤텍시스템.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/콤텍시스템.png" alt="콤텍시스템.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/콤텍시스템.png" alt="콤텍시스템.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/콤텍시스템.png" alt="콤텍시스템.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">파워로직스</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/파워로직스.png" alt="파워로직스.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/파워로직스.png" alt="파워로직스.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/파워로직스.png" alt="파워로직스.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/파워로직스.png" alt="파워로직스.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">피에스텍</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/피에스텍.png" alt="피에스텍.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/피에스텍.png" alt="피에스텍.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/피에스텍.png" alt="피에스텍.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/피에스텍.png" alt="피에스텍.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">한국제7호스팩</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/한국제7호스팩.png" alt="한국제7호스팩.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/한국제7호스팩.png" alt="한국제7호스팩.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/한국제7호스팩.png" alt="한국제7호스팩.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/한국제7호스팩.png" alt="한국제7호스팩.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">한송네오텍</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/한송네오텍.png" alt="한송네오텍.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/한송네오텍.png" alt="한송네오텍.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/한송네오텍.png" alt="한송네오텍.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/한송네오텍.png" alt="한송네오텍.png"/>
 		</div>
 	</div><div style="display: flex; flex-wrap: wrap; overflow-x: none; overflow-y: none; border: 1px solid #FFFFFF;">
 		<span style="width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block;">후성</span>
 		<div style="margin: 0px; width: 710px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
 			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 700px !important; height: fit-content;"
-				data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/후성.png" alt="후성.png"/>
+				data-type="" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf/후성.png" alt="후성.png"/>
 		</div>
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<!--
-			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			<div id="ID-토론" name="toro" class="toro" style="padding: 2px; width: 590px; height: 1080px; overflow-y: auto; color: #FFFFFF;"></div>
-			-->
+			<div id="ID-뉴스" name="news" class="news" style="padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+			<div id="ID-토론" name="toro" class="toro" style="display: none; padding: 2px; width: 270px; height: 1080px; overflow-y: scroll; color: #FFFFFF;"></div>
+		</div>
+		<div name="IMG-FHD" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd" data-src="http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/후성.png" alt="후성.png"/>
+		</div>
+		<div name="IMG-FHD-HTS" style="display: none; margin: 0px; width: 630px !important; height: 1080px; overflow-y: scroll; overflow-x: none; display: flex; float: none;">
+			<img onError="this.src='https://via.placeholder.com/100/000.png'" class="lazy" style="width: 620px !important; height: 1080px;"
+				data-type="fhd-hts" data-src="http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/후성.png" alt="후성.png"/>
 		</div>
 	</div></div><SCRIPT type="text/javascript">
 (function(){
+
+(function(e){
+	var a = window.document.getElementsByName( 'news' );
+	var b = window.document.getElementsByName( 'toro' );
+	var c = window.document.getElementsByName( 'IMG-FHD' );
+	var d = window.document.getElementsByName( 'IMG-FHD-HTS' );
+	var i=0, iLen=a.length;
+	for( ;i<iLen; ++i ){
+		d[ i ].style.display = c[ i ].style.display = b[ i ].style.display = a[ i ].style.display = 'none';
+	}
+})();
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -632,7 +787,27 @@
 
 window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", function( e ){
 	var t = e.target;
-	if( t.tagName == "IMG" ) window.open( "http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+	if( t.tagName == "IMG" ){
+		if( e.ctrlKey )
+		{
+			window.open( "http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
+		}
+		else
+		{
+			if( "fhd" == t.getAttribute( "data-type" ) )
+			{
+				window.open( "http://thdtjsdn.shop/img/stock/charts/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
+			}
+			else if( "fhd-hts" == t.getAttribute( "data-type" ) )
+			{
+				window.open( "http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+			}
+			else
+			{
+				window.open( "http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+			}
+		}
+	}
 	if( t.tagName == "SPAN" )
 	{
 		if( t.getAttribute( "data-type" ) == "LINK" )
@@ -719,6 +894,9 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 		timeout__lazyLoad__NEWS = setTimeout(function() {
 			var scrollTop = window.pageYOffset;
 			els.forEach(function( el ){
+
+				if( el.style.display == "none" ) return;
+
 				if( el.offsetTop < ( window.innerHeight + scrollTop ) )
 				{
 					el.classList.remove( "news" );
@@ -783,6 +961,9 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 		timeout__lazyLoad__TORON = setTimeout(function() {
 			var scrollTop = window.pageYOffset;
 			els.forEach(function( el ){
+
+				if( el.style.display == "none" ) return;
+
 				if( el.offsetTop < ( window.innerHeight + scrollTop ) )
 				{
 					el.classList.remove( "toro" );

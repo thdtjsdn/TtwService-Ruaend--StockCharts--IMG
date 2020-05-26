@@ -971,6 +971,16 @@ window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", func
 			}
 		}
 	}
+
+	if( t.tagName == "INPUT" )
+	{
+		setTimeout( function(){
+			window.__lazyLoad__IMG();
+			window.__lazyLoad__NEWS();
+			window.__lazyLoad__TORON();
+		}, 500 );
+	}
+
 	if( t.tagName == "SPAN" )
 	{
 		if( t.getAttribute( "data-type" ) == "LINK" )
@@ -1014,6 +1024,7 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 			}
 		}, 500 );
 	}
+	window.__lazyLoad__IMG = lazyLoad__IMG;
 
 	window.document.getElementById( "ID-CONTAINER" ).addEventListener( "scroll", lazyLoad__IMG );
 	//window.addEventListener( "scroll", lazyLoad__IMG );
@@ -1099,6 +1110,7 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 			}
 		}, 500 );
 	}
+	window.__lazyLoad__NEWS = lazyLoad__NEWS;
 
 	window.document.getElementById( "ID-CONTAINER" ).addEventListener( "scroll", lazyLoad__NEWS );
 	//window.addEventListener( "scroll", lazyLoad__NEWS );
@@ -1180,6 +1192,8 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 			}
 		}, 500 );
 	}
+
+	window.__lazyLoad__TORON = lazyLoad__TORON;
 
 	window.document.getElementById( "ID-CONTAINER" ).addEventListener( "scroll", lazyLoad__TORON );
 	//window.addEventListener( "scroll", lazyLoad__TORON );

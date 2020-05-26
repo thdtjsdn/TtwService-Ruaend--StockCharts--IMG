@@ -3046,9 +3046,11 @@
 
 window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", function( e ){
 	var t = e.target;
-	if( t.tagName == "IMG" )
+	if( t.tagName == "IMG" ) window.open( "http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+	if( t.tagName == "SPAN" )
 	{
-		window.open( "http://thdtjsdn.shop/img/stock/charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+		if( t.getAttribute( "data-type" ) == "LINK" )
+			window.open( "https://www.google.com/search?q=" + t.innerText, "_blank" );
 	}
 });
 

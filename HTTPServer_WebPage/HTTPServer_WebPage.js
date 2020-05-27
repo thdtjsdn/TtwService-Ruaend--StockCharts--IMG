@@ -275,6 +275,8 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 
 				debugger;
 
+				console.log( q.name + " - " + q.date );
+
 				try
 				{
 					var path = "../WebPage/root/json/stock/" + o[ q.name ] + "/" + q.date + ".json" ;

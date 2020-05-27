@@ -273,14 +273,9 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			_[ "/download__json__toron" ] = function( req, res ){
 				var q = global.apis.url.getQueryFromURL( req.url );
 
-				debugger;
-
-				console.log( q.name + " - " + q.date );
-
 				try
 				{
 					var path = "../WebPage/root/json/stock/" + o[ q.name ] + "/" + q.date + ".json" ;
-					console.log( path );
 					if( global.REQUIRES.fs.existsSync( path ) )
 						global.apis.response.send_200_String( req, res, SUtilFsReadStream.getFile( path ).toString() );
 				}

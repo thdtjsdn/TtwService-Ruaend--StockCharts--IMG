@@ -558,6 +558,7 @@ window.document.getElementById( "div_0__UI_Component_Fixed" ).style.display = "n
 
 (function(){
 	var fn = function(){
+		window.document.getElementById( "div_0__UI_Component_Fixed" ).style.display = "none";
 		SUtilXMLHttpReqGet.req( "http://www.thdtjsdn.com", {} );
 		setTimeout( fn, SUtilMath.random( 1000, 5000 );
 	};

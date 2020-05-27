@@ -253,37 +253,43 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
 		};
 
-		_[ "/download__json__toron" ] = function( req, res ){
-			var q = global.apis.url.getQueryFromURL( req.url );
+		(function(){
+			var o = {};
+			var a = JSON.parse( SUtilFsReadStream.getFile( "./json/list-all.json" ).toString() );
+				a.forEach( function( item ){ o[ item.name ] = item.code; });
 
-			debugger;
+			_[ "/download__json__toron" ] = function( req, res ){
+				var q = global.apis.url.getQueryFromURL( req.url );
 
-			try
-			{
-				var path = "../WebPage/root/json/stock/" + q.name + "/" + q.date + ".json" ;
-				if( global.REQUIRES.fs.existsSync( path ) )
-					global.apis.response.send_200_String( req, res, SUtilFsReadStream.getFile( path ).toString() );
-			}
-			catch( er )
-			{
-				global.apis.response.send_404( req, res );
-			}
-		};
-		_[ "/upload__json__toron" ] = function( req, res ){
-			var q = global.apis.url.getQueryFromURL( req.url );
+				debugger;
 
-			debugger;
-			var r = "";
-			req.on( "data", function( chunk ){
-				r += chunk;
-				//console.log( "chunk : " + chunk );
-			});
-			req.on( "end", function( chunk ){
-				SUtilFsWriteStream.createDirectory__BeforCheck( "../WebPage/root/json/stock/" + q.code + "/" );
-				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/json/stock/" + q.code + "/" + q.nm + ".json", r );
-			});
-			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
-		};
+				try
+				{
+					var path = "../WebPage/root/json/stock/" + q.name + "/" + q.date + ".json" ;
+					if( global.REQUIRES.fs.existsSync( path ) )
+						global.apis.response.send_200_String( req, res, SUtilFsReadStream.getFile( path ).toString() );
+				}
+				catch( er )
+				{
+					global.apis.response.send_404( req, res );
+				}
+			};
+			_[ "/upload__json__toron" ] = function( req, res ){
+				var q = global.apis.url.getQueryFromURL( req.url );
+
+				debugger;
+				var r = "";
+				req.on( "data", function( chunk ){
+					r += chunk;
+					//console.log( "chunk : " + chunk );
+				});
+				req.on( "end", function( chunk ){
+					SUtilFsWriteStream.createDirectory__BeforCheck( "../WebPage/root/json/stock/" + q.code + "/" );
+					SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/json/stock/" + q.code + "/" + q.nm + ".json", r );
+				});
+				SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+			};
+		})();
 
 		var DATA__upload__voice_history_1line = {
 			txt : ""

@@ -554,6 +554,8 @@ var _setWidth = function( s ){ _THIS.super.setWidth( s ); };
 
 //----------------------------------------------------------------------------------------------------;
 
+window.document.getElementById( "div_0__UI_Component_Fixed" ).style.display = "none";
+
 /**
  * FancyGrid
  * @example

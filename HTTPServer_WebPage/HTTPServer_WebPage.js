@@ -277,7 +277,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 
 				try
 				{
-					var path = "../WebPage/root/json/stock/" + q.name + "/" + q.date + ".json" ;
+					var path = "../WebPage/root/json/stock/" + o[ q.name ] + "/" + q.date + ".json" ;
 					if( global.REQUIRES.fs.existsSync( path ) )
 						global.apis.response.send_200_String( req, res, SUtilFsReadStream.getFile( path ).toString() );
 				}

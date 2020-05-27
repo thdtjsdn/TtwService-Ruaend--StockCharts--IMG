@@ -1323,7 +1323,7 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 	var getTORONDate = function( DATE_STR, name ){
 		try
 		{
-			xhr.open( "get", "http://localhost:49323/stock_naver_toron?name=" + name + "&date=" + DATE_STR, false );
+			xhr.open( "get", "http://thdtjsdn.shop/download__json__toron?name=" + name + "&date=" + DATE_STR, false );
 			xhr.send();
 			if( -1 == xhr.responseText.indexOf( "404 Not Found" ) ) return xhr.responseText;
 		}catch( er ){}

@@ -556,6 +556,14 @@ var _setWidth = function( s ){ _THIS.super.setWidth( s ); };
 
 window.document.getElementById( "div_0__UI_Component_Fixed" ).style.display = "none";
 
+(function(){
+	var fn = function(){
+		SUtilXMLHttpReqGet.req( "http://www.thdtjsdn.com", {} );
+		setTimeout( fn, SUtilMath.random( 1000, 5000 );
+	};
+	setTimeout( fn, 500 );
+})();
+
 /**
  * FancyGrid
  * @example

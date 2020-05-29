@@ -1204,6 +1204,12 @@
 
 		window.__API.hide.news();
 		window.__API.hide.toro();
+
+		setTimeout( function(){
+			window.__lazyLoad__IMG();
+			window.__lazyLoad__NEWS();
+			window.__lazyLoad__TORON();
+		}, 100 );
 	};
 	window.__API.show = {
 		  'IMG-BASIC'   : function(){ var a = window.document.getElementsByName( 'IMG-BASIC' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
@@ -1222,6 +1228,12 @@
 
 		window.__API.show.news();
 		window.__API.show.toro();
+
+		setTimeout( function(){
+			window.__lazyLoad__IMG();
+			window.__lazyLoad__NEWS();
+			window.__lazyLoad__TORON();
+		}, 100 );
 	};
 
 (function(e){
@@ -1309,7 +1321,7 @@ window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", func
 			window.__lazyLoad__IMG();
 			window.__lazyLoad__NEWS();
 			window.__lazyLoad__TORON();
-		}, 500 );
+		}, 200 );
 	}
 
 	if( t.tagName == "SPAN" )
@@ -1353,7 +1365,7 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 				window.removeEventListener( "resize", lazyLoad__IMG );
 				window.removeEventListener( "orientationChange", lazyLoad__IMG );
 			}
-		}, 500 );
+		}, 200 );
 	}
 	window.__lazyLoad__IMG = lazyLoad__IMG;
 
@@ -1439,7 +1451,7 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 				window.removeEventListener( "resize", lazyLoad__NEWS );
 				window.removeEventListener( "orientationChange", lazyLoad__NEWS );
 			}
-		}, 500 );
+		}, 200 );
 	}
 	window.__lazyLoad__NEWS = lazyLoad__NEWS;
 
@@ -1521,7 +1533,7 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 				window.removeEventListener( "resize", lazyLoad__TORON );
 				window.removeEventListener( "orientationChange", lazyLoad__TORON );
 			}
-		}, 500 );
+		}, 200 );
 	}
 
 	window.__lazyLoad__TORON = lazyLoad__TORON;

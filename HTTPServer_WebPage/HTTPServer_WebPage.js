@@ -260,7 +260,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				//console.log( "chunk : " + chunk );
 			});
 			req.on( "end", function( chunk ){
-				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/ui/Page/주식-차트-이미지/HTML-small" + q.nm + ".html", r );
+				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/ui/Page/주식-차트-이미지/HTML-small/" + q.nm + ".html", r );
 			});
 			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
 		};

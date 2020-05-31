@@ -245,7 +245,22 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				//console.log( "chunk : " + chunk );
 			});
 			req.on( "end", function( chunk ){
-				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/" + q.nm + ".html", r );
+				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/ui/stock/" + q.nm + ".html", r );
+			});
+			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+		};
+
+		_[ "/upload__html__ui" ] = function( req, res ){
+			var q = global.apis.url.getQueryFromURL( req.url );
+
+			debugger;
+			var r = "";
+			req.on( "data", function( chunk ){
+				r += chunk;
+				//console.log( "chunk : " + chunk );
+			});
+			req.on( "end", function( chunk ){
+				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/ui/Page/주식-차트-이미지/HTML-small" + q.nm + ".html", r );
 			});
 			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
 		};

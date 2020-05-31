@@ -236,7 +236,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			}
 		};
 		_[ "/upload__html" ] = function( req, res ){
-			var q = global.apis.url.getQueryFromURL_Decode( req.url );( req.url );
+			var q = global.apis.url.getQueryFromURL_Decode( req.url );
 
 			debugger;
 			var r = "";
@@ -251,7 +251,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		};
 
 		_[ "/upload__html__ui" ] = function( req, res ){
-			var q = global.apis.url.getQueryFromURL_Decode( req.url );( req.url );
+			var q = global.apis.url.getQueryFromURL_Decode( req.url );
 
 			debugger;
 			var r = "";
@@ -266,7 +266,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		};
 
 		_[ "/upload__json" ] = function( req, res ){
-			var q = global.apis.url.getQueryFromURL_Decode( req.url );( req.url );
+			var q = global.apis.url.getQueryFromURL_Decode( req.url );
 
 			debugger;
 			var r = "";
@@ -286,7 +286,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				a.forEach( function( item ){ o[ item.name ] = item.code; });
 
 			_[ "/download__json__toron" ] = function( req, res ){
-				var q = global.apis.url.getQueryFromURL_Decode( req.url );( req.url );
+				var q = global.apis.url.getQueryFromURL_Decode( req.url );
 
 				try
 				{
@@ -301,7 +301,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				}
 			};
 			_[ "/upload__json__toron" ] = function( req, res ){
-				var q = global.apis.url.getQueryFromURL_Decode( req.url );( req.url );
+				var q = global.apis.url.getQueryFromURL_Decode( req.url );
 
 				debugger;
 				var r = "";

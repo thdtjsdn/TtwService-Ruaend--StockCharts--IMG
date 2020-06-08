@@ -104,6 +104,7 @@ body { overflow-x: hidden; overflow-y: hidden; background-color: black; } img { 
 
 .img__w_660__h_fit { width: 660px; height: fit-content; }
 .img__w_660__h_211 { width: 660px; height: 211px; }
+.img__w_660__h_401 { width: 660px; height: 401px; }
 .img__w_660__h_218 { width: 660px; height: 218px; }
 .img__w_660__h_350 { width: 660px; height: 350px; }
 
@@ -123,7 +124,7 @@ body { overflow-x: hidden; overflow-y: hidden; background-color: black; } img { 
 데이터 업데이트 당일 장종료 후 외인/기관/개인 수급량 데이터는 반영되있지 않습니다.
 
 18시 30분 이후 밤 업데이트시 반영됩니다.
-</P><br><P style="color: #ffac05;">업데이트 시간 : Fri Jun 05 2020 21:07:06 GMT+0900 (한국 표준시)</p>
+</P><br><P style="color: #ffac05;">업데이트 시간 : Tue Jun 09 2020 00:32:08 GMT+0900 (한국 표준시)</p>
 <div style="width: 100%; posotion: absolute; left: 0px; top: 0px; right: 0px;">
 	<input type="input" style="margin: 2px; padding: 2px; height: 40px;" value="" placeholder="종목이름" onkeydown="window.__API.search( event );"/>
 
@@ -150,7 +151,7 @@ body { overflow-x: hidden; overflow-y: hidden; background-color: black; } img { 
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HTS FHD 숨김" onclick="(function(){ window.__API.hide[ 'IMG-FHD-HTS' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HTS FHD 켜기" onclick="(function(){ window.__API.show[ 'IMG-FHD-HTS' ](); })();"/>
 </div>
-<div id="ID-CONTAINER" style="display: flex; flex-wrap: wrap; overflow-x: hidden; height: calc( 100% - 200px ); overflow-y: scroll;">
+<div id="ID-CONTAINER" style="display: flex; flex-wrap: wrap; overflow-x: hidden; height: calc( 100% - 220px ); overflow-y: scroll;">
 	<div style="height: 60px;"></div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
 		<span class="span__stockName">동구바이오제약</span>
 
@@ -359,17 +360,6 @@ body { overflow-x: hidden; overflow-y: hidden; background-color: black; } img { 
 		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="{{종목명}}" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/{{종목명}}.png" /></div>
 		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="{{종목명}}" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/{{종목명}}.png" /></div>
 	</div>`;
-
-(function(e){
-	window.__API.hide.all();
-
-	//window.__API.show[ "IMG-MINI" ]();
-
-	//window.__API.show[ 'IMG-BASIC' ]();
-	window.__API.show[ 'IMG-HD' ]();
-	window.__API.show.news();
-	window.__API.show.toro();
-})();
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -683,6 +673,16 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 
 	setTimeout( lazyLoad__TORON, 10 );
 
+	(function(e){
+		window.__API.hide.all();
+
+		//window.__API.show[ "IMG-MINI" ]();
+
+		//window.__API.show[ 'IMG-BASIC' ]();
+		window.__API.show[ 'IMG-HD' ]();
+		//window.__API.show.news();
+		//window.__API.show.toro();
+	})();
 });
 
 //----------------------------------------------------------------------------------------------------;

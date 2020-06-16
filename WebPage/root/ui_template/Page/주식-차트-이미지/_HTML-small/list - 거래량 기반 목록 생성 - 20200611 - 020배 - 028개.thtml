@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<HTML lang="en" xml:lang="en">
+<HEAD>
+	<TITLE>list - 거래량 기반 목록 생성 - 20200611 - 020배 - 028개</TITLE>
+
+	<META name="google" value="notranslate" />
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<META http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+	<META name="format-detection" content="telephone=no,address=no,email=thdtjsdn@gmail.com">
+	<META name="robots" content="index,follow">
+	<META name="apple-mobile-web-app-title" content="thdtjsdn">
+
+	<META name="keywords" content="">
+	<META name="description" content="">
+
+	<!-- facebook -->
+	<META property="og:type" content="website">
+	<META property="og:title" content="thdtjsdn">
+	<META property="og:site_name" content="thdtjsdn">
+	<META property="og:url" content="https://www.facebook.com/thdtjsdn">
+	<META property="og:image" content="">
+	<META property="og:description" content=""/>
+
+	<!-- twitter -->
+	<META name="twitter:card" content="summary">
+	<META name="twitter:title" content="thdtjsdn">
+	<META name="twitter:url" content="https://twitter.com/thdtjsdn">
+	<META name="twitter:image" content="">
+	<META name="twitter:description" content=""/>
+
+	<!--
+	<META name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+	<META name="viewport" content="width=device-width, initial-scale=0.70, maximum-scale=1.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
+	<META name="viewport" content="width=device-width, initial-scale=0.76, maximum-scale=1.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
+	<META name="viewport" content="width=device-width, initial-scale=0.77, maximum-scale=1.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
+	<META name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
+	-->
+
+	<!-- favicon -->
+	<LINK rel="shortcut icon" type="image/x-icon" href="" />
+	<LINK rel="apple-touch-icon" href="" />
+
+	<!-- CSS - ./css -->
+	<STYLE></STYLE>
+
+	<!-- CSS -->
+	<!--
+	<LINK rel="stylesheet" type="text/css" href="http://localhost:49323/libs/Semantic-UI/2.4.1/min-122-s.css" />
+	<LINK rel="stylesheet" type="text/css" href="http://dnsproxy.shop:49323/libs/Semantic-UI/2.4.1/min-122-base-s.css" />
+	<LINK rel="stylesheet" type="text/css" href="http://thdtjsdn.shop:49323/libs/Semantic-UI/2.4.1/min-122-base-s.css" />
+	<LINK rel="stylesheet" type="text/css" href="http://www.ruaend.kr:49323/libs/Semantic-UI/2.4.1/min-122-base-s.css" />
+	<LINK rel="stylesheet" type="text/css" href="http://116.33.62.146:49323/libs/Semantic-UI/2.4.1/min-122-s.css" />
+	-->
+
+	<!-- JS -->
+	<!--
+	<SCRIPT type="text/javascript" src="./js-common/index--SYS0320.min.js" async="false" defer="true"></SCRIPT>
+	-->
+
+	<!-- Google AdSense - thdtjsdn -->
+	<script data-ad-client="ca-pub-1892980256031512" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</HEAD>
+
+<BODY style="background-color: #000000;">
+	<!--
+		id, class 수정 금지
+		화면에 보이지 않아도 되는 DOM 객체
+		배경에 애니메이션 같은 배경 효과
+	-->
+	<DIV id="div_0__Background" class="divContainer background"></DIV>
+
+	<!--
+		id, class 수정 금지
+		<Object>를 활용하지 않은 Main Application
+	-->
+	<DIV id="div_0__Application" class="divContainer application"></DIV>
+
+	<!--
+		id, class 수정 금지
+		UI 객체 고정된 좌표로 배치
+		사용자가 layou을 조작할 수 없는 UI 객체 배치
+	-->
+	<DIV id="div_0__UI_Component_Fixed" class="divContainer uiCompFixed">
+		<div id="list-stock-charts-img" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; height: 100% !important;">
+			<style>
+body { overflow-x: hidden; overflow-y: hidden; background-color: black; } img { padding: 0px !important; border: none !important; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; } .divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
+
+.div__fit__wh { width: fit-content; height: fit-content; }
+
+.div__w_fit__h_439 { width: fit-content; height: 439px; }
+
+.div__w_630__h_2430 { width: 630px; height: 2430px; display: none; margin: 0px; overflow-y: scroll; overflow-x: hidden; display: flex; float: none; }
+
+.div__w_670__h_fit { width: 670px; height: fit-content; margin: 0px; overflow-y: scroll; }
+.div__w_670__h_360 { width: 670px; height: 360px; margin: 0px; overflow-y: scroll; }
+
+.div__w_960__h_fit  { width: 960px; height: fit-content; margin: 0px; overflow-y: scroll; overflow-x: hidden; float: none; }
+
+.div__w_1920__h_1058 { width: 1920px; height: 1058px; display: none; margin: 0px; overflow-y: scroll; overflow-x: hidden; display: flex; float: none; }
+.div__w_3048__h_2147 { width: 3840px; height: 2147px; display: none; margin: 0px; overflow-y: scroll; overflow-x: hidden; display: flex; float: none; }
+.div__w_3048__h_2158 { width: 3840px; height: 2158px; display: none; margin: 0px; overflow-y: scroll; overflow-x: hidden; display: flex; float: none; }
+
+.img__w_660__h_fit { width: 660px; height: fit-content; }
+.img__w_660__h_211 { width: 660px; height: 211px; }
+.img__w_660__h_218 { width: 660px; height: 218px; }
+.img__w_660__h_350 { width: 660px; height: 350px; }
+
+.img__w_950__h_fit { width: 950px; height: fit-content; }
+.img__w_950__h_250 { width: 950px; height: 250px; }
+.img__w_950__h_340 { width: 950px; height: 340px; }
+.img__w_950__h_560 { width: 950px; height: 560px; }
+
+.span__stockName { width: 0px; max-width: 0px; font-size: 1px; color: #000000; display: inline-block; }
+
+
+.board_news { padding: 2px; width: 270px; height: 2839px !important; overflow-y: scroll; color: #FFFFFF; }
+.board_toro { padding: 2px; width: 270px; height: 2839px !important; overflow-y: scroll; color: #FFFFFF; }
+
+</style>
+<P style="color: #ffac05;">UPDATE TIME : Tue Jun 16 2020 17:46:43 GMT+0900 (한국 표준시)</p>
+<div style="width: 100%; posotion: absolute; left: 0px; top: 0px; right: 0px;">
+	<input type="input" style="margin: 2px; padding: 2px; height: 40px;" value="" placeholder="종목이름" onkeydown="window.__API.search( event );"/>
+
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="모드(미니)" onclick="(function(){ window.__API.hide.all(); window.__API.show[ 'IMG-MINI' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="모드(기본)" onclick="(function(){ window.__API.hide.all(); window.__API.show[ 'IMG-BASIC' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="모드(HD)"    onclick="(function(){ window.__API.hide.all(); window.__API.show[ 'IMG-HD' ](); })();"/>
+
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="전체 숨김"    onclick="(function(){ window.__API.hide.all(); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="전체 켜기"    onclick="(function(){ window.__API.show.all(); })();"/>
+	<!--
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="뉴스 숨김"    onclick="(function(){ window.__API.hide.news(); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="뉴스 켜기"    onclick="(function(){ window.__API.show.news(); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="토론 숨김"    onclick="(function(){ window.__API.hide.toro(); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="토론 켜기"    onclick="(function(){ window.__API.show.toro(); })();"/>
+	-->
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="BASIC 숨김"   onclick="(function(){ window.__API.hide[ 'IMG-BASIC' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="BASIC 켜기"   onclick="(function(){ window.__API.show[ 'IMG-BASIC' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="MINI 숨김"    onclick="(function(){ window.__API.hide[ 'IMG-MINI' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="MINI 켜기"    onclick="(function(){ window.__API.show[ 'IMG-MINI' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HD 숨김"      onclick="(function(){ window.__API.hide[ 'IMG-HD' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HD 켜기"      onclick="(function(){ window.__API.show[ 'IMG-HD' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="FHD 숨김"     onclick="(function(){ window.__API.hide[ 'IMG-FHD' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="FHD 켜기"     onclick="(function(){ window.__API.show[ 'IMG-FHD' ](); })();"/>
+	<!--
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="UHD 숨김"     onclick="(function(){ window.__API.hide[ 'IMG-UHD' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="UHD 켜기"     onclick="(function(){ window.__API.show[ 'IMG-UHD' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HTS FHD 숨김" onclick="(function(){ window.__API.hide[ 'IMG-FHD-HTS' ](); })();"/>
+	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HTS FHD 켜기" onclick="(function(){ window.__API.show[ 'IMG-FHD-HTS' ](); })();"/>
+	-->
+</div>
+<div id="ID-CONTAINER" style="display: flex; flex-wrap: wrap; overflow-x: hidden; height: calc( 100% - 200px ); overflow-y: scroll;">
+	<div style="height: 60px;"></div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">ACER</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="ACER.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/ACER.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/ACER.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/ACER.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/ACER.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/ACER.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/ACER.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/ACER.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/ACER.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/ACER.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/ACER.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/ACER.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/ACER.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/ACER.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/ACER.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/ACER.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/ACER.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="ACER.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="ACER.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="ACER" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/ACER.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="ACER" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/ACER.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="ACER" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/ACER.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="ACER" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/ACER.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">BBP</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="BBP.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/BBP.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/BBP.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/BBP.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/BBP.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/BBP.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/BBP.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/BBP.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/BBP.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/BBP.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/BBP.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/BBP.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/BBP.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/BBP.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/BBP.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/BBP.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/BBP.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="BBP.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="BBP.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="BBP" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/BBP.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="BBP" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/BBP.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="BBP" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/BBP.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="BBP" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/BBP.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">BV</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="BV.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/BV.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/BV.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/BV.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/BV.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/BV.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/BV.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/BV.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/BV.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/BV.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/BV.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/BV.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/BV.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/BV.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/BV.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/BV.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/BV.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="BV.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="BV.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="BV" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/BV.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="BV" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/BV.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="BV" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/BV.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="BV" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/BV.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">CNCR</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="CNCR.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/CNCR.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/CNCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/CNCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/CNCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/CNCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/CNCR.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/CNCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/CNCR.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/CNCR.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/CNCR.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/CNCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/CNCR.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/CNCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/CNCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/CNCR.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/CNCR.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="CNCR.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="CNCR.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="CNCR" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/CNCR.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="CNCR" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/CNCR.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="CNCR" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/CNCR.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="CNCR" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/CNCR.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">DRIO</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="DRIO.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/DRIO.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/DRIO.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/DRIO.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/DRIO.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/DRIO.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/DRIO.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/DRIO.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/DRIO.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/DRIO.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/DRIO.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/DRIO.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/DRIO.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/DRIO.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/DRIO.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/DRIO.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/DRIO.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="DRIO.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="DRIO.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="DRIO" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/DRIO.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="DRIO" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/DRIO.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="DRIO" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/DRIO.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="DRIO" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/DRIO.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">EJAN</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="EJAN.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/EJAN.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/EJAN.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/EJAN.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/EJAN.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/EJAN.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/EJAN.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/EJAN.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/EJAN.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/EJAN.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/EJAN.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/EJAN.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/EJAN.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/EJAN.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/EJAN.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/EJAN.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/EJAN.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="EJAN.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="EJAN.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="EJAN" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/EJAN.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="EJAN" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/EJAN.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="EJAN" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/EJAN.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="EJAN" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/EJAN.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">ESCR</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="ESCR.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/ESCR.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/ESCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/ESCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/ESCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/ESCR.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/ESCR.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/ESCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/ESCR.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/ESCR.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/ESCR.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/ESCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/ESCR.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/ESCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/ESCR.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/ESCR.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/ESCR.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="ESCR.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="ESCR.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="ESCR" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/ESCR.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="ESCR" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/ESCR.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="ESCR" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/ESCR.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="ESCR" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/ESCR.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">FUD</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="FUD.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/FUD.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/FUD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/FUD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/FUD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/FUD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/FUD.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/FUD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/FUD.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/FUD.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/FUD.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/FUD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/FUD.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/FUD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/FUD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/FUD.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/FUD.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="FUD.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="FUD.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="FUD" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/FUD.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="FUD" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/FUD.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="FUD" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/FUD.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="FUD" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/FUD.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">GBLIZ</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="GBLIZ.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/GBLIZ.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/GBLIZ.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/GBLIZ.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/GBLIZ.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/GBLIZ.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/GBLIZ.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/GBLIZ.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/GBLIZ.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/GBLIZ.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/GBLIZ.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/GBLIZ.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/GBLIZ.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/GBLIZ.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/GBLIZ.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/GBLIZ.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/GBLIZ.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="GBLIZ.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="GBLIZ.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="GBLIZ" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/GBLIZ.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="GBLIZ" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/GBLIZ.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="GBLIZ" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/GBLIZ.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="GBLIZ" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/GBLIZ.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">HYAC</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="HYAC.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/HYAC.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/HYAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/HYAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/HYAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/HYAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/HYAC.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/HYAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/HYAC.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/HYAC.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/HYAC.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/HYAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/HYAC.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/HYAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/HYAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/HYAC.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/HYAC.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="HYAC.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="HYAC.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="HYAC" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/HYAC.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="HYAC" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/HYAC.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="HYAC" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/HYAC.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="HYAC" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/HYAC.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">IPB</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="IPB.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/IPB.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/IPB.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/IPB.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/IPB.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/IPB.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/IPB.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/IPB.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/IPB.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/IPB.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/IPB.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/IPB.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/IPB.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/IPB.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/IPB.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/IPB.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/IPB.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="IPB.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="IPB.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="IPB" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/IPB.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="IPB" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/IPB.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="IPB" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/IPB.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="IPB" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/IPB.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">IQDY</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="IQDY.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/IQDY.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/IQDY.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/IQDY.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/IQDY.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/IQDY.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/IQDY.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/IQDY.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/IQDY.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/IQDY.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/IQDY.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/IQDY.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/IQDY.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/IQDY.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/IQDY.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/IQDY.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/IQDY.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="IQDY.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="IQDY.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="IQDY" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/IQDY.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="IQDY" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/IQDY.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="IQDY" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/IQDY.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="IQDY" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/IQDY.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">JHEM</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="JHEM.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/JHEM.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/JHEM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/JHEM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/JHEM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/JHEM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/JHEM.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/JHEM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/JHEM.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/JHEM.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/JHEM.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/JHEM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/JHEM.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/JHEM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/JHEM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/JHEM.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/JHEM.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="JHEM.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="JHEM.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="JHEM" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/JHEM.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="JHEM" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/JHEM.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="JHEM" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/JHEM.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="JHEM" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/JHEM.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">JJG</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="JJG.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/JJG.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/JJG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/JJG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/JJG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/JJG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/JJG.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/JJG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/JJG.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/JJG.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/JJG.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/JJG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/JJG.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/JJG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/JJG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/JJG.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/JJG.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="JJG.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="JJG.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="JJG" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/JJG.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="JJG" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/JJG.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="JJG" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/JJG.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="JJG" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/JJG.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">LAIX</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="LAIX.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/LAIX.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/LAIX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/LAIX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/LAIX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/LAIX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/LAIX.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/LAIX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/LAIX.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/LAIX.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/LAIX.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/LAIX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/LAIX.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/LAIX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/LAIX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/LAIX.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/LAIX.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="LAIX.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="LAIX.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="LAIX" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/LAIX.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="LAIX" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/LAIX.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="LAIX" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/LAIX.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="LAIX" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/LAIX.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">MAAX</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="MAAX.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/MAAX.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/MAAX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/MAAX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/MAAX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/MAAX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/MAAX.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/MAAX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/MAAX.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/MAAX.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/MAAX.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/MAAX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/MAAX.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/MAAX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/MAAX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/MAAX.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/MAAX.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="MAAX.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="MAAX.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="MAAX" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/MAAX.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="MAAX" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/MAAX.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="MAAX" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/MAAX.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="MAAX" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/MAAX.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">NFLT</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="NFLT.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/NFLT.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/NFLT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/NFLT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/NFLT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/NFLT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/NFLT.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/NFLT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/NFLT.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/NFLT.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/NFLT.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/NFLT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/NFLT.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/NFLT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/NFLT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/NFLT.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/NFLT.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="NFLT.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="NFLT.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="NFLT" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/NFLT.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="NFLT" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/NFLT.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="NFLT" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/NFLT.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="NFLT" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/NFLT.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">PBHC</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="PBHC.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PBHC.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PBHC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PBHC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PBHC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/PBHC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/PBHC.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/PBHC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/PBHC.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PBHC.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PBHC.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/PBHC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/PBHC.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/PBHC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/PBHC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/PBHC.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/PBHC.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="PBHC.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="PBHC.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="PBHC" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/PBHC.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="PBHC" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/PBHC.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="PBHC" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/PBHC.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="PBHC" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/PBHC.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">PEX</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="PEX.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PEX.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PEX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PEX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PEX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/PEX.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/PEX.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/PEX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/PEX.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PEX.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PEX.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/PEX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/PEX.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/PEX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/PEX.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/PEX.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/PEX.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="PEX.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="PEX.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="PEX" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/PEX.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="PEX" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/PEX.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="PEX" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/PEX.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="PEX" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/PEX.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">PIC</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="PIC.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PIC.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PIC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PIC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PIC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/PIC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/PIC.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/PIC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/PIC.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PIC.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PIC.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/PIC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/PIC.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/PIC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/PIC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/PIC.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/PIC.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="PIC.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="PIC.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="PIC" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/PIC.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="PIC" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/PIC.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="PIC" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/PIC.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="PIC" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/PIC.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">PJUL</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="PJUL.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PJUL.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PJUL.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PJUL.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PJUL.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/PJUL.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/PJUL.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/PJUL.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/PJUL.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PJUL.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PJUL.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/PJUL.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/PJUL.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/PJUL.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/PJUL.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/PJUL.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/PJUL.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="PJUL.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="PJUL.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="PJUL" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/PJUL.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="PJUL" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/PJUL.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="PJUL" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/PJUL.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="PJUL" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/PJUL.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">RCG</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="RCG.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/RCG.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/RCG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/RCG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/RCG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/RCG.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/RCG.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/RCG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/RCG.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/RCG.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/RCG.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/RCG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/RCG.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/RCG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/RCG.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/RCG.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/RCG.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="RCG.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="RCG.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="RCG" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/RCG.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="RCG" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/RCG.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="RCG" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/RCG.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="RCG" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/RCG.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">RWCD</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="RWCD.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/RWCD.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/RWCD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/RWCD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/RWCD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/RWCD.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/RWCD.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/RWCD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/RWCD.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/RWCD.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/RWCD.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/RWCD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/RWCD.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/RWCD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/RWCD.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/RWCD.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/RWCD.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="RWCD.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="RWCD.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="RWCD" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/RWCD.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="RWCD" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/RWCD.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="RWCD" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/RWCD.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="RWCD" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/RWCD.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">SBM</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="SBM.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/SBM.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/SBM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/SBM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/SBM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/SBM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/SBM.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/SBM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/SBM.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/SBM.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/SBM.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/SBM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/SBM.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/SBM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/SBM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/SBM.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/SBM.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="SBM.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="SBM.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="SBM" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/SBM.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="SBM" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/SBM.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="SBM" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/SBM.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="SBM" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/SBM.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">SPGM</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="SPGM.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/SPGM.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/SPGM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/SPGM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/SPGM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/SPGM.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/SPGM.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/SPGM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/SPGM.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/SPGM.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/SPGM.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/SPGM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/SPGM.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/SPGM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/SPGM.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/SPGM.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/SPGM.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="SPGM.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="SPGM.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="SPGM" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/SPGM.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="SPGM" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/SPGM.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="SPGM" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/SPGM.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="SPGM" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/SPGM.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">SQEW</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="SQEW.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/SQEW.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/SQEW.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/SQEW.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/SQEW.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/SQEW.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/SQEW.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/SQEW.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/SQEW.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/SQEW.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/SQEW.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/SQEW.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/SQEW.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/SQEW.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/SQEW.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/SQEW.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/SQEW.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="SQEW.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="SQEW.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="SQEW" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/SQEW.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="SQEW" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/SQEW.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="SQEW" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/SQEW.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="SQEW" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/SQEW.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">TTAC</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="TTAC.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/TTAC.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/TTAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/TTAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/TTAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/TTAC.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/TTAC.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/TTAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/TTAC.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/TTAC.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/TTAC.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/TTAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/TTAC.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/TTAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/TTAC.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/TTAC.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/TTAC.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="TTAC.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="TTAC.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="TTAC" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/TTAC.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="TTAC" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/TTAC.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="TTAC" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/TTAC.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="TTAC" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/TTAC.png" /></div>
+	</div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">VVCIF</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="VVCIF.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/VVCIF.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/VVCIF.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/VVCIF.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/VVCIF.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/VVCIF.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/VVCIF.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/VVCIF.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/VVCIF.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/VVCIF.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/VVCIF.png" style="display: none;"/>
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/VVCIF.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/VVCIF.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/VVCIF.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/VVCIF.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/VVCIF.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/VVCIF.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="VVCIF.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="VVCIF.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="VVCIF" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/VVCIF.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="VVCIF" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/VVCIF.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="VVCIF" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/VVCIF.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="VVCIF" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/VVCIF.png" /></div>
+	</div></div><SCRIPT type="text/javascript">
+(function(){
+	//----------------------------------------------------------------------------------------------------;
+
+	window.apis = window.apis || {};
+	window.apis.uri = window.apis.uri || {};
+	window.apis.uri.getURIReplaceSharp = function(n){ return n.replace(/#/gi, "!MzU=!").replace(/&/gi, "!Mzg=!").replace(/\+/gi, "!MTg3!").replace(/%/gi, "!Mzc=!") };
+
+	//----------------------------------------------------------------------------------------------------;
+
+	window.__API = {};
+	window.__API.hide = {
+		  'IMG-BASIC'   : function(){ var a = window.document.getElementsByName( 'IMG-BASIC' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'IMG-HD'     : function(){ var a = window.document.getElementsByName( 'IMG-HD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'IMG-FHD'     : function(){ var a = window.document.getElementsByName( 'IMG-FHD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'IMG-UHD'     : function(){ var a = window.document.getElementsByName( 'IMG-UHD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'IMG-FHD-HTS' : function(){ var a = window.document.getElementsByName( 'IMG-FHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'IMG-UHD-HTS' : function(){ var a = window.document.getElementsByName( 'IMG-UHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'IMG-MINI'    : function(){ var a = window.document.getElementsByName( 'IMG-MINI' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+
+		, 'news' : function(){ var a = window.document.getElementsByName( 'news' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+		, 'toro' : function(){ var a = window.document.getElementsByName( 'toro' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = 'none'; } }
+	};
+	window.__API.hide.all = function(){
+		window.__API.hide[ 'IMG-BASIC' ]();
+		window.__API.hide[ 'IMG-HD' ]();
+		window.__API.hide[ 'IMG-FHD' ]();
+		window.__API.hide[ 'IMG-UHD' ]();
+		window.__API.hide[ 'IMG-FHD-HTS' ]();
+		window.__API.hide[ 'IMG-UHD-HTS' ]();
+		window.__API.hide[ 'IMG-MINI' ]();
+
+		window.__API.hide.news();
+		window.__API.hide.toro();
+
+		setTimeout( function(){
+			window.__lazyLoad__IMG();
+			window.__lazyLoad__NEWS();
+			window.__lazyLoad__TORON();
+		}, 100 );
+	};
+	window.__API.show = {
+		  'IMG-BASIC'   : function(){ var a = window.document.getElementsByName( 'IMG-BASIC' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'IMG-HD'     : function(){ var a = window.document.getElementsByName( 'IMG-HD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'IMG-FHD'     : function(){ var a = window.document.getElementsByName( 'IMG-FHD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'IMG-UHD'     : function(){ var a = window.document.getElementsByName( 'IMG-UHD' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'IMG-FHD-HTS' : function(){ var a = window.document.getElementsByName( 'IMG-FHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'IMG-UHD-HTS' : function(){ var a = window.document.getElementsByName( 'IMG-UHD-HTS' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'IMG-MINI'    : function(){ var a = window.document.getElementsByName( 'IMG-MINI' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+
+		, 'news' : function(){ var a = window.document.getElementsByName( 'news' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+		, 'toro' : function(){ var a = window.document.getElementsByName( 'toro' ); var i=0, iLen=a.length; for( ;i<iLen; ++i ){ a[ i ].style.display = ''; } }
+	};
+	window.__API.show.all = function(){
+		window.__API.show[ 'IMG-BASIC' ]();
+		window.__API.show[ 'IMG-HD' ]();
+		window.__API.show[ 'IMG-FHD' ]();
+		window.__API.show[ 'IMG-UHD' ]();
+		window.__API.show[ 'IMG-FHD-HTS' ]();
+		//window.__API.show[ 'IMG-UHD-HTS' ]();
+		//window.__API.show[ 'IMG-MINI' ]();
+
+		window.__API.show.news();
+		window.__API.show.toro();
+
+		setTimeout( function(){
+			window.__lazyLoad__IMG();
+			window.__lazyLoad__NEWS();
+			window.__lazyLoad__TORON();
+		}, 100 );
+	};
+
+	window.__API.search = function( e ){
+		if( e.keyCode != 13 ) return;
+		window.document.getElementById( "ID-CONTAINER" ).innerHTML = window.__API.search.TEMPLATE.replace( /{{종목명}}/gi, e.target.value );
+
+		window.__API.hide.all();
+
+		//window.__API.show[ "IMG-MINI" ]();
+		//window.__API.show[ 'IMG-BASIC' ]();
+		window.__API.show[ 'IMG-HD' ]();
+		window.__API.show.news();
+		window.__API.show.toro();
+	};
+	window.__API.search.TEMPLATE = `<div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
+		<span class="span__stockName">{{종목명}}</span>
+
+		<div name="IMG-MINI" class="div__w_670__h_360">
+			<img class="lazy img__w_660__h_350" alt="{{종목명}}.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/{{종목명}}.png" />
+		</div>
+
+		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/{{종목명}}.png" />
+		</div>
+
+		<div name="IMG-HD" class="div__w_960__h_fit">
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/{{종목명}}.png" />
+
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/{{종목명}}.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/{{종목명}}.png" style="display: none;" />
+			</div>
+
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/{{종목명}}.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/{{종목명}}.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/{{종목명}}.png" />
+			-->
+		</div>
+
+		<div style="display: flex;">
+			<div id="ID-뉴스" name="news" class="news board_news" alt="{{종목명}}.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="{{종목명}}.png"></div>
+		</div>
+
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="{{종목명}}" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/{{종목명}}.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="{{종목명}}" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/{{종목명}}.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="{{종목명}}" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/{{종목명}}.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="{{종목명}}" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/{{종목명}}.png" /></div>
+	</div>`;
+
+(function(e){
+	window.__API.hide.all();
+
+	//window.__API.show[ "IMG-MINI" ]();
+
+	//window.__API.show[ 'IMG-BASIC' ]();
+	window.__API.show[ 'IMG-HD' ]();
+	//window.__API.show.news();
+	//window.__API.show.toro();
+})();
+
+//----------------------------------------------------------------------------------------------------;
+
+//(function(){
+//	var xhr = new XMLHttpRequest();
+//	var pad = function( n ){ var s = n.toString(); if( s.length == 1 ) return "0" + s; return s; };
+//	var getDateStr = function( d ){ return pad( d.getFullYear() ) + "-" + pad( d.getMonth() + 1 ) + "-" + pad( d.getDate() ); };
+//	var getNewsDate = function( DATE_STR, name ){
+//		try
+//		{
+//			xhr.open( "get", "http://thdtjsdn.shop/html/stock/" + DATE_STR + " - 종합시황뉴스 - 정제 - 종목 - 시간정렬 - " + name + ".html", false );
+//			xhr.send();
+//			if( -1 == xhr.responseText.indexOf( "404 Not Found" ) ) return xhr.responseText;
+//		}catch( er ){}
+//		return "";
+//	};
+//
+//	var d = new Date();               var DATE_STR0 = getDateStr( d );
+//		d.setDate( d.getDate() - 1 ); var DATE_STR1 = getDateStr( d );
+//		d.setDate( d.getDate() - 1 ); var DATE_STR2 = getDateStr( d );
+//
+//	//뉴스 - HTS;
+//	DATE_STR0 = DATE_STR0.replace( /-/gi, "" );
+//	DATE_STR1 = DATE_STR1.replace( /-/gi, "" );
+//	DATE_STR2 = DATE_STR2.replace( /-/gi, "" );
+//	var a = window.document.getElementsByClassName( "news" );
+//	var io;
+//	var i=0, iLen=a.length;
+//	for( ; i<iLen; ++i )
+//	{
+//		io = a[ i ];
+//		var img = io.parentElement.parentElement.children[ 1 ].children[ 0 ];
+//		var name = img.getAttribute( "alt" ).replace( ".png", "" );
+//
+//		var HTML_INNER = "";
+//			HTML_INNER += getNewsDate( DATE_STR0, name );
+//			HTML_INNER += getNewsDate( DATE_STR1, name );
+//			HTML_INNER += getNewsDate( DATE_STR2, name );
+//
+//		io.innerHTML = HTML_INNER;
+//	}
+//})();
+
+//----------------------------------------------------------------------------------------------------;
+
+window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", function( e ){
+	//*/
+	var t = e.target;
+	if( t.tagName == "IMG" )
+	{
+		var url0 = "http://thdtjsdn.shop/img/stock/";
+		if( e.ctrlKey )
+			window.open( url0 + "charts--us/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
+		else
+		{
+			if( "hd" == t.getAttribute( "data-type" ) )
+			{
+				//window.open( url0 + "charts--us/asfasfaf-hd/" + t.getAttribute( "alt" ), "_blank" );
+			}
+			else if( "fhd" == t.getAttribute( "data-type" ) )
+				window.open( url0 + "charts--us/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
+			else if( "uhd" == t.getAttribute( "data-type" ) )
+				window.open( url0 + "charts--us/asfasfaf-uhd/" + t.getAttribute( "alt" ), "_blank" );
+			else if( "fhd-hts" == t.getAttribute( "data-type" ) )
+				window.open( url0 + "charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+			else if( "uhd-hts" == t.getAttribute( "data-type" ) )
+				window.open( url0 + "charts-kiwoom-uhd/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
+			else
+			{
+				//window.open( url0 + "charts--us/asfasfaf-hd/" + t.getAttribute( "alt" ), "_blank" );
+			}
+		}
+	}
+	//*/
+
+	if( t.tagName == "INPUT" )
+	{
+		setTimeout( function(){
+			window.__lazyLoad__IMG();
+			window.__lazyLoad__NEWS();
+			window.__lazyLoad__TORON();
+		}, 200 );
+	}
+
+	if( t.tagName == "SPAN" )
+	{
+		if( t.getAttribute( "data-type" ) == "LINK" )
+			window.open( "https://www.google.com/search?q=" + t.innerText, "_blank" );
+	}
+});
+
+//----------------------------------------------------------------------------------------------------;
+
+window.document.addEventListener( "DOMContentLoaded", function(){
+	var timeout__lazyLoad__IMG;
+
+	function lazyLoad__IMG (){
+		if( timeout__lazyLoad__IMG ) window.clearTimeout( timeout__lazyLoad__IMG );
+
+		var els = window.document.querySelectorAll( "img.lazy" );
+
+		timeout__lazyLoad__IMG = setTimeout(function() {
+			var scrollTop = window.document.getElementById( "ID-CONTAINER" ).scrollTop;
+			//var scrollTop = window.pageYOffset;
+			els.forEach(function( el ){
+
+				if( el.parentElement.style.display == "none" || el.style.display == "none" ) return;
+
+				if( el.offsetTop < ( window.document.getElementById( "ID-CONTAINER" ).offsetHeight + scrollTop )
+					&& el.offsetTop > ( scrollTop - 700 ) )
+				//if( el.offsetTop < ( window.innerHeight + scrollTop ) )
+				{
+					el.classList.remove( "lazy" );
+					el.onerror = function( e ){
+						e.target.src = "https://via.placeholder.com/100/000.png";
+
+						/*///로컬모드에서는 주석하기;
+						e.target.style.display = "none";
+						e.target.parentElement.style.display = "none";
+						//*/
+					};
+					//img.removeAttribute( "data-src" );
+					el.src = "http://thdtjsdn.shop/img/stock/" + el.dataset.src;
+				}
+			});
+
+			if( els.length == 0 )
+			{
+				window.document.getElementById( "ID-CONTAINER" ).removeEventListener( "scroll", lazyLoad__IMG );
+				//window.removeEventListener( "scroll", lazyLoad__IMG );
+				window.removeEventListener( "resize", lazyLoad__IMG );
+				window.removeEventListener( "orientationChange", lazyLoad__IMG );
+			}
+		}, 200 );
+	}
+	window.__lazyLoad__IMG = lazyLoad__IMG;
+
+	window.document.getElementById( "ID-CONTAINER" ).addEventListener( "scroll", lazyLoad__IMG );
+	//window.addEventListener( "scroll", lazyLoad__IMG );
+	window.addEventListener( "resize", lazyLoad__IMG );
+	//window.addEventListener( "orientationChange", lazyLoad__IMG );
+
+	setTimeout( lazyLoad__IMG, 10 );
+
+	//--------------------------------------------------;
+	//--------------------------------------------------;
+	//--------------------------------------------------;
+	//--------------------------------------------------;
+	//--------------------------------------------------;
+
+	var xhr = new XMLHttpRequest();
+	var pad = function( n ){ var s = n.toString(); if( s.length == 1 ) return "0" + s; return s; };
+	var getDateStr = function( d ){ return pad( d.getFullYear() ) + "-" + pad( d.getMonth() + 1 ) + "-" + pad( d.getDate() ); };
+	var getNewsDate = function( DATE_STR, name ){
+		try
+		{
+			xhr.open( "get", "http://thdtjsdn.shop/html/stock/" + DATE_STR + " - 종합시황뉴스 - 정제 - 종목 - 시간정렬 - " + window.apis.uri.getURIReplaceSharp( name ) + ".html", false );
+			xhr.send();
+			if( -1 == xhr.responseText.indexOf( "404 Not Found" ) ) return xhr.responseText;
+		}catch( er ){}
+		return "";
+	};
+
+	var timeout__lazyLoad__NEWS;
+
+	function lazyLoad__NEWS (){
+		if( timeout__lazyLoad__NEWS ) window.clearTimeout( timeout__lazyLoad__NEWS );
+
+		var d = new Date();               var DATE_STR0 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR1 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR2 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR3 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR4 = getDateStr( d );
+			//d.setDate( d.getDate() - 1 ); var DATE_STR5 = getDateStr( d );
+
+		DATE_STR0 = DATE_STR0.replace( /-/gi, "" );
+		DATE_STR1 = DATE_STR1.replace( /-/gi, "" );
+		DATE_STR2 = DATE_STR2.replace( /-/gi, "" );
+		DATE_STR3 = DATE_STR3.replace( /-/gi, "" );
+		DATE_STR4 = DATE_STR4.replace( /-/gi, "" );
+		//DATE_STR5 = DATE_STR5.replace( /-/gi, "" );
+
+		timeout__lazyLoad__NEWS = setTimeout(function() {
+			var els = window.document.querySelectorAll( "div.news" );
+
+			var scrollTop = window.document.getElementById( "ID-CONTAINER" ).scrollTop;
+			//var scrollTop = window.pageYOffset;
+			els.forEach(function( el ){
+
+				if( el.parentElement.style.display == "none" || el.style.display == "none" ) return;
+
+				if( el.offsetTop < ( window.document.getElementById( "ID-CONTAINER" ).offsetHeight + scrollTop )
+					&& el.offsetTop > ( scrollTop - 700 ) )
+				//if( el.offsetTop < ( window.innerHeight + scrollTop ) )
+				{
+					el.classList.remove( "news" );
+
+					var name = el.getAttribute( "alt" ).replace( ".png", "" );
+
+					var HTML_INNER = "";
+						HTML_INNER += getNewsDate( DATE_STR0, name );
+						HTML_INNER += getNewsDate( DATE_STR1, name );
+						HTML_INNER += getNewsDate( DATE_STR2, name );
+						HTML_INNER += getNewsDate( DATE_STR3, name );
+						HTML_INNER += getNewsDate( DATE_STR4, name );
+						//HTML_INNER += getNewsDate( DATE_STR5, name );
+
+					el.innerHTML = HTML_INNER;
+				}
+			});
+
+			if( els.length == 0 )
+			{
+				window.document.getElementById( "ID-CONTAINER" ).removeEventListener( "scroll", lazyLoad__NEWS );
+				//window.removeEventListener( "scroll", lazyLoad__NEWS );
+				window.removeEventListener( "resize", lazyLoad__NEWS );
+				window.removeEventListener( "orientationChange", lazyLoad__NEWS );
+			}
+		}, 200 );
+	}
+	window.__lazyLoad__NEWS = lazyLoad__NEWS;
+
+	window.document.getElementById( "ID-CONTAINER" ).addEventListener( "scroll", lazyLoad__NEWS );
+	//window.addEventListener( "scroll", lazyLoad__NEWS );
+	window.addEventListener( "resize", lazyLoad__NEWS );
+	//window.addEventListener( "orientationChange", lazyLoad__NEWS );
+
+	setTimeout( lazyLoad__NEWS, 10 );
+
+	//--------------------------------------------------;
+
+	var getTORONDate = function( DATE_STR, name ){
+		try
+		{
+			xhr.open( "get", "http://thdtjsdn.shop/download__json__toron?name=" + window.apis.uri.getURIReplaceSharp( name ) + "&date=" + DATE_STR, false );
+			//xhr.open( "get", "http://localhost:49323/stock_naver_toron?name=" + window.apis.uri.getURIReplaceSharp( name ) + "&date=" + DATE_STR, false );
+			xhr.send();
+			if( -1 == xhr.responseText.indexOf( "404 Not Found" ) ) return xhr.responseText;
+		}catch( er ){
+			console.error( er );
+		}
+		return "";
+	};
+	var TEMPLATE_TORON = '<span style="display: block; width: 100%; color: #fcba03">{{wid}} - {{dt}} - {{tt}}</span><span style="display: block; width: 100%;">{{ct}}</span><hr>';
+
+	var timeout__lazyLoad__TORON;
+
+	function lazyLoad__TORON (){
+		if( timeout__lazyLoad__TORON ) window.clearTimeout( timeout__lazyLoad__TORON );
+
+		var d = new Date();               var DATE_STR0 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR1 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR2 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR3 = getDateStr( d );
+			d.setDate( d.getDate() - 1 ); var DATE_STR4 = getDateStr( d );
+			//d.setDate( d.getDate() - 1 ); var DATE_STR5 = getDateStr( d );
+
+		timeout__lazyLoad__TORON = setTimeout(function() {
+			var els = window.document.querySelectorAll( "div.toro" );
+
+			var scrollTop = window.document.getElementById( "ID-CONTAINER" ).scrollTop;
+			//var scrollTop = window.pageYOffset;
+			els.forEach(function( el ){
+
+				if( el.parentElement.style.display == "none" || el.style.display == "none" ) return;
+
+				if( el.offsetTop < ( window.document.getElementById( "ID-CONTAINER" ).offsetHeight + scrollTop )
+					&& el.offsetTop > ( scrollTop - 700 ) )
+				//if( el.offsetTop < ( window.innerHeight + scrollTop ) )
+				{
+					el.classList.remove( "toro" );
+
+					var name = el.getAttribute( "alt" ).replace( ".png", "" );
+
+					var boards = [];
+					try{ boards = boards.concat( JSON.parse( getTORONDate( DATE_STR0, name ) ) ); }catch( er ){}
+					try{ boards = boards.concat( JSON.parse( getTORONDate( DATE_STR1, name ) ) ); }catch( er ){}
+					try{ boards = boards.concat( JSON.parse( getTORONDate( DATE_STR2, name ) ) ); }catch( er ){}
+					try{ boards = boards.concat( JSON.parse( getTORONDate( DATE_STR3, name ) ) ); }catch( er ){}
+					try{ boards = boards.concat( JSON.parse( getTORONDate( DATE_STR4, name ) ) ); }catch( er ){}
+					//try{ boards = boards.concat( JSON.parse( getTORONDate( DATE_STR5, name ) ) ); }catch( er ){}
+
+
+					var HTML_INNER = "";
+					boards.forEach( function( item0 ){
+						HTML_INNER += TEMPLATE_TORON.replace( /{{wid}}/gi, item0.wid )
+							.replace( /{{dt}}/gi, item0.dt )
+							.replace( /{{tt}}/gi, item0.tt )
+							.replace( /{{ct}}/gi, item0.ct )
+					});
+					el.innerHTML = HTML_INNER;
+				}
+			});
+
+			if( els.length == 0 )
+			{
+				window.document.getElementById( "ID-CONTAINER" ).removeEventListener( "scroll", lazyLoad__TORON );
+				//window.removeEventListener( "scroll", lazyLoad__TORON );
+				window.removeEventListener( "resize", lazyLoad__TORON );
+				window.removeEventListener( "orientationChange", lazyLoad__TORON );
+			}
+		}, 200 );
+	}
+
+	window.__lazyLoad__TORON = lazyLoad__TORON;
+
+	window.document.getElementById( "ID-CONTAINER" ).addEventListener( "scroll", lazyLoad__TORON );
+	//window.addEventListener( "scroll", lazyLoad__TORON );
+	window.addEventListener( "resize", lazyLoad__TORON );
+	//window.addEventListener( "orientationChange", lazyLoad__TORON );
+
+	setTimeout( lazyLoad__TORON, 10 );
+
+});
+
+//----------------------------------------------------------------------------------------------------;
+
+})();
+</SCRIPT>
+		</div>
+	</DIV>
+
+	<!--
+		id, class 수정 금지
+		UI 객체-Panel 형태로 사용자가 Layout를 조작할 수 있는 UI 객체 배치
+	-->
+	<DIV id="div_0__UI_Component_Panel" class="divContainer uiCompPanel" style="display: none;"></DIV>
+
+	<!--
+		id, class 수정 금지
+		UI 객체-Panel 보다 상위에 보이고 싶은 객체
+	-->
+	<DIV id="div_0__Top" class="divContainer top" style="display: none;"></DIV>
+
+	<!--
+		id, class 수정 금지
+		Modal 처리를 위한 부분
+	-->
+	<DIV id="div_0__Top_modal" class="divContainer topModal" style="display: none;">
+		<DIV class="divContainer topModal modal-background-content"></DIV>
+		<DIV class="divContainer topModal modal-background"></DIV>
+		<DIV class="divContainer topModal modal-content"></DIV>
+	</DIV>
+</BODY>
+
+</HTML>

@@ -85,7 +85,7 @@
 	<DIV id="div_0__UI_Component_Fixed" class="divContainer uiCompFixed">
 		<div id="list-stock-charts-img" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; height: 100% !important;">
 			<style>
-body { overflow-x: hidden; background-color: black; } img { padding: 0px !important; border: none !important; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; } .divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
+body { overflow-x: hidden; overflow-y: hidden; background-color: black; } img { padding: 0px !important; border: none !important; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; } .divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
 
 .div__fit__wh { width: fit-content; height: fit-content; }
 
@@ -104,7 +104,6 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 
 .img__w_660__h_fit { width: 660px; height: fit-content; }
 .img__w_660__h_211 { width: 660px; height: 211px; }
-.img__w_660__h_401 { width: 660px; height: 401px; }
 .img__w_660__h_218 { width: 660px; height: 218px; }
 .img__w_660__h_350 { width: 660px; height: 350px; }
 
@@ -120,11 +119,7 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 .board_toro { padding: 2px; width: 270px; height: 2839px !important; overflow-y: scroll; color: #FFFFFF; }
 
 </style>
-<P style="color: #ffac05;">
-데이터 업데이트 당일 장종료 후 외인/기관/개인 수급량 데이터는 반영되있지 않습니다.
-
-18시 30분 이후 밤 업데이트시 반영됩니다.
-</P><br><P style="color: #ffac05;">업데이트 시간 : Fri Jun 19 2020 20:22:51 GMT+0900 (한국 표준시)</p>
+<P style="color: #ffac05;">UPDATE TIME : Sat Jun 20 2020 18:51:29 GMT+0900 (한국 표준시)</p>
 <div style="width: 100%; posotion: absolute; left: 0px; top: 0px; right: 0px;">
 	<input type="input" style="margin: 2px; padding: 2px; height: 40px;" value="" placeholder="종목이름" onkeydown="window.__API.search( event );"/>
 
@@ -134,65 +129,73 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="전체 숨김"    onclick="(function(){ window.__API.hide.all(); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="전체 켜기"    onclick="(function(){ window.__API.show.all(); })();"/>
+	<!--
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="뉴스 숨김"    onclick="(function(){ window.__API.hide.news(); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="뉴스 켜기"    onclick="(function(){ window.__API.show.news(); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="토론 숨김"    onclick="(function(){ window.__API.hide.toro(); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="토론 켜기"    onclick="(function(){ window.__API.show.toro(); })();"/>
+	-->
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="BASIC 숨김"   onclick="(function(){ window.__API.hide[ 'IMG-BASIC' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="BASIC 켜기"   onclick="(function(){ window.__API.show[ 'IMG-BASIC' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="MINI 숨김"    onclick="(function(){ window.__API.hide[ 'IMG-MINI' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="MINI 켜기"    onclick="(function(){ window.__API.show[ 'IMG-MINI' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HD 숨김"      onclick="(function(){ window.__API.hide[ 'IMG-HD' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HD 켜기"      onclick="(function(){ window.__API.show[ 'IMG-HD' ](); })();"/>
+	<!--
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="FHD 숨김"     onclick="(function(){ window.__API.hide[ 'IMG-FHD' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="FHD 켜기"     onclick="(function(){ window.__API.show[ 'IMG-FHD' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="UHD 숨김"     onclick="(function(){ window.__API.hide[ 'IMG-UHD' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="UHD 켜기"     onclick="(function(){ window.__API.show[ 'IMG-UHD' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HTS FHD 숨김" onclick="(function(){ window.__API.hide[ 'IMG-FHD-HTS' ](); })();"/>
 	<input type="button" style="margin: 2px; padding: 2px; height: 40px;" value="HTS FHD 켜기" onclick="(function(){ window.__API.show[ 'IMG-FHD-HTS' ](); })();"/>
+	-->
 </div>
-<div id="ID-CONTAINER" style="display: flex; flex-wrap: wrap; overflow-x: hidden; height: calc( 100% - 220px ); overflow-y: scroll;">
+<div id="ID-CONTAINER" style="display: flex; flex-wrap: wrap; overflow-x: hidden; height: calc( 100% - 200px ); overflow-y: scroll;">
 	<div style="height: 60px;"></div><div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
-		<span class="span__stockName">부산산업</span>
+		<span class="span__stockName">PT</span>
 
 		<div name="IMG-MINI" class="div__w_670__h_360">
-			<img class="lazy img__w_660__h_350" alt="부산산업.png" data-type="mini" data-src="charts/asfasfaf/전체 - BASIC - 차트/부산산업.png" />
+			<img class="lazy img__w_660__h_350" alt="PT.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PT.png" />
 		</div>
 
 		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
-			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts/asfasfaf/전체 - BASIC - 차트/부산산업.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts/asfasfaf/전체 - BASIC - 수치 표/부산산업.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts/asfasfaf/전체 - BASIC - 뉴스 공시/부산산업.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts/asfasfaf/전체 - BASIC - 재무제표 종목설명/부산산업.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts/asfasfaf/전체 - BASIC - 레포트/부산산업.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/PT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/PT.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/PT.png" />
 		</div>
 
 		<div name="IMG-HD" class="div__w_960__h_fit">
-			<img class="lazy img__w_950__h_560" data-src="charts/asfasfaf/전체 - HD - 차트 - 캔들/부산산업.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량/부산산업.png" />
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/PT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/PT.png" />
 
-			<div class="div__w_fit__h_439" style="margin-left: 145px;">
-				<img class="lazy img__w_660__h_211" data-src="charts/asfasfaf/전체 - BASIC - 수치 표/부산산업.png" />
-				<img class="lazy img__w_660__h_218" data-src="charts/asfasfaf/전체 - BASIC - 뉴스 공시/부산산업.png" />
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/PT.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/PT.png" style="display: none;"/>
 			</div>
 
-			<img class="lazy img__w_950__h_340" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량 - 동향/부산산업.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량 - 동향 - 누적/부산산업.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 등락률/부산산업.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 등락률 - 누적/부산산업.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 등락률 - 고저차이/부산산업.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량 - 게시물 - 토론/부산산업.png" />
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/PT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/PT.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/PT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/PT.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/PT.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/PT.png" />
+			-->
 		</div>
 
 		<div style="display: flex;">
-			<div id="ID-뉴스" name="news" class="news board_news" alt="부산산업.png"></div>
-			<div id="ID-토론" name="toro" class="toro board_toro" alt="부산산업.png"></div>
+			<div id="ID-뉴스" name="news" class="news board_news" alt="PT.png"></div>
+			<div id="ID-토론" name="toro" class="toro board_toro" alt="PT.png"></div>
 		</div>
 
-		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="부산산업" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts/asfasfaf-fhd/부산산업.png" /></div>
-		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="부산산업" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts/asfasfaf-uhd/부산산업.png" /></div>
-		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="부산산업" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/부산산업.png" /></div>
-		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="부산산업" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/부산산업.png" /></div>
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="PT" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/PT.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="PT" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/PT.png" /></div>
+		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="PT" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/PT.png" /></div>
+		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="PT" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/PT.png" /></div>
 	</div></div><SCRIPT type="text/javascript">
 (function(){
 	//----------------------------------------------------------------------------------------------------;
@@ -230,8 +233,8 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 
 		setTimeout( function(){
 			window.__lazyLoad__IMG();
-			window.__lazyLoad__NEWS();
-			window.__lazyLoad__TORON();
+			//window.__lazyLoad__NEWS();
+			//window.__lazyLoad__TORON();
 		}, 100 );
 	};
 	window.__API.show = {
@@ -260,8 +263,8 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 
 		setTimeout( function(){
 			window.__lazyLoad__IMG();
-			window.__lazyLoad__NEWS();
-			window.__lazyLoad__TORON();
+			//window.__lazyLoad__NEWS();
+			//window.__lazyLoad__TORON();
 		}, 100 );
 	};
 
@@ -274,39 +277,43 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 		//window.__API.show[ "IMG-MINI" ]();
 		//window.__API.show[ 'IMG-BASIC' ]();
 		window.__API.show[ 'IMG-HD' ]();
-		window.__API.show.news();
-		window.__API.show.toro();
+		//window.__API.show.news();
+		//window.__API.show.toro();
 	};
 	window.__API.search.TEMPLATE = `<div style="display: flex; flex-wrap: wrap; overflow-x: hidden; overflow-y: hidden; border: 1px solid #FFFFFF;">
 		<span class="span__stockName">{{종목명}}</span>
 
 		<div name="IMG-MINI" class="div__w_670__h_360">
-			<img class="lazy img__w_660__h_350" alt="{{종목명}}.png" data-type="mini" data-src="charts/asfasfaf/전체 - BASIC - 차트/{{종목명}}.png" />
+			<img class="lazy img__w_660__h_350" alt="{{종목명}}.png" data-type="mini" data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/{{종목명}}.png" />
 		</div>
 
 		<div name="IMG-BASIC" style="margin: 0px; width: 670px !important; height: fit-content; overflow-y: scroll; display: flex; float: none;">
-			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts/asfasfaf/전체 - BASIC - 차트/{{종목명}}.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts/asfasfaf/전체 - BASIC - 수치 표/{{종목명}}.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts/asfasfaf/전체 - BASIC - 뉴스 공시/{{종목명}}.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts/asfasfaf/전체 - BASIC - 재무제표 종목설명/{{종목명}}.png" />
-			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts/asfasfaf/전체 - BASIC - 레포트/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-차트"      data-src="charts--us/asfasfaf/전체 - US - BASIC - 차트/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-수치_표"   data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-뉴스_공시" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-재무제표"  data-src="charts--us/asfasfaf/전체 - US - BASIC - 재무제표 종목설명/{{종목명}}.png" />
+			<img class="lazy" data-type="" name="IMG-BASIC-레포트"    data-src="charts--us/asfasfaf/전체 - US - BASIC - 레포트/{{종목명}}.png" />
 		</div>
 
 		<div name="IMG-HD" class="div__w_960__h_fit">
-			<img class="lazy img__w_950__h_560" data-src="charts/asfasfaf/전체 - HD - 차트 - 캔들/{{종목명}}.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_560" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 캔들/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량/{{종목명}}.png" />
 
-			<div class="div__w_fit__h_439" style="margin-left: 145px;">
-				<img class="lazy img__w_660__h_211" data-src="charts/asfasfaf/전체 - BASIC - 수치 표/{{종목명}}.png" />
-				<img class="lazy img__w_660__h_218" data-src="charts/asfasfaf/전체 - BASIC - 뉴스 공시/{{종목명}}.png" />
+			<div class="div__w_fit__h_439" style="margin-left: 145px; height: 221px;">
+				<img class="lazy img__w_660__h_211" data-src="charts--us/asfasfaf/전체 - US - BASIC - 수치 표/{{종목명}}.png" />
+				<img class="img__w_660__h_218" data-src="charts--us/asfasfaf/전체 - US - BASIC - 뉴스 공시/{{종목명}}.png" style="display: none;" />
 			</div>
 
-			<img class="lazy img__w_950__h_340" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량 - 동향/{{종목명}}.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량 - 동향 - 누적/{{종목명}}.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 등락률/{{종목명}}.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 등락률 - 누적/{{종목명}}.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 등락률 - 고저차이/{{종목명}}.png" />
-			<img class="lazy img__w_950__h_250" data-src="charts/asfasfaf/전체 - HD - 차트 - 거래량 - 게시물 - 토론/{{종목명}}.png" />
+			<!--
+			<img class="lazy img__w_950__h_340" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 동향 - 누적/{{종목명}}.png" />
+			-->
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 누적/{{종목명}}.png" />
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 등락률 - 고저차이/{{종목명}}.png" />
+			<!--
+			<img class="lazy img__w_950__h_250" data-src="charts--us/asfasfaf/전체 - US - HD - 차트 - 거래량 - 게시물 - 토론/{{종목명}}.png" />
+			-->
 		</div>
 
 		<div style="display: flex;">
@@ -314,11 +321,22 @@ body { overflow-x: hidden; background-color: black; } img { padding: 0px !import
 			<div id="ID-토론" name="toro" class="toro board_toro" alt="{{종목명}}.png"></div>
 		</div>
 
-		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="{{종목명}}" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts/asfasfaf-fhd/{{종목명}}.png" /></div>
-		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="{{종목명}}" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts/asfasfaf-uhd/{{종목명}}.png" /></div>
+		<div name="IMG-FHD"     class="div__w_1920__h_1058"> <img class="lazy" alt="{{종목명}}" style="width: 1910px !important; height: 1048px;" data-type="fhd" data-src="charts--us/asfasfaf-fhd/{{종목명}}.png" /></div>
+		<div name="IMG-UHD"     class="div__w_3048__h_2147"> <img class="lazy" alt="{{종목명}}" style="width: 3830px !important; height: 2137px;" data-type="uhd" data-src="charts--us/asfasfaf-uhd/{{종목명}}.png" /></div>
 		<div name="IMG-FHD-HTS" class="div__w_630__h_2430">  <img class="lazy" alt="{{종목명}}" style="width: 620px !important; height: 2430px;"data-type="fhd-hts" data-src="charts-kiwoom/asfasfaf/{{종목명}}.png" /></div>
 		<div name="IMG-UHD-HTS" class="div__w_3048__h_2158"> <img class="lazy" alt="{{종목명}}" style="width: 3830px !important; height: 2148px;" data-type="uhd-hts" data-src="charts-kiwoom-uhd/asfasfaf/{{종목명}}.png" /></div>
 	</div>`;
+
+(function(e){
+	window.__API.hide.all();
+
+	//window.__API.show[ "IMG-MINI" ]();
+
+	//window.__API.show[ 'IMG-BASIC' ]();
+	window.__API.show[ 'IMG-HD' ]();
+	//window.__API.show.news();
+	//window.__API.show.toro();
+})();
 
 //----------------------------------------------------------------------------------------------------;
 
@@ -371,24 +389,24 @@ window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", func
 	{
 		var url0 = "http://thdtjsdn.shop/img/stock/";
 		if( e.ctrlKey )
-			window.open( url0 + "charts/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
+			window.open( url0 + "charts--us/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
 		else
 		{
 			if( "hd" == t.getAttribute( "data-type" ) )
 			{
-				//window.open( url0 + "charts/asfasfaf-hd/" + t.getAttribute( "alt" ), "_blank" );
+				//window.open( url0 + "charts--us/asfasfaf-hd/" + t.getAttribute( "alt" ), "_blank" );
 			}
 			else if( "fhd" == t.getAttribute( "data-type" ) )
-				window.open( url0 + "charts/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
+				window.open( url0 + "charts--us/asfasfaf-fhd/" + t.getAttribute( "alt" ), "_blank" );
 			else if( "uhd" == t.getAttribute( "data-type" ) )
-				window.open( url0 + "charts/asfasfaf-uhd/" + t.getAttribute( "alt" ), "_blank" );
+				window.open( url0 + "charts--us/asfasfaf-uhd/" + t.getAttribute( "alt" ), "_blank" );
 			else if( "fhd-hts" == t.getAttribute( "data-type" ) )
 				window.open( url0 + "charts-kiwoom/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
 			else if( "uhd-hts" == t.getAttribute( "data-type" ) )
 				window.open( url0 + "charts-kiwoom-uhd/asfasfaf/" + t.getAttribute( "alt" ), "_blank" );
 			else
 			{
-				//window.open( url0 + "charts/asfasfaf-hd/" + t.getAttribute( "alt" ), "_blank" );
+				//window.open( url0 + "charts--us/asfasfaf-hd/" + t.getAttribute( "alt" ), "_blank" );
 			}
 		}
 	}
@@ -398,8 +416,8 @@ window.document.getElementById( "ID-CONTAINER" ).addEventListener( "click", func
 	{
 		setTimeout( function(){
 			window.__lazyLoad__IMG();
-			window.__lazyLoad__NEWS();
-			window.__lazyLoad__TORON();
+			//window.__lazyLoad__NEWS();
+			//window.__lazyLoad__TORON();
 		}, 200 );
 	}
 
@@ -435,13 +453,13 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 					el.onerror = function( e ){
 						e.target.src = "https://via.placeholder.com/100/000.png";
 
-						//*///로컬모드에서는 주석하기;
+						/*///로컬모드에서는 주석하기;
 						e.target.style.display = "none";
 						e.target.parentElement.style.display = "none";
 						//*/
 					};
 					//img.removeAttribute( "data-src" );
-					el.src = "http://thdtjsdn.shop/img/stock/" + el.dataset.src + "?t=" + Date.now();
+					el.src = "http://thdtjsdn.shop/img/stock/" + el.dataset.src;
 				}
 			});
 
@@ -632,16 +650,6 @@ window.document.addEventListener( "DOMContentLoaded", function(){
 
 	setTimeout( lazyLoad__TORON, 10 );
 
-	(function(e){
-		window.__API.hide.all();
-
-		//window.__API.show[ "IMG-MINI" ]();
-
-		//window.__API.show[ 'IMG-BASIC' ]();
-		window.__API.show[ 'IMG-HD' ]();
-		//window.__API.show.news();
-		//window.__API.show.toro();
-	})();
 });
 
 //----------------------------------------------------------------------------------------------------;

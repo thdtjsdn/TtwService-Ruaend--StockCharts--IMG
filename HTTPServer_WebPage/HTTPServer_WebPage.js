@@ -125,6 +125,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		//IP 차단;
 		//*/
 		if( -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )
+			|| -1 != req.client.remoteAddress.indexOf( "54.36.148.99" )
 			|| -1 != req.client.remoteAddress.indexOf( "62.210.172.8" )
 			|| -1 != req.client.remoteAddress.indexOf( "195.54.160.135" )
 		)

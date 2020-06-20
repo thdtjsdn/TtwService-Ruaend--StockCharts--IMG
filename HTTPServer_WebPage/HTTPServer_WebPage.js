@@ -121,10 +121,9 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		{
 			global.console.log( Date.now() + " - " + req.client.remoteAddress + " - " + uri );
 		}
-
 		//IP 차단;
 		//*/
-		if( -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )
+		else if( -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )
 			|| -1 != req.client.remoteAddress.indexOf( "54.36.148." )//프랑스 - AS16276 OVH SAS;
 			|| -1 != req.client.remoteAddress.indexOf( "62.210.172.8" )
 			|| -1 != req.client.remoteAddress.indexOf( "66.249.65." )//미국 - AS15169 Google LLC;
@@ -132,6 +131,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		)
 		{
 			//global.apis.response.send_404( req, res );
+			global.console.log( Date.now() + " - [ 차단 ] - " + req.client.remoteAddress + " - " + uri );
 			global.apis.response.send_200_String( req, res, "fuck off" );
 			return;
 		}

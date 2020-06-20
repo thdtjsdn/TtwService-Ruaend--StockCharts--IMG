@@ -125,9 +125,10 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		//IP 차단;
 		//*/
 		if( -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )
-			|| -1 != req.client.remoteAddress.indexOf( "54.36.148.99" )
+			|| -1 != req.client.remoteAddress.indexOf( "54.36.148.99" )//프랑스 - 스팸;
 			|| -1 != req.client.remoteAddress.indexOf( "62.210.172.8" )
-			|| -1 != req.client.remoteAddress.indexOf( "195.54.160.135" )
+			|| -1 != req.client.remoteAddress.indexOf( "66.249.65." )//미국 - AS15169 Google LLC;
+			|| -1 != req.client.remoteAddress.indexOf( "195.54.160.135" )//러시아 - Arkada LLC;
 		)
 		{
 			//global.apis.response.send_404( req, res );

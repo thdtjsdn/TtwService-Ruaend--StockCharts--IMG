@@ -121,9 +121,12 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		{
 			global.console.log( Date.now() + " - " + req.client.remoteAddress + " - " + uri );
 		}
+
 		//IP 차단;
 		//*/
-		else if( -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )//한국 - SKB;
+		if(    -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )//한국 - SKB;
+			|| -1 != req.client.remoteAddress.indexOf( "5.9.140." )//독일 -;
+			|| -1 != req.client.remoteAddress.indexOf( "54.36.148." )//프랑스 - AS16276 OVH SAS;
 			|| -1 != req.client.remoteAddress.indexOf( "54.36.148." )//프랑스 - AS16276 OVH SAS;
 			|| -1 != req.client.remoteAddress.indexOf( "62.210.172.8" )//네덜란드 - ;
 			|| -1 != req.client.remoteAddress.indexOf( "66.249.65." )//미국 - AS15169 Google LLC;

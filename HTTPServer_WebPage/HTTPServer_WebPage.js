@@ -128,6 +128,9 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			|| -1 != req.client.remoteAddress.indexOf( "192.99.6." )//캐나다 - OVH Hosting Inc.;
 
 			|| -1 != req.client.remoteAddress.indexOf( "195.54.160.135" )//러시아 - Arkada LLC;
+
+			|| -1 != req.client.remoteAddress.indexOf( "216.244.66." )//미국 - wowrack.com;
+			//|| -1 != req.client.remoteAddress.indexOf( "216.244.66.227" )//미국 - wowrack.com;
 		)
 		{
 			//global.apis.response.send_404( req, res );

@@ -98,6 +98,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		54.36.148.//프랑스 - AS16276 OVH SAS;
 		62.210.172.8//네덜란드 -
 		66.249.65.//미국 - AS15169 Google LLC;
+		117.144.49.210//중국 - China Mobile Communications Corporation;
 		117.220.196.50//인도 - 해킹;
 		154.8.201.45//중국 - Tencent Cloud Computing (Beijing) Co. Ltd;
 		192.99.4.//캐나다 - OVH Hosting Inc.;

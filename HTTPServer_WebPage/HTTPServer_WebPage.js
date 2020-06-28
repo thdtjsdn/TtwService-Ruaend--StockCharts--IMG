@@ -131,6 +131,8 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 
 			|| -1 != req.client.remoteAddress.indexOf( "216.244.66." )//미국 - wowrack.com;
 			//|| -1 != req.client.remoteAddress.indexOf( "216.244.66.227" )//미국 - wowrack.com;
+
+			|| -1 != req.client.remoteAddress.indexOf( "218.17.208.165" )//중국 - 해킹시도;
 		)
 		{
 			//global.apis.response.send_404( req, res );
@@ -143,6 +145,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		if( ( -1 == uri.indexOf( "/img/" ) )
 			&& ( -1 == uri.indexOf( "음성 기록 통계" ) )
 			&& ( -1 == req.client.remoteAddress.indexOf( "1.235.228.84" ) )
+			&& ( -1 == req.client.remoteAddress.indexOf( "192.168.0.1" ) )
 		)
 		{
 			global.console.log( Date.now() + " - " + req.client.remoteAddress + " - " + uri );

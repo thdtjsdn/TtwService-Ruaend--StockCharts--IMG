@@ -123,6 +123,9 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			|| -1 != req.client.remoteAddress.indexOf( "62.210.172.8" )//네덜란드 - ;
 			|| -1 != req.client.remoteAddress.indexOf( "66.249.65." )//미국 - AS15169 Google LLC;
 
+
+			|| -1 != req.client.remoteAddress.indexOf( "117.220.196.50" )//인도 - 해킹;
+
 			|| -1 != req.client.remoteAddress.indexOf( "192.99.4." )//캐나다 - OVH Hosting Inc.;
 			//|| -1 != req.client.remoteAddress.indexOf( "192.99.4.163" )//캐나다 - OVH Hosting Inc.;
 			|| -1 != req.client.remoteAddress.indexOf( "192.99.6." )//캐나다 - OVH Hosting Inc.;

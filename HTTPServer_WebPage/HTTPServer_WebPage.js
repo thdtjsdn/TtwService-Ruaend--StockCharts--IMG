@@ -92,6 +92,21 @@ global.apis.fs.autoLoad_JSs([ [ "JavaScript Import", "./js/", { router : 1, rout
 global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 /*/
 (function(){
+	var BLOCK_IPS = `
+		1.246.223.32//한국 - SKB;
+		5.9.140.//독일 -;
+		54.36.148.//프랑스 - AS16276 OVH SAS;
+		62.210.172.8//네덜란드 -
+		66.249.65.//미국 - AS15169 Google LLC;
+		117.220.196.50//인도 - 해킹;
+		154.8.201.45//중국 - Tencent Cloud Computing (Beijing) Co. Ltd;
+		192.99.4.//캐나다 - OVH Hosting Inc.;
+		192.99.6.//캐나다 - OVH Hosting Inc.;
+		195.54.160.135//러시아 - Arkada LLC;
+		216.244.66.//미국 - wowrack.com;
+		216.244.66.227//미국 - wowrack.com;
+		218.17.208.165//중국 - 해킹시도;
+		`;
 	var _CWD = global.process.cwd() + "/";
 	var _CWD_ROOT = _CWD + "../WebPage/root";
 
@@ -116,27 +131,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 
 		//IP 차단;
 		//*/
-		if(    -1 != req.client.remoteAddress.indexOf( "1.246.223.32" )//한국 - SKB;
-			|| -1 != req.client.remoteAddress.indexOf( "5.9.140." )//독일 -;
-			|| -1 != req.client.remoteAddress.indexOf( "54.36.148." )//프랑스 - AS16276 OVH SAS;
-			|| -1 != req.client.remoteAddress.indexOf( "54.36.148." )//프랑스 - AS16276 OVH SAS;
-			|| -1 != req.client.remoteAddress.indexOf( "62.210.172.8" )//네덜란드 - ;
-			|| -1 != req.client.remoteAddress.indexOf( "66.249.65." )//미국 - AS15169 Google LLC;
-
-
-			|| -1 != req.client.remoteAddress.indexOf( "117.220.196.50" )//인도 - 해킹;
-
-			|| -1 != req.client.remoteAddress.indexOf( "192.99.4." )//캐나다 - OVH Hosting Inc.;
-			//|| -1 != req.client.remoteAddress.indexOf( "192.99.4.163" )//캐나다 - OVH Hosting Inc.;
-			|| -1 != req.client.remoteAddress.indexOf( "192.99.6." )//캐나다 - OVH Hosting Inc.;
-
-			|| -1 != req.client.remoteAddress.indexOf( "195.54.160.135" )//러시아 - Arkada LLC;
-
-			|| -1 != req.client.remoteAddress.indexOf( "216.244.66." )//미국 - wowrack.com;
-			//|| -1 != req.client.remoteAddress.indexOf( "216.244.66.227" )//미국 - wowrack.com;
-
-			|| -1 != req.client.remoteAddress.indexOf( "218.17.208.165" )//중국 - 해킹시도;
-		)
+		if(    -1 != BLOCK_IPS.indexOf( req.client.remoteAddress.replace( "ffff:", "" ) ) )
 		{
 			//global.apis.response.send_404( req, res );
 			global.console.log( Date.now() + " - [ 차단 ] - " + req.client.remoteAddress + " - " + uri );

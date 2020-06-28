@@ -30,8 +30,8 @@
 		, SYS0011_WebServer : [ "http://localhost:31333", "http://localhost:31333", "http://localhost:31333" ]//B2LiNK-LogServer-Dev;
 
 		//모든 View 서비스에서 사용;
-		//, SYS0015_APIServer : [ "http://116.33.62.146:49324", "http://116.33.62.146:49324", "http://116.33.62.146:49324" ]//Development-Components-UI;
-		, SYS0015_WebServer : [ "http://116.33.62.146:49323", "http://116.33.62.146:49323", "http://116.33.62.146:49323" ]//Development-Components-UI;
+		//, SYS0015_APIServer : [ "http://thdtjsdn.shop:49324", "http://thdtjsdn.shop:49324", "http://thdtjsdn.shop:49324" ]//Development-Components-UI;
+		, SYS0015_WebServer : [ "http://thdtjsdn.shop:49323", "http://thdtjsdn.shop:49323", "http://thdtjsdn.shop:49323" ]//Development-Components-UI;
 		//, SYS0015_WebServer : [ "http://localhost:49323", "http://localhost:49323", "http://localhost:49323" ]//Development-Components-UI;
 		//, SYS0015_APIServer : [ "https://resource.b2link.co.kr/router", "https://resource.b2link.co.kr/router", "https://resource.b2link.co.kr/router" ]//Development-Components-UI;
 		//, SYS0015_WebServer : [ "https://resource.b2link.co.kr/view", "https://resource.b2link.co.kr/view", "https://resource.b2link.co.kr/view" ]//Development-Components-UI;
@@ -117,8 +117,8 @@
 		//B2LiNK-ProductServer-Dev ...;
 		, SYS0100_APIServer : [ "http://localhost:44320", "http://localhost:44320" ]
 		, SYS0100_WebServer : [ "http://localhost:44321", "http://localhost:44321" ]
-		//, SYS0100_APIServer : [ "http://116.33.62.146:44320", "http://116.33.62.146:44320" ]
-		//, SYS0100_WebServer : [ "http://116.33.62.146:44321", "http://116.33.62.146:44321" ]
+		//, SYS0100_APIServer : [ "http://thdtjsdn.shop:44320", "http://thdtjsdn.shop:44320" ]
+		//, SYS0100_WebServer : [ "http://thdtjsdn.shop:44321", "http://thdtjsdn.shop:44321" ]
 		//, SYS0100_APIServer : [ "http://222.239.10.123:44320", "http://222.239.10.123:44320" ]
 		//, SYS0100_WebServer : [ "http://222.239.10.123:44321", "http://222.239.10.123:44321" ]
 
@@ -126,8 +126,8 @@
 		//B2LiNK-B2B-Platform-Admin ...;
 		, SYS0210_APIServer : [ "http://localhost:42320", "http://localhost:42320" ]
 		, SYS0210_WebServer : [ "http://localhost:42321", "http://localhost:42321" ]
-		//, SYS0210_APIServer : [ "http://116.33.62.146:42320", "http://116.33.62.146:42320" ]
-		//, SYS0210_WebServer : [ "http://116.33.62.146:42321", "http://116.33.62.146:42321" ]
+		//, SYS0210_APIServer : [ "http://thdtjsdn.shop:42320", "http://thdtjsdn.shop:42320" ]
+		//, SYS0210_WebServer : [ "http://thdtjsdn.shop:42321", "http://thdtjsdn.shop:42321" ]
 		//, SYS0210_APIServer : [ "http://222.239.10.123:42320", "http://222.239.10.123:42320" ]
 		//, SYS0210_WebServer : [ "http://222.239.10.123:42321", "http://222.239.10.123:42321" ]
 
@@ -135,8 +135,8 @@
 		//B2LiNK-B2B-Platform-Dev ...;
 		, SYS0215_APIServer : [ "http://localhost:42325", "http://localhost:42325" ]
 		, SYS0215_WebServer : [ "http://localhost:42326", "http://localhost:42326" ]
-		//, SYS0215_APIServer : [ "http://116.33.62.146:42325", "http://116.33.62.146:42325" ]
-		//, SYS0215_WebServer : [ "http://116.33.62.146:42326", "http://116.33.62.146:42326" ]
+		//, SYS0215_APIServer : [ "http://thdtjsdn.shop:42325", "http://thdtjsdn.shop:42325" ]
+		//, SYS0215_WebServer : [ "http://thdtjsdn.shop:42326", "http://thdtjsdn.shop:42326" ]
 		//, SYS0215_APIServer : [ "http://222.239.10.123:42325", "http://222.239.10.123:42325" ]
 		//, SYS0215_WebServer : [ "http://222.239.10.123:42326", "http://222.239.10.123:42326" ]
 
@@ -145,20 +145,20 @@
 		, SYS0310_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
 		//, SYS0310_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
 		//, SYS0310_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
-		//, SYS0310_APIServer : [ "http://116.33.62.146:49780", "http://116.33.62.146:49780" ]
-		//, SYS0310_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
+		//, SYS0310_APIServer : [ "http://thdtjsdn.shop:49780", "http://thdtjsdn.shop:49780" ]
+		//, SYS0310_WebServer : [ "http://thdtjsdn.shop:49781", "http://thdtjsdn.shop:49781" ]
 
 		//사용하는 곳 목록;
-		, SYS0320_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
-		, SYS0320_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
+		//, SYS0320_APIServer : [ "http://localhost:49780", "http://localhost:49780" ]
+		//, SYS0320_WebServer : [ "http://localhost:49781", "http://localhost:49781" ]
 		//, SYS0320_APIServer : [ "http://dnsproxy.shop:49780", "http://dnsproxy.shop:49780" ]
 		//, SYS0320_WebServer : [ "http://dnsproxy.shop:49781", "http://dnsproxy.shop:49781" ]
 		//, SYS0320_APIServer : [ "http://thdtjsdn.shop:49780", "http://thdtjsdn.shop:49780" ]
 		//, SYS0320_WebServer : [ "http://thdtjsdn.shop:49781", "http://thdtjsdn.shop:49781" ]
 		//, SYS0320_APIServer : [ "http://www.ruaend.kr:49780", "http://www.ruaend.kr:49780" ]
 		//, SYS0320_WebServer : [ "http://www.ruaend.kr:49781", "http://www.ruaend.kr:49781" ]
-		//, SYS0320_APIServer : [ "http://116.33.62.146:49780", "http://116.33.62.146:49780" ]
-		//, SYS0320_WebServer : [ "http://116.33.62.146:49781", "http://116.33.62.146:49781" ]
+		, SYS0320_APIServer : [ "http://thdtjsdn.shop:49780", "http://thdtjsdn.shop:49780" ]
+		, SYS0320_WebServer : [ "http://thdtjsdn.shop:49781", "http://thdtjsdn.shop:49781" ]
 		//--------------------------------------------------[ E ] - 비지니스 시스템 서버;
 
 		//--------------------------------------------------[ S ] - Util;

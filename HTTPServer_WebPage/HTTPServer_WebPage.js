@@ -142,7 +142,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		//*/
 
 		if( ( -1 == uri.indexOf( "/img/" ) )
-			&& ( -1 == uri.indexOf( "/download__voice_history_1line" ) )
+			//&& ( -1 == uri.indexOf( "/download__voice_history_1line" ) )
 			&& ( -1 == uri.indexOf( "음성 기록 통계" ) )
 			&& ( -1 == req.client.remoteAddress.indexOf( "1.235.228.84" ) )
 			&& ( -1 == req.client.remoteAddress.indexOf( "192.168.0.1" ) )

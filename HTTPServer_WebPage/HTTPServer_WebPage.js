@@ -101,6 +101,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		117.144.49.210//중국 - China Mobile Communications Corporation;
 		117.220.196.50//인도 - 해킹;
 		154.8.201.45//중국 - Tencent Cloud Computing (Beijing) Co. Ltd;
+		192.71.12.140//Sweden - GleSYS Internet Services AB
 		192.99.4.//캐나다 - OVH Hosting Inc.;
 		192.99.6.//캐나다 - OVH Hosting Inc.;
 		195.54.160.135//러시아 - Arkada LLC;

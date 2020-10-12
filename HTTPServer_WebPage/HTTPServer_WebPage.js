@@ -1,3 +1,8 @@
+/*/
+/data/data/com.termux/files/home/Application/TtwService-Ruaend--StockCharts--IMG/HTTPServer_WebPage
+/data/data/com.termux/files/home/Application/TtwService-Ruaend--StockCharts--IMG/WebPage/root/ui/Page/주식-메인
+//*/
+
 //require( "../../TtwPlatform-00000--NodeJS/Common-WebServer-000-0.js" );
 require( "../../TtwPlatform-00000--NodeJS/Common-WebServer-000-1.js" );
 //require( "../../TtwPlatform-00000--NodeJS/Common-WebServer-001-0.js" );
@@ -59,6 +64,7 @@ global._$TATIC_CONST_SERVER_HTTP_MIME_TYPES = {
 	, js : "application/javascript"
 	, json : "text/json"
 	, mp3 : "audio/mpeg"
+	, wav : "audio/wav"
 	, png : "image/png"
 
 	, "server-120-ip" : "application/javascript"
@@ -97,13 +103,24 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		5.9.140.//독일 -;
 		54.36.148.//프랑스 - AS16276 OVH SAS;
 		62.210.172.8//네덜란드 -
-		66.249.65.//미국 - AS15169 Google LLC;
+		//66.249.65.//미국 - AS15169 Google LLC;
+		80.14.34.188//;
+		106.12.77.15//중국 - baidu.com - Beijing Baidu Netcom Science and Technology Co. Ltd.;
+		107.150.59.98//중국 - DataShack, LC;
+		114.67.237.246//;
+		116.74.58.212//;
 		117.144.49.210//중국 - China Mobile Communications Corporation;
 		117.220.196.50//인도 - 해킹;
+		120.53.124.104//중국 - 해킹 - Tencent cloud computing;
+		144.76.137.254//독일 - Hetzner Online GmbH;
 		154.8.201.45//중국 - Tencent Cloud Computing (Beijing) Co. Ltd;
+		185.191.171.//네덜란드 - 	datawebglobal.com;
 		192.71.12.140//Sweden - GleSYS Internet Services AB
 		192.99.4.//캐나다 - OVH Hosting Inc.;
 		192.99.6.//캐나다 - OVH Hosting Inc.;
+		192.241.235.154//;
+		195.54.160.//러시아 - Arkada LLC;
+		195.54.160.21//러시아 - Arkada LLC;
 		195.54.160.135//러시아 - Arkada LLC;
 		216.244.66.//미국 - wowrack.com;
 		216.244.66.227//미국 - wowrack.com;
@@ -133,17 +150,24 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 
 		//IP 차단;
 		//*/
-		if(    -1 != BLOCK_IPS.indexOf( req.client.remoteAddress.replace( "ffff:", "" ) ) )
+		try
 		{
-			//global.apis.response.send_404( req, res );
-			global.console.log( Date.now() + " - [ 차단 ] - " + req.client.remoteAddress + " - " + uri );
-			global.apis.response.send_200_String( req, res, "fuck off" );
-			return;
+			if(    -1 != BLOCK_IPS.indexOf( req.client.remoteAddress.replace( "ffff:", "" ) ) )
+			{
+				//global.apis.response.send_404( req, res );
+				global.console.log( Date.now() + " - [ 차단 ] - " + req.client.remoteAddress + " - " + uri );
+				global.apis.response.send_200_String( req, res, "fuck off" );
+				return;
+			}
+		}
+		catch( er )
+		{
 		}
 		//*/
 
 		if( ( -1 == uri.indexOf( "/img/" ) )
-			//&& ( -1 == uri.indexOf( "/download__voice_history_1line" ) )
+			&& ( -1 == uri.indexOf( "/download__voice_history_1line" ) )
+			&& ( -1 == uri.indexOf( "/download__selectd_stock" ) )
 			&& ( -1 == uri.indexOf( "음성 기록 통계" ) )
 			&& ( -1 == req.client.remoteAddress.indexOf( "1.235.228.84" ) )
 			&& ( -1 == req.client.remoteAddress.indexOf( "192.168.0.1" ) )
@@ -167,7 +191,13 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				}
 				else
 				{
+					/*/
 					global.apis.response.send_404( req, res );
+					/*/
+					global.b2link.response.setHeaders__b2ker( res );
+					res.writeHead( 302, { "Location" : "http://thdtjsdn.com" } );
+					res.end();
+					//*/
 					return;
 				}
 			});
@@ -190,7 +220,13 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				}
 				else
 				{
+					/*/
 					global.apis.response.send_404( req, res );
+					/*/
+					global.b2link.response.setHeaders__b2ker( res );
+					res.writeHead( 302, { "Location" : "http://thdtjsdn.com" } );
+					res.end();
+					//*/
 					return;
 				}
 			});
@@ -236,19 +272,129 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 		SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
 	};
 
+
+
+
+
 	(function(){
-		var FILE_PATH = "";
+
+		var path = "../WebPage/root/html/stock/";
+
+		/*/
+		/data/data/com.termux/files/home/Application/TtwService-Ruaend--StockCharts--IMG/WebPage/root/html/stock
+		http://thdtjsdn.site:49781/deleteHTMLList__Stocks?date=20200905
+		http://thdtjsdn.site:49781/deleteHTMLList__Stocks?date=20200920
+		//*/
+		_[ "/deleteHTMLList__Stocks" ] = function( req, res ){
+			var q = global.apis.url.getQueryFromURL_Decode( req.url );
+
+			var a = global.REQUIRES.fs.readdirSync( path );
+			a.forEach(function( item ){
+				if( -1 != item.indexOf( q.date ) )
+					SUtilFsWriteStream.deleteFile( path + item );
+			});
+
+			SUtilHttpServerResponse.responseWrite_404( res );
+		};
+
+		_[ "/getHTMLList__Stocks__JSON" ] = function( req, res ){
+			var a = SUtilFsReadStream.getList_File_Extension( path, ".html" );
+				//a.reverse();
+			SUtilHttpServerResponse.responseWrite_200_String( res, JSON.stringify( res ) );
+		};
+
+		/*/
+		http://thdtjsdn.com:49781/getHTMLList__Stocks__HTML?dates=["20200911","20200910","20200909","20200908"]
+		http://localhost:49781/getHTMLList__Stocks__HTML?dates=["20200911","20200910","20200909","20200908"]
+		//*/
+		_[ "/getHTMLList__Stocks__HTML" ] = function( req, res ){
+			var q = global.apis.url.getQueryFromURL_Decode( req.url );
+
+			if( !q.dates )
+			{
+				SUtilHttpServerResponse.responseWrite_200_String( res, "" );
+				return;
+			}
+
+			q.dates = JSON.parse( q.dates );
+
+			var r = "<style>body { background-color: #000000; }</style>";
+			/*/
+			var html_ad = `<div class="inline-ad">
+				<script type="text/javascript">google_ad_client="ca-pub-1892980256031512";google_ad_host="ca-host-pub-1556223355139109";google_ad_host_channel="L0007";google_ad_slot="6262262429";google_ad_width=950;google_ad_height=350;</script>
+				<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+				<ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:10px;background-color:transparent;" data-ad-slot="6262262429">
+					<ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;">
+						<iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"></iframe>
+					</ins>
+				</ins>
+			</div>`;
+
+			r += html_ad;
+			//*/
+
+			//var template = `<a href="http://thdtjsdn.site/html/stock/{{파일명0}}" target="blank">{{파일명1}}</a>`;
+			//var template = `<a href="http://thdtjsdn.com/html/stock/{{파일명0}}" target="blank">{{파일명1}}</a>`;
+			var template = `<a href="http://thdtjsdn.com/html/stock/{{파일명0}}" target="blank">{{파일명1}}</a>`;
+
+			var ar0 = [];
+			var ar1 = [];
+
+			//var a = SUtilFsReadStream.getList_File_Extension( path, ".html" );
+
+			var a = global.REQUIRES.fs.readdirSync( path );
+			a.forEach( function( item ){
+				if( -1 != item.indexOf( "ttw_관심" )
+					|| -1 != item.indexOf( "종합시황뉴스 - 정제 - 종목 - 시간정렬" )
+					|| -1 == item.indexOf( ".html" )
+				) return;
+
+				var i=0, iLen=q.dates.length;
+				for( ; i<iLen; ++i )
+				{
+					if( -1 != item.indexOf( q.dates[ i ] ) )
+					{
+						ar0.push( item );
+
+						var fd = global.REQUIRES.fs.openSync( path + item );
+						var fst = global.REQUIRES.fs.fstatSync( fd );
+						global.REQUIRES.fs.close( fd, function(){} );
+						ar1.push( fst );
+					}
+				}
+			});
+
+			//ar0.reverse();
+			//ar0.forEach(function( item ){ r += "<br><br>" + template.replace( "{{파일명0}}", item ).replace( "{{파일명1}}", item.replace( ".html", "" ) ); });
+			var i=0, iLen=ar0.length;
+			//for( ; i<iLen; ++i ) r += "<br><br>" + ar1[ i ].atime.toString().split( " GMT" )[ 0 ] + " - " + template.replace( "{{파일명0}}", ar0[ i ] ).replace( "{{파일명1}}", ar0[ i ].replace( ".html", "" ) );
+			for( ; i<iLen; ++i ){
+				var dt = "";
+				try{ dt = ar1[ i ].mtime.toString().slice( 4, 24 ); } catch( er ){ console.log( er ); }
+				r += '<br><br><span style="color: orange;">' + dt + '</span> - ' + template.replace( "{{파일명0}}", ar0[ i ].replace( /\%/gi, "%25" ) ).replace( "{{파일명1}}", ar0[ i ].replace( ".html", "" ) );
+			}
+
+			//console.log( "r : " + r );
+			//SUtilHttpServerResponse.responseWrite_200_String( res, r );
+			global.apis.response.send_200_HTML( req, res, r );
+		};
+
+
+
+
+
+		var FILE_PATH__getLog = "";
 		_[ "/getLog" ] = function( req, res ){
 
-			if( FILE_PATH == "" )
+			if( FILE_PATH__getLog == "" )
 			{
 				var a = SUtilFsReadStream.getList_File_Extension( "./log/", ".txt" );
-					a.forEach( function( item ){ if( -1 != item.indexOf( "log_" ) ) FILE_PATH = "./log/" + item; });
+					a.forEach( function( item ){ if( -1 != item.indexOf( "log_" ) ) FILE_PATH__getLog = "./log/" + item; });
 			}
 
 			try
 			{
-				var fStr = SUtilFsReadStream.getFile( FILE_PATH ).toString()
+				var fStr = SUtilFsReadStream.getFile( FILE_PATH__getLog ).toString()
 				SUtilHttpServerResponse.responseWrite_200_String( res, fStr );
 			}
 			catch( er )
@@ -338,10 +484,28 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			};
 		})();
 
+
+
+
+		var pad = function( n ){ var s = n.toString(); if( s.length == 1 ) return "0" + s; else return s; };
+		var DATA__selectd_stock = {
+			txt : ""
+		};
+		_[ "/download__selectd_stock" ] = function( req, res ){ try{ global.apis.response.send_200_String( req, res, DATA__selectd_stock.txt ); }catch( er ){} };
+		/*/
+		http://thdtjsdn.com/upload__selectd_stock?code=aaa
+		//*/
+		_[ "/upload__selectd_stock" ] = function( req, res ){
+			var q = global.apis.url.getQueryFromURL_Decode( req.url );
+			var d = new Date();
+			DATA__selectd_stock.txt = d.getFullYear() + pad( d.getMonth() + 1 ) + pad( d.getDate() ) + " " + pad( d.getHours() ) + ":" + pad( d.getMinutes() ) + " - " + q.code;
+			SUtilHttpServerResponse.responseWrite_200_True( res );
+		};
+
 		var DATA__upload__voice_history_1line = {
 			txt : ""
 		};
-		_[ "/download__voice_history_1line" ] = function( req, res ){ global.apis.response.send_200_String( req, res, DATA__upload__voice_history_1line.txt ); };
+		_[ "/download__voice_history_1line" ] = function( req, res ){ try{ global.apis.response.send_200_String( req, res, DATA__upload__voice_history_1line.txt ); }catch( er ){} };
 		_[ "/upload__voice_history_1line" ] = function( req, res ){
 			var r = "";
 			req.on( "data", function( chunk ){
@@ -352,7 +516,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 				//SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 1line.html", r );
 				DATA__upload__voice_history_1line.txt = r;
 			});
-			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+			SUtilHttpServerResponse.responseWrite_200_True( res );
 		};
 		_[ "/upload__voice_history_05" ] = function( req, res ){
 			var r = "";
@@ -363,7 +527,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			req.on( "end", function( chunk ){
 				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 0.5.html", r );
 			});
-			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+			SUtilHttpServerResponse.responseWrite_200_True( res );
 		};
 		_[ "/upload__voice_history_07" ] = function( req, res ){
 			var r = "";
@@ -374,7 +538,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			req.on( "end", function( chunk ){
 				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 0.7.html", r );
 			});
-			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+			SUtilHttpServerResponse.responseWrite_200_True( res );
 		};
 		_[ "/upload__voice_history_07_cnt" ] = function( req, res ){
 			var r = "";
@@ -385,7 +549,7 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			req.on( "end", function( chunk ){
 				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 0.7 - 횟수.html", r );
 			});
-			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+			SUtilHttpServerResponse.responseWrite_200_True( res );
 		};
 		_[ "/upload__voice_history_m07" ] = function( req, res ){
 			var r = "";
@@ -396,7 +560,25 @@ global.apis.server_http.globalServer__setMode__Dev__FileResCommonPath();
 			req.on( "end", function( chunk ){
 				SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - -0.7.html", r );
 			});
-			SUtilHttpServerResponse.responseWrite_200_JSON( res, {} );
+			SUtilHttpServerResponse.responseWrite_200_True( res );
+		};
+
+		var DATA__upload__voice_history_kospi_daq = {
+			daq : ""
+			, pi : ""
+		};
+		_[ "/download__voice_history_kosdaq" ] = function( req, res ){ try{ global.apis.response.send_200_String( req, res, DATA__upload__voice_history_kospi_daq.daq ); }catch( er ){} };
+		_[ "/upload__voice_history_kosdaq" ] = function( req, res ){
+			var r = "";
+			req.on( "data", function( chunk ){
+				r += chunk;
+				//console.log( "chunk : " + chunk );
+			});
+			req.on( "end", function( chunk ){
+				//SUtilFsWriteStream.writeFile_UTF8( "../WebPage/root/html/stock/voice_history/음성 기록 통계 - 1line.html", r );
+				DATA__upload__voice_history_kospi_daq.daq = r;
+			});
+			SUtilHttpServerResponse.responseWrite_200_True( res );
 		};
 	})();
 

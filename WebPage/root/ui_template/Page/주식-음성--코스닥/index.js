@@ -1,12 +1,10 @@
 /*/
-/data/data/com.termux/files/home/Application/TtwService-Ruaend--StockCharts--IMG/WebPage/root/ui/Page/주식-메인
+/data/data/com.termux/files/home/Application/TtwService-Ruaend--StockCharts--IMG/WebPage/root/ui/Page/주식-음성--코스닥
 //*/
 //----------------------------------------------------------------------------------------------------;
-var fileNm = 'ui/Page/주식-메인/index.js';
+var fileNm = 'ui/Page/주식-음성--코스닥/index.js';
 if( console ) console.log( '[ S ] - ' + fileNm + '----------' );
 //----------------------------------------------------------------------------------------------------;
-
-window.document.title = fileNm;
 
 window.onpopstate = null;
 
@@ -76,26 +74,7 @@ var _CLASS = (function(){
  */
 var _IDS = (function(){
 	return {
-		ROOT : 'ui/Page/주식-메인/index'
-
-		//, AD : "ui/Page/주식-메인/index--AD"
-		, AD__BUTTON__CLOSE : "ui/Page/주식-메인/index--AD--TIME--닫기"
-
-		, BUTTON__REAL_SEARCH_CODE : "ui/Page/주식-메인/index--INPUT--실시간조회종목코드"
-
-		, BUTTON__VOICE__KODAQ : "ui/Page/주식-메인/index--BUTTON--실시간-음성-코스닥"
-
-		, DIV__LIST : "ui/Page/주식-메인/index--DIV--LIST"
-
-		, INPUT__DATE : 'ui/Page/주식-메인/index--INPUT--DATE'
-
-		, INPUT__STOCK : 'ui/Page/주식-메인/index--INPUT--NAME'
-
-		, IFRAME : 'ui/Page/주식-메인/index--IFRAME'
-
-		, SELECT__CHART_TYPE : 'ui/Page/주식-메인/index--select--chartType'
-
-		, TITLE : 'ui/Page/주식-메인/index--선택종목코드--컨테이너--제목'
+		ROOT : 'ui/Page/주식-음성--코스닥/index'
 	};
 })();
 
@@ -108,187 +87,12 @@ var _IDS = (function(){
 var _ELS = (function(){
 	var o = {
 		ROOT : window.document.getElementById( _IDS.ROOT )
-
-		//, AD : window.document.getElementById( _IDS.AD )
-
-		//, AD__BUTTON__CLOSE : window.document.getElementById( _IDS.AD__BUTTON__CLOSE )
-
-		, BUTTON__REAL_SEARCH_CODE : window.document.getElementById( _IDS.BUTTON__REAL_SEARCH_CODE  )
-
-		, BUTTON__VOICE__KODAQ : window.document.getElementById( _IDS.BUTTON__VOICE__KODAQ  )
-
-		, DIV__LIST : window.document.getElementById( _IDS.DIV__LIST )
-
-		, IFRAME : window.document.getElementById( _IDS.IFRAME )
-
-		, INPUT__DATE : window.document.getElementById( _IDS.INPUT__DATE )
-
-		, INPUT__STOCK : window.document.getElementById( _IDS.INPUT__STOCK )
-
-		, SELECT__CHART_TYPE : window.document.getElementById( _IDS.SELECT__CHART_TYPE )
-
-		, TITLE : window.document.getElementById( _IDS.TITLE )
 	};
 
 	//window.apis.STATIC.CONST.ROOT_DIV.EL_APPLICATION.appendChild( o.ROOT );
 	//window.apis.STATIC.CONST.ROOT_DIV.EL_UI_COMPONENT_FIXED.appendChild( o.ROOT );
 	window.apis.element.mouseEnable( o.ROOT );
 	//window.apis.element.mouseDisable( o.ROOT );
-
-	/*/
-	o.ROOT.addEventListener( 'click', function( e ){
-		var t = e.target;
-		if( 'A' == t.tagName )
-		{
-			var url = t.getAttribute( 'data-href' );
-			if( '새창' == t.innerText ) window.open( url, '_blank' );
-			else
-			{
-				if( url )
-				{
-					o.IF0.src = url;
-				}
-			}
-		}
-	});
-	//*/
-
-	/*/
-	(function(){
-		var id = 'ui/Page/주식-메인/index--AD--TIME';
-		var el = window.document.getElementById( id );
-
-		var fn = function(){
-			if( el.style.display == "none" )
-			{
-				el.style.display = "";
-				setTimeout( fn, 10000 );
-			}
-		};
-
-		setTimeout( fn, 10000 );
-
-		var evt_mClick = function( event ){ el.style.display = "none"; };
-		window.document.getElementById( "ui/Page/주식-메인/index--AD--TIME--닫기" ).addEventListener( "click", evt_mClick );
-		setTimeout( function(){ el.style.display = "none"; }, 500 );
-	})();
-	//*/
-
-
-
-	(function( e ){
-		var evt = function( e ){
-			var t = e.target;
-			if( !t.value ){
-				alert( "날짜를 선택 하시오" );
-				return;
-			}
-
-			var date = t.value.replace( /\-/gi, '' );
-			var url = window.location.origin + '/getHTMLList__Stocks__HTML?dates=["' + date + '"]';
-
-			o.IFRAME.src = "";
-			o.IFRAME.style.display = "none";
-
-			var HTML = window.apis.xhr.reqSync_String( url );
-			o.DIV__LIST.innerHTML = HTML;
-			//o.AD.innerHTML = HTML_AD;
-		};
-
-		o.INPUT__DATE.addEventListener( "change", evt );
-		//o.INPUT__DATE.addEventListener( "click", evt );
-	})();
-
-
-
-	o.INPUT__STOCK.addEventListener( 'keydown', function( e ){
-		var t = e.target;
-		if( e.keyCode == 13 )
-		{
-			//window.open( window.location.origin + ':49781/html/stock/__종목명별 차트 HTML/' + t.value + '.html', 'blank' );
-			//o.IFRAME.src = window.location.origin + ':49781/html/stock/__종목명별 차트 HTML/' + t.value + '.html';
-			o.IFRAME.src = window.location.origin + ':49781/html/stock/__종목명별 차트 HTML - 서버 - 모든 이미지/' + t.value + '.html';
-			o.IFRAME.style.display = "";
-		}
-	});
-
-	o.SELECT__CHART_TYPE.addEventListener( 'change', function( e ){
-		var t = e.target;
-
-		var url0 = window.location.origin + ':49781/html/stock/__전체 종목명별 차트 HTML/';
-		var url1 = '';
-
-		     if( t.value == 'all-min'){ url1 = '차트-MIN-전체 - 서버.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd' ){ url1 = '차트-HD-전체 - 서버.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-fhd'){ url1 = '차트-FHD-전체 - 서버.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-
-		else if( t.value == 'all-min00' ){ url1 = '차트-MIN-전체 - 서버 - 00.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min01' ){ url1 = '차트-MIN-전체 - 서버 - 01.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min02' ){ url1 = '차트-MIN-전체 - 서버 - 02.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min03' ){ url1 = '차트-MIN-전체 - 서버 - 03.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min04' ){ url1 = '차트-MIN-전체 - 서버 - 04.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min05' ){ url1 = '차트-MIN-전체 - 서버 - 05.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min06' ){ url1 = '차트-MIN-전체 - 서버 - 06.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min07' ){ url1 = '차트-MIN-전체 - 서버 - 07.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min08' ){ url1 = '차트-MIN-전체 - 서버 - 08.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-min09' ){ url1 = '차트-MIN-전체 - 서버 - 09.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-
-		else if( t.value == 'all-hd00' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 00.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd01' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 01.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd02' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 02.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd03' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 03.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd04' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 04.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd05' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 05.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd06' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 06.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd07' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 07.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd08' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 08.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else if( t.value == 'all-hd09' ){ url1 = '차트-HD-전체-캔들라인 - 서버 - 09.html'; o.IFRAME.src = url0 + url1; o.IFRAME.style.display = ""; }
-		else
-		{
-			o.IFRAME.src = "";
-			o.IFRAME.style.display = "none";
-		}
-	});
-
-
-	(function(){
-		var pad = function( n ){ var s = n.toString(); if( s.length < 2 ) return "0" + s; else return s; };
-		var getDateString = function( d ){ return d.getFullYear() + pad( d.getMonth() + 1 ) + pad( d.getDate() ); }
-
-		var date = new Date();              var d0 = getDateString( date );
-		var url = window.location.origin + '/getHTMLList__Stocks__HTML?dates=["' + d0 + '"]';
-
-		//date.setDate( date.getDate() - 1 ); var d1 = getDateString( date );
-		//var url = window.location.origin + '/getHTMLList__Stocks__HTML?dates=["' + d0 + '","' + d1 + '"]';
-
-
-		//date.setDate( date.getDate() - 1 ); var d2 = getDateString( date );
-		//date.setDate( date.getDate() - 1 ); var d3 = getDateString( date );
-		//date.setDate( date.getDate() - 1 ); var d4 = getDateString( date );
-		//var url = window.location.origin + '/getHTMLList__Stocks__HTML?dates=["' + d0 + '","' + d1 + '","' + d2 + '","' + d3 + '","' + d4 + '"]';
-
-		var HTML = window.apis.xhr.reqSync_String( url );
-
-		if( -1 == HTML.indexOf( "<br>" ) )
-		{
-			date.setDate( date.getDate() - 1 ); var d0 = getDateString( date );
-			url = window.location.origin + '/getHTMLList__Stocks__HTML?dates=["' + d0 + '"]';
-			HTML = window.apis.xhr.reqSync_String( url );
-		}
-
-		o.DIV__LIST.innerHTML = HTML;
-		o.IFRAME.src = "";
-		o.IFRAME.style.display = "none";
-	})();
-
-	//o.TITLE.addEventListener( "click", function( event ){ window.open( window.location.origin + "/ui/Page/주식-현재종목/index.html", "주식-현재종목", "innerWidth=300, outerWidth=300, width=300, height=900, innerHeight=900, left=0, top=0" ); });
-	o.BUTTON__REAL_SEARCH_CODE.addEventListener( "click", function( evnet ){
-		window.open( window.location.origin + "/ui/Page/주식-현재종목/index.html", "주식-현재종목", "innerWidth=300, outerWidth=300, width=300, height=900, innerHeight=900, left=0, top=0" );
-	});
-
-	o.BUTTON__VOICE__KODAQ.addEventListener( "click", function( evnet ){
-		window.open( window.location.origin + "/ui/Page/주식-음성--코스닥/index.html", "주식-음성--코스닥", "innerWidth=300, outerWidth=300, width=300, height=500, innerHeight=500, left=0, top=0" );
-	});
 
 	return o;
 })();
@@ -689,21 +493,6 @@ var _setWidth = function( s ){ _THIS.super.setWidth( s ); };
 //----------------------------------------------------------------------------------------------------;
 
 window.document.getElementById( 'div_0__UI_Component_Fixed' ).style.display = 'none';
-
-//----------------------------------------------------------------------------------------------------;
-
-/*/
-var popup_ad = window.open( window.location.origin + "/ad--google.html", "_blank", "width=320, height=260, innerWidth=320, innerHeight=260, top=0, left=0, scrollbars=0" );
-	popup_ad.focus();
-//*/
-
-(function(){
-	window.open( "https://www.google.com/search?&q=thdtjsdn.com&oq=thdtjsdn.com", "_blank" );
-
-	var fn0 = function(){ window.apis.xhr.req( "http://thdtjsdn.com", fn0.cbComplete ); }
-		fn0.cbComplete = { onloadend : function( e ){ setTimeout( fn0, 3000 ); } };
-	setTimeout( fn0, 3000 );
-})();
 
 //----------------------------------------------------------------------------------------------------;
 

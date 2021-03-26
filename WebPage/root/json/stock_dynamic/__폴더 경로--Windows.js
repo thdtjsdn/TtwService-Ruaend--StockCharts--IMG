@@ -1,0 +1,1 @@
+\\TTWDESKTOPU3\e\GitHub_Ttw--Base\TtwService-Ruaend--StockCharts--IMG\WebPage\root\json\stock_dynamic

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<HTML lang="kr" xml:lang="kr">
+<head>
+<title>TtwService-Stock--원격매매--휴대폰--키움증권</title>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<body>
+<div>
+	<style>
+		body {background-color:#000000;}
+		input {width:185px;height:200px;font-size:30px;background-color:#000000;color:#ffffff;margin:0;border:1}
+	</style>
+	<div>
+		<input type="input" id="ID-INPUT-종목명" value="" style="width:100%;padding-left:10px;height:150px"/>
+		<input type="button" id="ID-BUTTON-종목변경" value="종목변경" style="width:100%;background-color:orange;height:150px;"/>
+	</div>
+	<br>
+	<br>
+	<div>
+		<input type="button" id="ID-BUTTON-매수(현재가)" value="매수(현재)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매도(0.31%)" value="매도(0.31%)" style="background-color:#0000ff;"/>
+		<input type="button" id="ID-BUTTON-주문취소(일괄)" value="주문취소(일괄)" style="background-color:orange;width:376px;"/>
+		<input type="button" id="ID-BUTTON-주문취소(1개)" value="주문취소(1개)" style="background-color:orange;"/>
+		<br>
+		<br>
+		<input type="button" id="ID-BUTTON-매수(현재가1틱아래)" value="매수(1틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가2틱아래)" value="매수(2틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가3틱아래)" value="매수(3틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가4틱아래)" value="매수(4틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가5틱아래)" value="매수(5틱)" style="background-color:#ff0000;"/>
+		<br>
+		<br>
+		<input type="button" id="ID-BUTTON-매수(현재가6틱아래)" value="매수(6틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가7틱아래)" value="매수(7틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가8틱아래)" value="매수(8틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가9틱아래)" value="매수(9틱)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가10틱아래)" value="매수(10틱)" style="background-color:#ff0000;"/>
+		<br>
+		<br>
+		<input type="button" id="ID-BUTTON-매도(3%)" value="매도(3%)" style="background-color:#0000ff;"/>
+		<input type="button" id="ID-BUTTON-매도(1%)" value="매도(1%)" style="background-color:#0000ff;"/>
+		<input type="button" id="ID-BUTTON-매도(0.6%)" value="매도(0.6%)" style="background-color:#0000ff;"/>
+		<input type="button" id="ID-BUTTON-매도(0.39%)" value="매도(0.39%)" style="background-color:#0000ff;width:376px;"/>
+		<br>
+		<br>
+		<input type="button" id="ID-BUTTON-지정수1" value="지정수1" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-지정수2" value="지정수2" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-지정수3" value="지정수3" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-지정수4" value="지정수4" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-지정수5" value="지정수5" style="background-color:orange;"/>
+		<br>
+		<br>
+		<input type="button" id="ID-BUTTON-종목동기화" value="종목동기화" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-종목찾기시작" value="종목찾기" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-종목찾기중단" value="종목찾기중단" style="background-color:orange;"/>
+	</div>
+<div>
+
+<script id="ttw-js">var xhr = new XMLHttpRequest();xhr.onload=function(e){eval(e.target.responseText);};xhr.open("get","http://thdtjsdn.com:49323/js-common/lib.common.blogger.js");xhr.send();</script>
+
+<script>
+setTimeout(function(){
+	/*/
+	KEY_NumpadAdd
+	//*/
+	var FN0 = function(key){
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.21:49323/'+key);}catch(er){}
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.19:49323/'+key);}catch(er){}
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.2:49323/' +key);}catch(er){}
+	};
+
+	window.document.getElementById("ID-BUTTON-매수(현재가)").addEventListener("click",function(e){FN0("KEY_NumpadAdd");});
+	window.document.getElementById("ID-BUTTON-매도(0.31%)").addEventListener("click",function(e){FN0("KEY_NumpadSub");});
+	window.document.getElementById("ID-BUTTON-주문취소(일괄)").addEventListener("click",function(e){FN0("KEY_NumpadMult");});
+	window.document.getElementById("ID-BUTTON-주문취소(1개)").addEventListener("click",function(e){FN0("KEY_NumpadDiv");});
+	window.document.getElementById("ID-BUTTON-매수(현재가1틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad1");});
+	window.document.getElementById("ID-BUTTON-매수(현재가2틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad2");});
+	window.document.getElementById("ID-BUTTON-매수(현재가3틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad3");});
+	window.document.getElementById("ID-BUTTON-매수(현재가4틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad4");});
+	window.document.getElementById("ID-BUTTON-매수(현재가5틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad5");});
+	window.document.getElementById("ID-BUTTON-매수(현재가6틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad6");});
+	window.document.getElementById("ID-BUTTON-매수(현재가7틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad7");});
+	window.document.getElementById("ID-BUTTON-매수(현재가8틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad8");});
+	window.document.getElementById("ID-BUTTON-매수(현재가9틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad9");});
+	window.document.getElementById("ID-BUTTON-매수(현재가10틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad0");});
+	window.document.getElementById("ID-BUTTON-매도(3%)").addEventListener("click",function(e){FN0("KEY_F1");});
+	window.document.getElementById("ID-BUTTON-매도(1%)").addEventListener("click",function(e){FN0("KEY_F2");});
+	window.document.getElementById("ID-BUTTON-매도(0.6%)").addEventListener("click",function(e){FN0("KEY_F3");});
+	window.document.getElementById("ID-BUTTON-매도(0.39%)").addEventListener("click",function(e){FN0("KEY_F4");});
+
+	window.document.getElementById("ID-BUTTON-지정수1").addEventListener("click",function(e){FN0("KEY_1");});
+	window.document.getElementById("ID-BUTTON-지정수2").addEventListener("click",function(e){FN0("KEY_2");});
+	window.document.getElementById("ID-BUTTON-지정수3").addEventListener("click",function(e){FN0("KEY_3");});
+	window.document.getElementById("ID-BUTTON-지정수4").addEventListener("click",function(e){FN0("KEY_4");});
+	window.document.getElementById("ID-BUTTON-지정수5").addEventListener("click",function(e){FN0("KEY_5");});
+
+	window.document.getElementById("ID-BUTTON-종목동기화").addEventListener("click",function(e){FN0("KEY_S_a");});
+
+	var FN1 = function(s){
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.21:49323/setStocksCode?code='+s);}catch(er){}
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.19:49323/setStocksCode?code='+s);}catch(er){}
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.2:49323/setStocksCode?code=' +s);}catch(er){}
+		//setTimeout(function(){try{SUtilXMLHttpReqGet.req('http://thdtjsdn.com:49781/upload__selectd_stock?code='+s);}catch(er){}},300);
+	};
+
+	window.document.getElementById("ID-BUTTON-종목변경").addEventListener("click",function(e){FN1(window.document.getElementById("ID-INPUT-종목명").value);});
+	window.document.getElementById("ID-INPUT-종목명").addEventListener("keydown",function(e){if(e.keyCode!=13)return;FN1(window.document.getElementById("ID-INPUT-종목명").value);});
+	window.document.getElementById("ID-INPUT-종목명").addEventListener("click",function(e){window.document.getElementById("ID-INPUT-종목명").value="";});
+
+	var FN2 = function(s){
+		try{SUtilXMLHttpReqGet.req('http://192.168.0.21:49783/' + s);}catch(er){}
+	};
+	window.document.getElementById("ID-BUTTON-종목찾기시작").addEventListener("click",function(e){FN2("true_auto_hts_set");});
+	window.document.getElementById("ID-BUTTON-종목찾기중단").addEventListener("click",function(e){FN2("false_auto_hts_set");});
+},2000);
+</script>
+</body>
+</html>

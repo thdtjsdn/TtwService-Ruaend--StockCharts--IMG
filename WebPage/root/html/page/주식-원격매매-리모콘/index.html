@@ -9,8 +9,14 @@
 <div>
 	<style>
 		body {background-color:#000000;}
-		input {width:185px;height:200px;font-size:30px;background-color:#000000;color:#ffffff;margin:0;border:1}
+		input {width:185px;height:150px;font-size:30px;background-color:#000000;color:#ffffff;margin:0;border:1}
 	</style>
+	<div style="color: #ffffff;">
+		<span>
+			<input type="checkbox" style="padding: 0px; margin: 0px; width: 35px; height: 35px;" id="ID-CHECKBOX-전체PC구동"></input>
+			<span style="font-size: 30px;">전체PC구동<span>
+		</span>
+	</div>
 	<div>
 		<input type="input" id="ID-INPUT-종목명" value="" style="width:100%;padding-left:10px;height:150px"/>
 		<input type="button" id="ID-BUTTON-종목변경" value="종목변경" style="width:100%;background-color:orange;height:150px;"/>
@@ -18,10 +24,12 @@
 	<br>
 	<br>
 	<div>
-		<input type="button" id="ID-BUTTON-매수(현재가)" value="매수(현재)" style="background-color:#ff0000;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가)" value="매수(현재)" style="background-color:#ff0000;width:376px;"/>
 		<input type="button" id="ID-BUTTON-매도(0.31%)" value="매도(0.31%)" style="background-color:#0000ff;"/>
 		<input type="button" id="ID-BUTTON-주문취소(일괄)" value="주문취소(일괄)" style="background-color:orange;width:376px;"/>
+		<!--
 		<input type="button" id="ID-BUTTON-주문취소(1개)" value="주문취소(1개)" style="background-color:orange;"/>
+		-->
 		<br>
 		<br>
 		<input type="button" id="ID-BUTTON-매수(현재가1틱아래)" value="매수(1틱)" style="background-color:#ff0000;"/>
@@ -52,8 +60,11 @@
 		<br>
 		<br>
 		<input type="button" id="ID-BUTTON-종목동기화" value="종목동기화" style="background-color:orange;"/>
-		<input type="button" id="ID-BUTTON-종목찾기시작" value="종목찾기" style="background-color:orange;"/>
-		<input type="button" id="ID-BUTTON-종목찾기중단" value="종목찾기중단" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-상승종목" value="상승종목" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-하락종목" value="하락종목" style="background-color:orange;"/>
+		<input type="button" id="ID-BUTTON-매수(현재가)0" value="매수(현재)" style="background-color:#ff0000;width:376px;"/>
+		<input type="button" id="ID-BUTTON-매도(0.6%)0" value="매도(0.6%)" style="background-color:#0000ff;width:564px;"/>
+		<input type="button" id="ID-BUTTON-매도(0.39%)0" value="매도(0.39%)" style="background-color:#0000ff;width:376px;"/>
 	</div>
 <div>
 
@@ -66,14 +77,14 @@ setTimeout(function(){
 	//*/
 	var FN0 = function(key){
 		try{SUtilXMLHttpReqGet.req('http://192.168.0.21:49323/'+key);}catch(er){}
-		try{SUtilXMLHttpReqGet.req('http://192.168.0.19:49323/'+key);}catch(er){}
-		try{SUtilXMLHttpReqGet.req('http://192.168.0.2:49323/' +key);}catch(er){}
+		if(window.document.getElementById("ID-CHECKBOX-전체PC구동").checked)try{SUtilXMLHttpReqGet.req('http://192.168.0.19:49323/'+key);}catch(er){}
+		if(window.document.getElementById("ID-CHECKBOX-전체PC구동").checked)try{SUtilXMLHttpReqGet.req('http://192.168.0.2:49323/' +key);}catch(er){}
 	};
 
 	window.document.getElementById("ID-BUTTON-매수(현재가)").addEventListener("click",function(e){FN0("KEY_NumpadAdd");});
 	window.document.getElementById("ID-BUTTON-매도(0.31%)").addEventListener("click",function(e){FN0("KEY_NumpadSub");});
 	window.document.getElementById("ID-BUTTON-주문취소(일괄)").addEventListener("click",function(e){FN0("KEY_NumpadMult");});
-	window.document.getElementById("ID-BUTTON-주문취소(1개)").addEventListener("click",function(e){FN0("KEY_NumpadDiv");});
+	//window.document.getElementById("ID-BUTTON-주문취소(1개)").addEventListener("click",function(e){FN0("KEY_NumpadDiv");});
 	window.document.getElementById("ID-BUTTON-매수(현재가1틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad1");});
 	window.document.getElementById("ID-BUTTON-매수(현재가2틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad2");});
 	window.document.getElementById("ID-BUTTON-매수(현재가3틱아래)").addEventListener("click",function(e){FN0("KEY_Numpad3");});
@@ -89,6 +100,10 @@ setTimeout(function(){
 	window.document.getElementById("ID-BUTTON-매도(0.6%)").addEventListener("click",function(e){FN0("KEY_F3");});
 	window.document.getElementById("ID-BUTTON-매도(0.39%)").addEventListener("click",function(e){FN0("KEY_F4");});
 
+	window.document.getElementById("ID-BUTTON-매수(현재가)0").addEventListener("click",function(e){FN0("KEY_NumpadAdd");});
+	window.document.getElementById("ID-BUTTON-매도(0.6%)0").addEventListener("click",function(e){FN0("KEY_F3");});
+	window.document.getElementById("ID-BUTTON-매도(0.39%)0").addEventListener("click",function(e){FN0("KEY_F4");});
+
 	window.document.getElementById("ID-BUTTON-지정수1").addEventListener("click",function(e){FN0("KEY_1");});
 	window.document.getElementById("ID-BUTTON-지정수2").addEventListener("click",function(e){FN0("KEY_2");});
 	window.document.getElementById("ID-BUTTON-지정수3").addEventListener("click",function(e){FN0("KEY_3");});
@@ -99,8 +114,8 @@ setTimeout(function(){
 
 	var FN1 = function(s){
 		try{SUtilXMLHttpReqGet.req('http://192.168.0.21:49323/setStocksCode?code='+s);}catch(er){}
-		try{SUtilXMLHttpReqGet.req('http://192.168.0.19:49323/setStocksCode?code='+s);}catch(er){}
-		try{SUtilXMLHttpReqGet.req('http://192.168.0.2:49323/setStocksCode?code=' +s);}catch(er){}
+		if(window.document.getElementById("ID-CHECKBOX-전체PC구동").checked)try{SUtilXMLHttpReqGet.req('http://192.168.0.19:49323/setStocksCode?code='+s);}catch(er){}
+		if(window.document.getElementById("ID-CHECKBOX-전체PC구동").checked)try{SUtilXMLHttpReqGet.req('http://192.168.0.2:49323/setStocksCode?code=' +s);}catch(er){}
 		//setTimeout(function(){try{SUtilXMLHttpReqGet.req('http://thdtjsdn.com:49781/upload__selectd_stock?code='+s);}catch(er){}},300);
 	};
 
@@ -111,8 +126,8 @@ setTimeout(function(){
 	var FN2 = function(s){
 		try{SUtilXMLHttpReqGet.req('http://192.168.0.21:49783/' + s);}catch(er){}
 	};
-	window.document.getElementById("ID-BUTTON-종목찾기시작").addEventListener("click",function(e){FN2("true_auto_hts_set");});
-	window.document.getElementById("ID-BUTTON-종목찾기중단").addEventListener("click",function(e){FN2("false_auto_hts_set");});
+	window.document.getElementById("ID-BUTTON-상승종목").addEventListener("click",function(e){FN2("setStocks_lastUp");});
+	window.document.getElementById("ID-BUTTON-하락종목").addEventListener("click",function(e){FN2("setStocks_lastDown");});
 },2000);
 </script>
 </body>

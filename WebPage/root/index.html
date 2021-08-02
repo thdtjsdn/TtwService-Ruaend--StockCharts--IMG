@@ -68,12 +68,48 @@
 
 <SCRIPT>if( "http://thdtjsdn.com" != window.location.origin ) window.location = "http://thdtjsdn.com";window.__TtwAlertIP = function(){alert('승인된 IP만 접근가능');}</SCRIPT>
 <script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>
+<script>setInterval(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.ing.js?t="+Date.now());o.send();}catch(e){}},300000);</script>
 
 </HEAD>
 
 
 
 <BODY style="width: 100%; height: 100%;">
+
+	<div style="cursor: pointer; padding: 10px; opacity: 0.9; background-color: #FFFFFF; color: #000000;
+			text-align: left; font-size: 20px;
+			position: absolute; left: 0px; right: 0px; top: 200px; z-index: 9999999;"
+		onclick="this.style.display='none'">
+		<b>
+		이 창은 클릭하면 사라짐(This window disappears when clicked).
+		<br><br>
+		요즘 접속자 늘어나면서 뻘짓거리 하는 IP가 부쩍늘었는데..
+		<br>These days, as the number of users increases, the number of IPs that are talking about is increasing..
+		<br><br>
+		- 그 어떤 프레임워크도 사용하지 않고 로우 레벨부터 순수 자체 개발한 환경이니 개 잡짓좀 그만해라.
+		<br>- It is an environment developed purely from a low level without using any framework, so please stop talking shit.
+		<br><br>
+		- 뻘짓거리 하는 IP는 무조건 차단이다. 난 사이트 광고따위로 밥벌어먹는게 아니라 전업투자자 + 개발자다.
+		<br>- Any sloppy IPs are unconditionally blocked. I am not a full-time investor + developer, not making a living from site advertisements.
+		<br><br>
+		- 차단 당해서 정보 못보면 니들이 손해지 난 아무 상관 없다.
+		<br>- If you can't see information because you're blocked, it doesn't matter to you.
+		<br><br>
+		<span style="color: #ff0000;">- 한번 차단 하면 절대 안풀어준다.<br>- Once blocked, it will never be released.</span>
+
+		<br><br>
+
+		<div style="font-size: 30px;">
+			한국장 내일 관심 종목(
+			<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---저가순--음성기록.html"><span style="color: #ff7d7d;">저가 등락순</span></a> /
+			<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록.html"><span style="color: #ff7d7d;">고가 등락순</span></a> /
+			<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록--전일.html"><span style="color: #ff7d7d;">고가 등락순(전일)</span></a>
+			)
+			<br>
+			<a target="_blank" href="html/page/주식-메세지-뷰어-음성/index.html"><span>관리자 정보 전달용 메세지 보기</span></a>
+		</div>
+		</b>
+	</div>
 
 
 
@@ -91,7 +127,7 @@
 	<!-- 실시간 종목 캐치 -->
 	<DIV style="font-size: 16px; width: 360px; position: fixed; right: 20px; top: 130px; padding: 5px;
 		background-color: #000000; color: #FFFFFF; border-style: dashed; border-width: thin;
-		z-index: 999999999999; overflow-x: hidden; overflow-y: scroll;">
+		z-index: 999999; overflow-x: hidden; overflow-y: scroll;">
 		<AUDIO id="ID-AUDIO" controls style="display: none;"><source id="ID-AUDIO_SRC" src="" type="audio/mpeg"></AUDIO>
 		<div>
 			<div style="font-size: 11px;">
@@ -233,9 +269,9 @@
 							if(chs[2].style.display=="")chs[2].src=u0+"전체 - HD - 차트 - 거래량 - 동향 - 누적 - MIN/"+stockNm+".png";
 							chs[3].innerText=stockNm;
 							chs[4].src=u0+"KR - MIN - CARD/"+stockNm+".png";
-							var r="<td>"+dt+"</td><td>"+stockNm+"</td><td>";if(cr > 0) r+= `<span style="color: #FF0000;">`+ss[ 2 ]+'</span>';else r+= `<span style="color: #46ace3;">`+ss[ 2 ]+'</span>';r += "</td><td>"+hcr+"%</td>";
+							var r="<td>"+dt+"</td><td>"+stockNm+"</td><td>";if(cr > 0) r+= `<span style="color: #ff7d7d;">`+ss[ 2 ]+'</span>';else r+= `<span style="color: #46ace3;">`+ss[ 2 ]+'</span>';r += "</td><td>"+hcr+"%</td>";
 							FN.el0.innerHTML=r;
-							var r="<td>" + aa + "</td><td>";if(crl > 0) r+= `<span style="color: #FF0000;">`+ss[ 3 ]+'</span>';else r+= `<span style="color: #46ace3;">`+ss[ 3 ]+'</span>';r += "</td><td>";if(crh > 0) r+= `<span style="color: #FF0000;">`+ss[ 4 ]+'</span>';else r+= `<span style="color: #46ace3;">`+ss[ 4 ]+'</span>';r += "</td><td>"+hlr+"</td>";
+							var r="<td>" + aa + "</td><td>";if(crl > 0) r+= `<span style="color: #ff7d7d;">`+ss[ 3 ]+'</span>';else r+= `<span style="color: #46ace3;">`+ss[ 3 ]+'</span>';r += "</td><td>";if(crh > 0) r+= `<span style="color: #ff7d7d;">`+ss[ 4 ]+'</span>';else r+= `<span style="color: #46ace3;">`+ss[ 4 ]+'</span>';r += "</td><td>"+hlr+"</td>";
 							FN.el1.innerHTML=r;
 
 							window.document.getElementById( "ID--input--종목정보--미니" ).value = stockNm;
@@ -290,7 +326,7 @@
 	<DIV id="div_0__UI_Component_Panel" class="divContainer uiCompPanel"></DIV>
 
 	<!-- COPYRIGHT -->
-	<DIV style="display: flex; position: fixed; left: 0px; right: 0px; top: 10px; font-size: 12px; z-index: 99999999;">
+	<DIV style="display: flex; position: fixed; left: 0px; right: 0px; top: 10px; font-size: 12px; z-index: 999999;">
 		<DIV style="background-color: #000000; color: #ffffff;">
 			Update Time : <span style="color: orange;">2020.12.04 17:13</span>&nbsp;&nbsp;Copyright <span style="color: orange;">thdtjsdn@gmail.com</span> All rights reserved.
 			Update : <span style="color: orange;">개발 소스 변경 시간</span> / <span style="color: orange;">Data는 상시 업데이트</span>
@@ -360,8 +396,11 @@
 						<br>
 						<span>- 업비트(원화마켓) 상/하락( 음성지원 )</span><span style="color: orange;">&nbsp; 00:00 ~ 24:00 365일</span>
 						<br>
-						<a target="_blank" href="__TtwAlertIP();"><span style="color: #fc3903;">실시간 종목 음성</span></a> /
+						<a target="_blank" onclick="__TtwAlertIP();"><span style="color: #ff7d7d;">실시간 종목 음성</span></a> /
+						<a target="_blank" onclick="__TtwAlertIP();"><span>당일 음성 종목별 차트</span></a>
+						<!--
 						<a target="_blank" href="html/vcurrency/__실시간 음성_HTML/실시간 음성 종목 데이터 - 라인 차트.html"><span>당일 음성 종목별 차트</span></a>
+						-->
 						<br>
 						<span>- 업비트(원화마켓) 차트( 음성지원 )</span><span style="color: orange;">&nbsp; 00:00 ~ 24:00 365일</span>
 						<br>
@@ -369,16 +408,16 @@
 						<a target="_blank" onclick="__TtwAlertIP();"><span>1920x1080</span></a> /
 						<a target="_blank" onclick="__TtwAlertIP();"><span>3840x2160</span></a>
 						<br>
-						<span>- 유튜브 업비트(원화마켓) 차트/음성</span><span style="color: orange;">&nbsp; 16:10 ~ 08:30 365일</span>
-						<br>
-						<a target="_blank" href="https://www.youtube.com/user/Thdtjsdn123"><span>Youtube - 실시간 음성 안내</span></a> /
-						<a target="_blank" href="html/page/가상화폐-자동매매-상황판/index.html" style="color: #FF0000;"><span>자동 매매 상황판</span></a>
 						<!--
-						<br>
-						<br>
-						<a target="_blank" href="https://open.kakao.com/o/g7E3yidd"><span style="color: #fc3903;">- 실시간 상승 코인(</span><span style="color: #ffffff;">등락률, 금액</span><span style="color: #fc3903;">) '카카오톡 방'</span></a>
+						<span>- 유튜브 업비트(원화마켓) 차트/음성</span><span style="color: orange;">&nbsp; 16:10 ~ 08:30 365일</span>
 						-->
+						<span>- 유튜브 업비트(원화마켓) 차트/음성</span><span style="color: orange;">&nbsp; 더워서 중지</span>
 						<br>
+						<a target="_blank" href="https://www.youtube.com/user/Thdtjsdn123"><span>Youtube - 실시간 차트 & 음성</span></a>
+						<br>
+						<a target="_blank" href="html/page/가상화폐-자동매매-상황판/index.html" style="color: #ff7d7d;"><span>- 자동 매매 상황판(24시간)</span></a>
+						<br>
+						<a target="_blank" href="https://open.kakao.com/o/g7E3yidd"><span style="color: #ff7d7d;">- 실시간 상승 코인(</span><span style="color: #ffffff;">등락률, 금액</span><span style="color: #ff7d7d;">) '카카오톡 방'</span></a>
 						<br>
 						<span>- 기타 거래소 / 통화 서비스 원하면 별도 문의(상단 메일로)</span>
 						<br>
@@ -429,7 +468,7 @@
 						<br><a target="_blank" href="index--stock-chart-global-index.html"><span>- 전체 지수</span></a>
 						<div style="padding-left: 10px;">
 							<a target="_blank" href="index--stock-chart-global-index-한국.html"><span>한국</span></a> /
-							<a target="_blank" href="index--stock-chart-global-index-미국.html"><span style="color: #FF0000;">미국</span></a> /
+							<a target="_blank" href="index--stock-chart-global-index-미국.html"><span style="color: #ff7d7d;">미국</span></a> /
 							<a target="_blank" href="index--stock-chart-global-index-중국.html"><span>중국</span></a> /
 							<a target="_blank" href="index--stock-chart-global-index-홍콩.html"><span>홍콩</span></a> /
 							<a target="_blank" href="index--stock-chart-global-index-일본.html"><span>일본</span></a>
@@ -453,7 +492,7 @@
 						<span>- 지정 국가 지수 - 기간별 - 미국, 일본, 중국, 한국</span>
 						<div style="padding-left: 10px;">
 							<a target="_blank" href="index--stock-chart-global-index---st0--today.html"><span>1일</span></a> /
-							<a target="_blank" href="index--stock-chart-global-index---st0--day.html"><span style="color: #FF0000;">일봉</span></a> /
+							<a target="_blank" href="index--stock-chart-global-index---st0--day.html"><span style="color: #ff7d7d;">일봉</span></a> /
 							<a target="_blank" href="index--stock-chart-global-index---st0--week.html"><span>주봉</span></a> /
 							<a target="_blank" href="index--stock-chart-global-index---st0--month.html"><span>월봉</span></a> /
 							<a target="_blank" href="index--stock-chart-global-index---st0--month3.html"><span>3개월</span></a> /
@@ -536,27 +575,49 @@
 							<br><span style="font-size: 20px;">분석 / 뉴스</span>
 							<br><span style="font-size: 11px;">South Korea Stocks</span>
 							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
-								<span style="font-size: 11px; color: orange;">2020.12.05 20:21</span>
+								<span style="font-size: 11px; color: orange;">2021.07.16 22:09</span>
 						</div>
 					</a>
 					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
+						<br>
+						- 관심 종목(
+						<!--
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---저가순.html"><span style="color: #ff7d7d;">저가 등락순</span></a> /
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순.html"><span style="color: #ff7d7d;">고가 등락순</span></a>
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---저가순--음성기록.html"><span style="color: #ff7d7d;">저가 등락순</span></a> /
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록.html"><span style="color: #ff7d7d;">고가 등락순</span></a>
+						-->
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---저가순--음성기록.html"><span style="color: #ff7d7d;">저가 등락순</span></a> /
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록.html"><span style="color: #ff7d7d;">고가 등락순</span></a> /
+						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록--전일.html"><span style="color: #ff7d7d;">고가 등락순(전일)</span></a>
+						)
+						<!--
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목.html"><span style="color: #ff7d7d;">- 분석 후 선택 목록( 고가 등락률순 )</span></a> / <a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목--전일.html"><span style="color: #ff7d7d;">전일</span></a>
+						<br><a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목(연속수급).html"><span>- 연속수급 목록( 고가 등락률순 )</span></a> / <a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목(연속수급)--전일.html"><span>전일</span></a>
+						-->
+
+						<br><span> - 분석 목록( </span>
+							<a target="_blank" href="html/stock/__일자별목록 - 마지막.html"><span>마지막일</span></a> /
+							<a target="_blank" href="html/stock/__일자별목록 - 2거래일.html"><span>2거래일</span></a> /
+							<a target="_blank" href="html/stock/__일자별목록 - 3거래일.html"><span>3거래일</span></a> )
+
+						<br>
 						<br><span>- 전종목 시세</span>
 						<div style="padding-left: 10px;">
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 이름순.html"><span>이름순</span></a> /
-							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 종가.html"><span>종가등락률</span></a> /
-							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 고가.html"><span>고가등락률</span></a> /
-							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 거래대금순.html"><span>거래대금</span></a>
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 거래대금순.html"><span>거래대금</span></a> /
+							등락률(
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 저가.html"><span>저가</span></a> /
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 종가.html"><span>종가</span></a> /
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 고가.html"><span>고가</span></a>
+							)
 							<br>
-							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 고가--낮은거래대금제외.html"><span>고가등락률(거래대금필터)</span></a>
+							거래대금제한(
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 저가--낮은거래대금제외.html"><span>저가등락률</span></a> /
+							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 등락률순 - 고가--낮은거래대금제외.html"><span>고가등락률</span></a>
+							)
 						</div>
-
-						<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목.html"><span style="color: #fc3903;">- 분석 후 선택 목록( 고가 등락률순 )</span></a>
-						<!--
-							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목.html"><span style="color: #fc3903;">- 분석 후 선택 목록( 고가 등락률순 )</span></a> / <a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목--전일.html"><span style="color: #fc3903;">전일</span></a>
-						<br><a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목(연속수급).html"><span>- 연속수급 목록( 고가 등락률순 )</span></a> / <a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목(연속수급)--전일.html"><span>전일</span></a>
-						-->
-						<br><span>- 전종목 시세( 수량 분리, 이름순 )</span>
-						<div style="padding-left: 10px;">
+						- 이름순 분리(
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 00.html"><span>00</span></a>
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 01.html"><span>01</span></a>
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 02.html"><span>02</span></a>
@@ -567,16 +628,14 @@
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 07.html"><span>07</span></a>
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 08.html"><span>08</span></a>
 							<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합 - 09.html"><span>09</span></a>
-						</div>
+						)
+
+						<br>
 						<br><a target="_blank" href="html/stock/__당일 - 키워드 검색 결과.html"> - 당일 키워드 검색 결과
 						<br><a target="_blank" href="html/stock/__공시 - 마지막일.html"><span>- 공시</span></a> /
 							<a target="_blank" href="html/stock/__공시 - 정제 - 누적 - 키워드 - 마지막일.html"><span>공시( 키워드 )</span></a> /
 							<a target="_blank" href="html/stock/__뉴스 - 마지막일.html"><span>뉴스</span></a> /
 							<a target="_blank" href="html/stock/__뉴스 - 정제 - 누적 - 키워드 - 마지막일.html"><span>뉴스( 키워드 )</span></a>
-						<br><span> - 분석 목록( </span>
-							<a target="_blank" href="html/stock/__일자별목록 - 마지막.html"><span>마지막일</span></a> /
-							<a target="_blank" href="html/stock/__일자별목록 - 2거래일.html"><span>2거래일</span></a> /
-							<a target="_blank" href="html/stock/__일자별목록 - 3거래일.html"><span>3거래일</span></a> )
 					</div>
 				</div>
 				<div class="div_card">
@@ -600,30 +659,42 @@
 							<a onclick='window["__evt_ID--input--종목상세화면0"](event);'>&nbsp;조회0</a> /
 							<a onclick='window["__evt_ID--input--종목상세화면1"](event);'>조회1</a>
 						</div>
-
-						<br><a target="_blank" href="ui/Page/주식-정보--종합/index.html"><span>- 종목 종합 정보(<span style="color: #FFFFFF;">당일, 일단위~년단위, 기타</span>)</span></a>
-
+							<a target="_blank" href="ui/Page/주식-정보--종합/index.html"><span>- 종목 종합 정보(<span style="color: #FFFFFF;">당일, 일단위~년단위, 기타</span>)</span></a>
 						<br><a target="_blank" href="ui/Page/주식-토론--실시간/index.html"><span>- 실시간 토론 글(<span style="color: #FFFFFF;">별도 서버 구동시에만</span>)</span></a>
 						<br>
-						<span>- 주식 장중</span><span style="color: orange;">&nbsp; 09:00 ~ 15:30</span>
-						<div style="padding-left: 10px;">
-							<a target="_blank" href="ui/Page/주식-현재종목/index.html"><span style="color: #fc3903;">장중 관리자 조회 종목</span></a>
+						<div>
+							<a target="_blank" href="ui/Page/주식-현재종목/index.html"><span style="color: #ff7d7d;">- 장중 관리자 조회 종목</span></a>
+							<span>(주식 장중</span><span style="color: orange;">&nbsp; 09:00 ~ 15:30)</span>
 						</div>
 						<span>- 주식 장중( 음성지원 )</span><span style="color: orange;">&nbsp; 09:00 ~ 15:30</span>
 						<div style="padding-left: 10px;">
 							<a target="_blank" href="ui/Page/주식-음성--코스닥/index.html"><span>코스닥 상승/하락</span></a> /
-							<a target="_blank" href="ui/Page/주식-음성--코스닥-등락률/index.html"><span style="color: #fc3903;">코스닥 등락률</span></a>
+							<a target="_blank" href="ui/Page/주식-음성--코스닥-등락률/index.html"><span style="color: #ff7d7d;">코스닥 등락률</span></a>
 						</div>
 						<div style="padding-left: 10px;">
-							<a target="_blank" href="html/stock/__실시간 음성_HTML/실시간 음성 종목.html"><span style="color: #fc3903;">실시간 종목 음성</span></a> /
+							<a target="_blank" href="html/stock/__실시간 음성_HTML/실시간 음성 종목.html"><span style="color: #ff7d7d;">실시간 종목 음성</span></a> /
 							<a target="_blank" href="html/stock/__실시간 음성_HTML/실시간 음성 종목 데이터 - 라인 차트.html"><span>당일 음성 종목별 차트</span></a>
 							<br>
-							<span>음성기록 통계(</span>
+							<span>음성기록 차트 전종목(</span>
 							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 1일치.html"><span>1일</span></a>,
 							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 4일치.html"><span>4일</span></a>,
 							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 5일치.html"><span>5일</span></a>,
 							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 8일치.html"><span>8일</span></a>,
 							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 9일치.html"><span>9일</span></a>)
+							<br>
+							<span>음성기록 차트 20회 이하 삭제(</span>
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 1일치--20.html"><span>1일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 4일치--20.html"><span>4일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 5일치--20.html"><span>5일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 8일치--20.html"><span>8일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 9일치--20.html"><span>9일</span></a>)
+							<br>
+							<span>음성기록 차트 50회 이하 삭제(</span>
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 1일치--50.html"><span>1일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 4일치--50.html"><span>4일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 5일치--50.html"><span>5일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 8일치--50.html"><span>8일</span></a>,
+							<a target="_blank" href="html/stock/voice_history/__음성 기록 통계 - 종목별 차트 한번에 보기 - 9일치--50.html"><span>9일</span></a>)
 						</div>
 					</div>
 				</div>
@@ -712,8 +783,8 @@
 				</div>
 
 				<!-- -->
-				<div class="div_card">
-					<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">
+				<div class="div_card" style="height: 280px;">
+					<!--<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">-->
 						<div class="div_card_title">
 							<span style="font-size: 30px;">주식(미국)</span>
 							<br><span style="font-size: 20px;">분석 / 뉴스</span>
@@ -721,7 +792,7 @@
 							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
 								<span style="font-size: 11px; color: orange;">2020.11.08 07:18</span>
 						</div>
-					</a>
+					<!--</a>-->
 					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
 						<br><span>- 전종목 시세</span>
 						<div style="padding-left: 10px;">
@@ -756,8 +827,8 @@
 				</div>
 
 				<!-- -->
-				<div class="div_card">
-					<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">
+				<div class="div_card" style="height: 280px;">
+					<!--<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">-->
 						<div class="div_card_title">
 							<span style="font-size: 30px;">주식(중국)</span>
 							<br><span style="font-size: 20px;">분석 / 뉴스</span>
@@ -765,7 +836,7 @@
 							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
 								<span style="font-size: 11px; color: orange;">2020.11.08 09:41</span>
 						</div>
-					</a>
+					<!--</a>-->
 					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
 						<br><span>- 전종목 시세</span>
 						<div style="padding-left: 10px;">
@@ -800,8 +871,8 @@
 				</div>
 
 				<!-- -->
-				<div class="div_card">
-					<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">
+				<div class="div_card" style="height: 280px;">
+					<!--<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">-->
 						<div class="div_card_title">
 							<span style="font-size: 30px;">주식(홍콩)</span>
 							<br><span style="font-size: 20px;">분석 / 뉴스</span>
@@ -809,7 +880,7 @@
 							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
 								<span style="font-size: 11px; color: orange;">2020.11.08 10:15</span>
 						</div>
-					</a>
+					<!--</a>-->
 					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
 						<br><span>- 전종목 시세</span>
 						<div style="padding-left: 10px;">
@@ -844,8 +915,8 @@
 				</div>
 
 				<!-- -->
-				<div class="div_card">
-					<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">
+				<div class="div_card" style="height: 280px;">
+					<!--<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">-->
 						<div class="div_card_title">
 							<span style="font-size: 30px;">주식(일본)</span>
 							<br><span style="font-size: 20px;">분석 / 뉴스</span>
@@ -853,7 +924,7 @@
 							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
 								<span style="font-size: 11px; color: orange;">2020.11.08 11:30</span>
 						</div>
-					</a>
+					<!--</a>-->
 					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
 						<br><span>- 전종목 시세</span>
 						<div style="padding-left: 10px;">
@@ -888,8 +959,8 @@
 				</div>
 
 				<!-- -->
-				<div class="div_card">
-					<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">
+				<div class="div_card" style="height: 280px;">
+					<!--<a style="cursor: pointer;" href="ui/Page/주식-메인/index.html">-->
 						<div class="div_card_title">
 							<span style="font-size: 30px;">주식(베트남)</span>
 							<br><span style="font-size: 20px;">분석 / 뉴스</span>
@@ -897,7 +968,7 @@
 							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
 								<span style="font-size: 11px; color: orange;">2020.11.08 12:27</span>
 						</div>
-					</a>
+					<!--</a>-->
 					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
 						<br><span>- 전종목 시세</span>
 						<div style="padding-left: 10px;">
@@ -932,7 +1003,7 @@
 				</div>
 
 				<!-- -->
-				<div class="div_card">
+				<div class="div_card" style="height: 155px;">
 					<a style="cursor: pointer;" href="ui/Page/부동산-메인/index.html">
 						<div class="div_card_title">
 							<span style="font-size: 30px;">부동산</span>
@@ -982,14 +1053,38 @@
 					-->
 				</div>
 
+				<!-- -->
+				<div class="div_card">
+					<!--<a style="cursor: pointer;" href="ui/Page/주식-메세지-등록-음성/index.html">-->
+						<div class="div_card_title">
+							<span style="font-size: 30px;">JS Lib & Comp</span>
+							<br><span style="font-size: 20px;">GIS</span>
+							<br><span style="font-size: 11px;">Etc...</span>
+							<br><span style="font-size: 11px; color: #FFFFFF;">Update : </span>
+								<span style="font-size: 11px; color: orange;">2021.06.09 23:10</span>
+						</div>
+					<!--</a>-->
+					<div style="padding-left:10px; font-size: 14px; text-align: left; cursor: pointer;">
+						<br><span>- GIS</span>
+						<div style="padding-left: 10px;">
+							<a target="_blank" href="ui/Page/Map/CustomLeaflet/Basic/index.html"><span>지도</span></a>
+						</div>
+					</div>
+
+					<!--
+					<span style="font-size: 11px; color: orange;">2020.11.19 - 차트 업데이트 안함</span>
+					-->
+				</div>
+
 				<!-- Google AD -->
 				<!--
 				<div class="div_ad"><div class="inline-ad div_ad_child0"><script type="text/javascript">google_ad_client="ca-pub-1892980256031512";google_ad_host="ca-host-pub-1556223355139109";google_ad_host_channel="L0007";google_ad_slot="6262262429";google_ad_width=300;google_ad_height=250;</script><script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:10px;background-color:transparent;" data-ad-slot="6262262429"><ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"></iframe></ins></ins></div></div>
 				-->
 			</div>
 			<DIV>
+			<!--
 				<IFRAME id="ID-IFRAME-MAP"     style="border: none; position: fixed; left: 0px; right: 0px; top: 10px; z-index: -9999999;" width="100%" height="100%;"></IFRAME>
-				<IFRAME id="ID-IFRAME-MESSAGE" style="border: none; height: 2000px; z-index: 999999999;" width="96%;"></IFRAME>
+				<IFRAME id="ID-IFRAME-MESSAGE" style="border: none; height: 2000px; z-index: 999999;" width="96%;"></IFRAME>
 				<SCRIPT>
 					(function(){
 						setTimeout( function(){
@@ -1001,6 +1096,7 @@
 						}, 100 );
 					})();
 				</SCRIPT>
+			-->
 			</DIV>
 
 		</DIV>

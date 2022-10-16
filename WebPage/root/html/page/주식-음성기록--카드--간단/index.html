@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<HTML lang="kr" xml:lang="kr">
+<HEAD>
+
+<TITLE>TtwFinancial--Service--관심종목--차트-등락률--음성</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<META http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<META name="format-detection" content="telephone=no,address=SouthKorea Seoul,email=thdtjsdn@gmail.com">
+
+<META name="keywords" content="stocks,charts,tables">
+<META name="description" content="stocks,charts,tables">
+
+<!-- facebook -->
+<META property="og:type" content="website">
+<META property="og:title" content="thdtjsdn's Stocks">
+<META property="og:site_name" content="Stocks">
+<META property="og:url" content="https://www.facebook.com/thdtjsdn0">
+<META property="og:image" content="">
+<META property="og:description" content=""/>
+
+<!-- twitter -->
+<!--
+<META name="twitter:card" content="summary">
+<META name="twitter:title" content="thdtjsdn">
+<META name="twitter:url" content="https://twitter.com/thdtjsdn/">
+<META name="twitter:image" content="">
+<META name="twitter:description" content=""/>
+-->
+
+<!-- favicon -->
+<!--
+<LINK rel="shortcut icon" type="image/x-icon" href=""/>
+<LINK rel="apple-touch-icon" href=""/>
+-->
+
+
+
+<!-- CSS - ./css -->
+<STYLE>
+	::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; } .divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
+	body {
+		overflow-x: hidden;
+		/*
+		background-color: black; color: white;
+		background-color: white; color: black;
+		*/
+		background-color: black; color: white;
+		width: 100%;
+		height: 100%;
+	}
+
+	.divTitleItem {
+		border: 1px solid #FFFFFF;
+		padding: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.pb0{ color: #2141de; } .pb{ color: #3498eb; }
+	/*
+	.pb0{ color: #a6ffff; } .pb{ color: #a6ffff; }
+	*/
+
+	.pr { color: #FF0000; }
+	.aa0 { color: #d2ff78; } .aa1 { color: #f4ff78; }
+	.aa2 { color: #ffef78; } .aa3 { color: #ffd078; }
+	.aa4 { color: #ffac78; } .aa5 { color: #ff8f78; }
+	.aa6 { color: #ff7878; } .aa7 { color: #ff3030; }
+</STYLE>
+
+
+
+<!--
+<script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>
+<script>setInterval(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.ing.js?t="+Date.now());o.send();}catch(e){}},300000);</script>
+-->
+
+
+
+<SCRIPT id="ID-SCRIPT-000" type="text/javascript" src="http://thdtjsdn.com:49323/js-common/lib.common.js" defer="true"></SCRIPT>
+
+
+
+
+
+</HEAD>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<BODY>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<AUDIO id="ID-AUDIO" controls style="display: none;"><source id="ID-AUDIO_SRC" src="" type="audio/mpeg"></AUDIO>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<div style="width: 100%; height: 100%; padding: 0px;">
+
+	<div>
+		<div style="display: flex;">
+			<div>
+				<input id="ID-CHECKBOX-REALTIME" type="checkbox" checked/>
+				<span>실시간 ON/OFF</span>
+			</div>
+			<span>　| </span>
+			<div>
+				<input id="ID-CHECKBOX-SOUND" type="checkbox" checked/>
+				<span>음성 ON/OFF</span>
+			</div>
+			<span>　| </span>
+			<div>
+				<input id="ID-CHECKBOX-상승" type="checkbox" checked/>
+				<span>상승 종목</span>
+			</div>
+			<span> / </span>
+			<div>
+				<input id="ID-CHECKBOX-하락" type="checkbox"/>
+				<span>하락 종목</span>
+			</div>
+			<span>　| </span>
+			<input id="ID-CHECKBOX-자동HTS변경" type="checkbox">자동 HTS 변경</input>
+			<span> / </span>
+			<input id="ID-CHECKBOX-메인만변경" type="checkbox" checked>메인만 변경</input>
+			<span>　| </span>
+			<div>
+				<input id="ID-INPUT-종목명" type="input" placeholder="종목명" style="width: 100px;" onclick="window.document.getElementById('ID-INPUT-종목명').value='';"/>
+			</div>
+			<div>
+				<input id="ID-INPUT-카드수량" type="input" placeholder="카드수량" style="width: 100px;" value="62""/>
+			</div>
+		</div>
+	</div>
+
+	<!-- ---------------------------------------------------------------------------------------------------- -->
+
+	<DIV>
+		<DIV style="width: 99%; text-align: center; padding-left: 1px; padding-right: 1px;">
+			<DIV id="ID-DIV--NHNCHART-NAME" style="padding: 5px; font-size: 24px; display: flex;"></DIV>
+			<DIV style="display: flex;">
+				<IMG id="ID-IMG--NHNCHART0" style="border: none; filter: invert(100%); width: 50%; padding: 0px; margin: 0px;"></IMG>
+				<IMG id="ID-IMG--NHNCHART1" style="border: none; filter: invert(100%); width: 50%; padding: 0px; margin: 0px;"></IMG>
+			</DIV>
+		</DIV>
+		<DIV id="ID-DIV-HISTORY-CARD" style="display: flex; flex-wrap: wrap; width: 99%; border: 1px dashed #FFFFFF;"></DIV>
+	</DIV>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<SCRIPT src="http://thdtjsdn.com/html/page/주식-음성기록--카드--간단/index.js"></SCRIPT>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+</BODY>
+
+</HTML>

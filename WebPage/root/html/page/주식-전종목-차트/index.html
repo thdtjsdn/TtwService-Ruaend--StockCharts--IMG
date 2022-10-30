@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<HTML lang="kr" xml:lang="kr">
+<HEAD>
+
+<TITLE>TtwFinancial--Service--전종목-차트</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<META http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<META name="format-detection" content="telephone=no,address=SouthKorea Seoul,email=thdtjsdn@gmail.com">
+
+<META name="keywords" content="stocks,charts,tables">
+<META name="description" content="stocks,charts,tables">
+
+<!-- favicon -->
+<!--
+<LINK rel="shortcut icon" type="image/x-icon" href=""/>
+<LINK rel="apple-touch-icon" href=""/>
+-->
+
+
+
+<!-- CSS - ./css -->
+<STYLE>
+	::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; } .divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
+	body {
+		overflow-x: hidden;
+		/*
+		background-color: black; color: white;
+		background-color: white; color: black;
+		*/
+		background-color: black; color: white;
+		width: 100%;
+		height: 100%;
+	}
+
+	.divTitle {
+		background-color: orange;
+		text-align: center;
+	}
+
+	.divTitleItem {
+		border: 1px solid #FFFFFF;
+		padding: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.pb0{ color: #2141de; } .pb{ color: #3498eb; } .pr { color: #FF0000; }
+	.aa0 { color: #d2ff78; } .aa1 { color: #f4ff78; }
+	.aa2 { color: #ffef78; } .aa3 { color: #ffd078; }
+	.aa4 { color: #ffac78; } .aa5 { color: #ff8f78; }
+	.aa6 { color: #ff7878; } .aa7 { color: #ff3030; }
+
+	.span_aa_black {
+		color: #000000;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+</STYLE>
+
+<!--
+<script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>
+<script>setInterval(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.ing.js?t="+Date.now());o.send();}catch(e){}},300000);</script>
+-->
+
+<script>setInterval(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.ing.js?t="+Date.now());o.send();}catch(e){}},300000);</script>
+</HEAD>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<BODY style="width: 100%; height: 100%;">
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<div id="ID-DIV-TEMP" style="display: none;"></div>
+
+<iframe id="if0" width="100%" height="300" src="http://thdtjsdn.com/index.iframe.ad.html"></iframe>
+
+<div style="width: 100%; height: 100%; padding: 0px;">
+
+	<div id="ID-DIV-TIME--UPDATE" style="font-size: 24px; color: orange;"></div>
+	<div style="display: flex;">
+		<button style="font-size: 30px;" id="ID-BUTTON-종목명순">종목명</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-전일거래대금순">전일거래<br>대금순</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-거래대금순">당일거래<br>대금순</button>
+		<button style="font-size: 30px; color: #FF0000;" id="ID-BUTTON-등락률(종고)">등락률<br>종고</button>
+		<button style="font-size: 30px; color: #0000FF;" id="ID-BUTTON-등락률(종저)">등락률<br>종저</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-등락률(고)">등락률<br>고가</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-등락률(저)">등락률<br>저가</button>
+		<button style="font-size: 30px; color: #FF0000;" id="ID-BUTTON-외인수급순">외인<br>수급순</button>
+		<button style="font-size: 30px; color: #0000FF;" id="ID-BUTTON-기관대금순">기관<br>수급순</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-프매대금순">프매<br>수급순</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-시간(외)대금순">시외<br>대금순</button>
+		<button style="font-size: 30px;" id="ID-BUTTON-시간(외)등락순">시외<br>등락순</button>
+		<button style="font-size: 30px; color: #FF0000;" id="ID-BUTTON-내일관심">내일<br>관심</button>
+		<button style="font-size: 30px; color: #FF0000;" id="ID-BUTTON-전일관심">전일<br>관심</button>
+		<button style="font-size: 30px; color: #FF0000;" id="ID-BUTTON-전전일관심">전전일<br>관심</button>
+	</div>
+
+	<div style="display: flex; font-size: 30px;">
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>블랙모드</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-BLACKMODE" type="checkbox" checked></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>차트 수량</span>
+			<br><input style="font-size: 40px; width: 150px;" id="ID-INPUT-수량" placeholder="200" value="200"></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>표</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-표" type="checkbox" checked></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>UHD</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-UHD" type="checkbox"></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>일간</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-day" type="checkbox" checked></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>일봉</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-c-day" type="checkbox" checked></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>주봉</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-c-week" type="checkbox" checked></input>
+		</div>
+		<div style="border: 1px solid #FFFFFF; text-align: center; padding: 3px;">
+			<span>월봉</span>
+			<br><input style="width: 100px; height: 42px;" id="ID-INPUT-CHECK-c-month" type="checkbox" checked></input>
+		</div>
+	</div>
+
+	<!-- ---------------------------------------------------------------------------------------------------- -->
+
+	<DIV id="ID-DIV-LIST" style="width: 100%;"></DIV>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<!--
+<SCRIPT src="http://thdtjsdn.com/html/page/주식-전종목-차트/index.js"></SCRIPT>
+<SCRIPT src="file:///D:/GitHub_Ttw--Base/TtwService-Ruaend--StockCharts--IMG/WebPage/root/html/page/주식-전종목-차트/index.js"></SCRIPT>
+-->
+<SCRIPT src="file:///D:/GitHub_Ttw--Base/TtwService-Ruaend--StockCharts--IMG/WebPage/root/html/page/주식-전종목-차트/index.js"></SCRIPT>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<SCRIPT id="ID-SCRIPT-000" type="text/javascript" src="http://thdtjsdn.com:49323/js-common/lib.common.js" defer="true"></SCRIPT>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<HTML lang="kr" xml:lang="kr">
+<HEAD>
+
+<TITLE>TtwFinancial--Service--시뮬레이터</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<META http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<META name="format-detection" content="telephone=no,address=SouthKorea Seoul,email=thdtjsdn@gmail.com">
+
+<META name="keywords" content="stocks,charts,tables">
+<META name="description" content="stocks,charts,tables">
+
+<META property="og:type" content="website">
+<META property="og:title" content="thdtjsdn's Stocks">
+<META property="og:site_name" content="Stocks">
+<META property="og:url" content="https://www.facebook.com/thdtjsdn0">
+<META property="og:image" content="">
+<META property="og:description" content=""/>
+
+<STYLE>
+	::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; } .divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
+	body {
+		overflow-x: hidden; background-color: black; color: white;
+		width: 100%;
+		height: 100%;
+	}
+
+	table {
+		text-align: center;
+	}
+
+	td, th {
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border: 1px solid #FFFFFF;
+	}
+
+	.td-nm {
+		cursor: pointer;
+	}
+
+	.pb0{ color: #2141de; } .pb{ color: #3498eb; } .pr { color: #FF0000; }
+	.aa0 { color: #d2ff78; } .aa1 { color: #f4ff78; }
+	.aa2 { color: #ffef78; } .aa3 { color: #ffd078; }
+	.aa4 { color: #ffac78; } .aa5 { color: #ff8f78; }
+	.aa6 { color: #ff7878; } .aa7 { color: #ff3030; }
+
+	.div-button {
+		border: 1px solid #FFFFFF;
+		padding: 3px;
+		margin-right: 2px;
+	}
+</STYLE>
+
+
+
+<script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>
+<script>setInterval(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.ing.js?t="+Date.now());o.send();}catch(e){}},300000);</script>
+
+
+
+<SCRIPT id="ID-SCRIPT-000" type="text/javascript" src="http://thdtjsdn.com:49323/js-common/lib.common.js" defer="true"></SCRIPT>
+
+
+
+
+
+</HEAD>
+
+
+
+
+
+
+
+<BODY>
+
+
+
+
+
+
+
+<AUDIO id="ID-AUDIO"  controls style="display: none;"><source id="ID-AUDIO_SRC"  src="" type="audio/mpeg"></AUDIO>
+<AUDIO id="ID-AUDIO0" controls style="display: none;"><source id="ID-AUDIO_SRC0" src="" type="audio/mpeg"></AUDIO>
+
+
+
+<div style="width: 100%; height: 100%; padding: 0px;">
+
+	<div style="height: 53px;">　</div>
+
+
+
+
+	<div>잔고 목록　-　<span id="ID-SPAN-잔고-종목수량">0</span> 종목</div>
+	<div style="display: flex; text-align: center; width: 100%;">
+		<div style="margin: 1px;">
+			<input id="ID-BUTTON-결과-시간순" type="button" value="시간순"/>
+			<input id="ID-BUTTON-결과-현재_수익률순" type="button" value="현재 수익률순"/>
+			<input id="ID-BUTTON-결과-현재_수익금순" type="button" value="현재 수익금순"/>
+			<input id="ID-BUTTON-결과-현재_매수금순" type="button" value="현재 매수금순"/>
+			<input id="ID-BUTTON-결과-누적_매도금순" type="button" value="누적 매도금순"/>
+			<input id="ID-BUTTON-결과-누적_익절금순" type="button" value="누적 익절금순"/>
+			<input id="ID-BUTTON-결과-누적_수수료순" type="button" value="누적 수수료순"/>
+			<input id="ID-BUTTON-결과-누적_매수횟수" type="button" value="누적 매수순" style="display: none;"/>
+			<input id="ID-BUTTON-결과-누적_추매횟수" type="button" value="누적 추매순" style="display: none;"/>
+			<input id="ID-BUTTON-결과-누적_익절횟수" type="button" value="누적 익절순" style="display: none;"/>
+			<input id="ID-BUTTON-결과-누적_손절횟수" type="button" value="누적 손절순"/>
+			<input id="ID-BUTTON-결과-누적_대금(매수)순" type="button" value="대금(매수)순"/>
+			<input id="ID-BUTTON-결과-누적_대금(매도)순" type="button" value="대금(매도)순"/>
+			<input id="ID-BUTTON-결과-누적_매매강도순"   type="button" value="매매강도순"/>
+		</div>
+	</div>
+	<div style="height: 100%; overflow-y: scroll; margin: 0px; padding: 0px;">
+		<table id="ID-DIV-잔고">
+			<thead>
+				<tr>
+					<th>일자-시간</th>
+					<th>신규/추매<br>익절/손절</th>
+					<th style="width: 170px;">종목명</th>
+					<th>등락률<br>저가</th>
+					<th>등락률<br>포착시점</th>
+					<th>등락률<br>고가</th>
+					<th>수익률</th>
+					<th>수익금</th>
+					<th>매수<br>단가</th>
+					<th>현재<br>매수금</th>
+					<th>누적<br>매도금</th>
+					<th>누적<br>익절금</th>
+					<th>누적<br>수수료</th>
+					<!--
+					<th>매수<br>횟수</th>
+					<th>추매<br>횟수</th>
+					<th>익절<br>횟수</th>
+					-->
+					<th>손절<br>횟수</th>
+					<th>대금<br>매수</th>
+					<th>대금<br>매도</th>
+					<th>매매<br>강도</th>
+					<th>대금<br>누적</th>
+					<th>대금<br>갭</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="ID-TRADING-BOARD" style="border: 1px solid #FFFFFF; padding: 5px; position: fixed; bottom: 30px; right: 20px; font-size: 16px; display: flex; color: #ffffff; z-index: 99999999999; background-color: #000;">
+		<div>
+			<div>자동 매매 상황판</div>
+			<b style="text-align: right;">
+				<div id="ID-TRADING-BOARD-매수금"   style="color: #ff7d7d; display: flex;"><div style="color: #ffffff; width: 120px;">매수금(현) :　</div><div style="width: 120px;">0</div></div>
+				<div id="ID-TRADING-BOARD-매도금"   style="color: #36aaf7; display: flex;"><div style="color: #ffffff; width: 120px;">매도금(총) :　</div><div style="width: 120px;">0</div></div>
+				<div id="ID-TRADING-BOARD-익절금"   style="color: #ff7d7d; display: flex;"><div style="color: #ffffff; width: 120px;">익절금(총) :　</div><div style="width: 120px;">0</div></div>
+				<div id="ID-TRADING-BOARD-수수료"   style="color: #36aaf7; display: flex;"><div style="color: #ffffff; width: 120px;">수수료(총) :　</div><div style="width: 120px;">0</div></div>
+				<div id="ID-TRADING-BOARD-수익상태" style="color: #36aaf7; display: flex;"><div style="color: #ffffff; width: 120px;">수익상태 :　</div><div style="width: 120px;">0</div></div>
+			</b>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+<SCRIPT src="http://thdtjsdn.com/html/page/주식-자동매매-시뮬레이터--잔고--결과표--기간일/index.60일간.js"></SCRIPT>
+
+<SCRIPT async src="https://www.googletagmanager.com/gtag/js?id=G-HGFLRYQ09Z"></SCRIPT>
+<SCRIPT>try{window.dataLayer=window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HGFLRYQ09Z');}catch(e){}</SCRIPT>
+<SCRIPT data-ad-client="ca-pub-1892980256031512" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></SCRIPT>
+<div class="inline-ad"><script type="text/javascript">google_ad_client="ca-pub-1892980256031512";google_ad_host="ca-host-pub-1556223355139109";google_ad_host_channel="L0007";google_ad_slot="6262262429";google_ad_width=1920;google_ad_height=250;</script><script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:10px;background-color:transparent;" data-ad-slot="6262262429"><ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"></iframe></ins></ins></div>
+
+</BODY>
+
+</HTML>

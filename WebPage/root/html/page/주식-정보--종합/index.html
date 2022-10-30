@@ -2,21 +2,23 @@
 <HTML lang="kr" xml:lang="kr">
 <HEAD>
 <TITLE>TtwStock--Service</TITLE>
-<META http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <META http-equiv="X-UA-Compatible" content="IE=Edge" />
 <META name="format-detection" content="telephone=no,address=SouthKorea Seoul,email=thdtjsdn@gmail.com">
 <META name="keywords" content="stocks,charts,tables">
 <META name="description" content="stocks,charts,tables">
 <STYLE>
-body {background-color:black;color:#FFFFFF;}
-img {padding:0px !important;border:none !important;} ::-webkit-scrollbar {width:6px;} ::-webkit-scrollbar-track {background-color:lightblue;} ::-webkit-scrollbar-track-piece {background-color:gray;} ::-webkit-scrollbar-thumb {border-radius:8px;background-color:white;} ::-webkit-scrollbar-button {background-color:darkblue;width:20px;height:10px;} ::-webkit-scrollbar-button:start {background-color:red;} ::-webkit-scrollbar-button:end {background-color:orange;} ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner {background-color:violet;} ::-webkit-resizer {background-color:green;}
-.divContainer {position:absolute;left:0px;top:0px;right:0px;bottom:0px;}
+body { background-color: black; color: #FFFFFF; }
+img { padding: 0px !important; border: none !important; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background-color: lightblue; } ::-webkit-scrollbar-track-piece { background-color: gray; } ::-webkit-scrollbar-thumb { border-radius: 8px; background-color: white; } ::-webkit-scrollbar-button { background-color: darkblue; width: 20px; height: 10px; } ::-webkit-scrollbar-button:start { background-color: red; } ::-webkit-scrollbar-button:end { background-color: orange; } ::-webkit-scrollbar-button:vertical:increment {} ::-webkit-scrollbar-button:vertical:decrement {} ::-webkit-scrollbar-corner { background-color: violet; } ::-webkit-resizer { background-color: green; }
+.divContainer { position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; }
 </STYLE>
+<!--
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGFLRYQ09Z"></script>
-<script>window.dataLayer=window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HGFLRYQ09Z');</script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HGFLRYQ09Z');</script>
 <script data-ad-client="ca-pub-1892980256031512" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+-->
 </HEAD>
-<BODY data-SCODE="SYS0320" data-TYPE="PAGE" style="width:100% !important;height:100%;">
+<BODY data-SCODE="SYS0320" data-TYPE="PAGE" style="width: 100% !important; height: 100%;">
 <DIV id="div_0__Background" class="divContainer background"></DIV>
 <DIV id="div_0__Application" class="divContainer application">
 </DIV>
@@ -28,108 +30,238 @@ img {padding:0px !important;border:none !important;} ::-webkit-scrollbar {width:
 <DIV class="divContainer topModal modal-background"></DIV>
 <DIV class="divContainer topModal modal-content"></DIV>
 </DIV>
-<div id="ui/Page/주식-정보--종합/index" style="height:100%;width:100%;text-align:center;overflow-y:auto;">
-<style>
-img {padding:0px !important;border:none !important;}
-td {border:1px solid rgb(255,255,255);}
-th {border:1px solid rgb(255,255,255);}
-</style>
-<div style="margin:0px;padding:0px;text-align:left;">
-<input id="ID-INPUT-CHART-NAME"                                       style="width:300px;height:28px !important;" placeholder="종목이름"/>
-<input id="ID-INPUT-BUTTON-SEARCH-CHART" type="button" value="Search" style="width:150px;height:34px !important;"/>
-<span style="color:orange;">최소(FHD),권장(UHD)</span>
-<br>
-<div style="color:#FFFFFF;font-size:12px;">
-<div style="display:inline-block;">
-<input type="checkbox" id="CHECKBOX--미니차트" checked>미니차트</input>
-<input type="checkbox" id="CHECKBOX--거래대금/분석" checked>거래대금/분석</input>
-<input type="checkbox" id="CHECKBOX--뉴스/공시" checked>뉴스/공시</input>
-<input type="checkbox" id="CHECKBOX--레포트" checked>레포트</input>
-<input type="checkbox" id="CHECKBOX--매매수급(거래량)" checked>매매수급(거래량)</input>
+
+<!--
+/data/data/com.termux/files/home/Application/TtwService-Ruaend--StockCharts--IMG/WebPage/root/ui/Page/주식-정보--종합
+-->
+
+<div id="ui/Page/주식-정보--종합/index" style="height: 100%; width: 100%; text-align: center; overflow-y: auto;">
+
+	<div style="cursor: pointer; padding: 10px; opacity: 0.9; background-color: #FFFFFF; color: #000000;
+			text-align: left; font-size: 20px;
+			position: absolute; left: 0px; right: 0px; top: 200px; z-index: 9999999;"
+		onclick="this.style.display='none'">
+		<b>
+		<span style="color: red;">이 창은 클릭하면 사라짐 / 정보가 유익하면 화면 가장 하단 광고 클릭 PLZ</span>
+		<br><span style="color: orange;">15:50분 전 업데이트 데이터</span>
+		<br>- 외국계 거래원 표
+
+		<br><br>
+		<span style="color: orange;">17:30분 전 업데이트 데이터</span>
+		<br>- 음성기록 차트 이미지들
+		<br>- 거래대금 / 분석
+		<br>- 매매수급
+		<br>- 캔들, 라인, 거래량, 거래량-누적, 재무제표
+		<br>- 등락률 씨리즈
+
+		<br><br>
+		<span style="color: orange;">일부 데이터가 원래 증권사 최종데이터 집계가 18:30분 이후 토탈 정상 집계됨</span>
+		<br>18:30분 ~ 24시전 업데이트 데이터
+		<br><span style="color: orange;">(관리자 컨디션에 따라 들쑥날쑥 - <a style="color: blue;" target="_blank" href="http://thdtjsdn.com/html/page/주식-메세지-뷰어-음성/index.html">메세지 뷰어</a> / <a style="color: blue;" target="_blank" href="https://www.facebook.com/thdtjsdn0">페이스북 페이지</a> 알람으로 확인가능)</span>
+		<br>- 매매동향 씨리즈
+		<br>- 뉴스 / 공시
+		<br>- 증권사 레포트
+
+		<br><br>
+		<span style="color: orange;">금요일만 업데이트</span>
+		<br>- 토론글
+		<br><br>
+		<div style="font-size: 20px;">
+			한국장 내일 관심 종목(
+			<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---저가순--음성기록.html"><span style="color: #ff7d7d;">저가 등락순</span></a> /
+			<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록.html"><span style="color: #ff7d7d;">고가 등락순</span></a> /
+			<a target="_blank" href="html/stock/__전종목 시세 HTML/전종목 시세 - CARD - 분석통합--선택종목---고가순--음성기록--전일.html"><span style="color: #ff7d7d;">고가 등락순(전일)</span></a>
+			) - 17:30분 전 업데이트 완료
+			<br>
+			<a target="_blank" href="http://thdtjsdn.com/html/page/주식-메세지-뷰어-음성/index.html"><span>관리자 정보 전달용 메세지 뷰어</span></a>
+		</div>
+		</b>
+	</div>
+
+
+	<style>
+		img { padding: 0px !important; border: none !important; }
+		td { border: 1px solid rgb(255, 255, 255); }
+		th { border: 1px solid rgb(255, 255, 255); }
+
+		.pb0{ color: #2141de; } .pb{ color: #3498eb; } .pr { color: #FF0000; }
+		.aa0 { color: #d2ff78; } .aa1 { color: #f4ff78; }
+		.aa2 { color: #ffef78; } .aa3 { color: #ffd078; }
+		.aa4 { color: #ffac78; } .aa5 { color: #ff8f78; }
+		.aa6 { color: #ff7878; } .aa7 { color: #ff3030; }
+	</style>
+
+	<!-- ---------------------------------------------------------------------------------------------------- -->
+
+	<div style="margin: 0px; padding: 0px; text-align: left; position: fixed; background-color: #000000;">
+		<input id="ID-INPUT-CHART-NAME"                                       style="width: 200px; height: 28px !important;" placeholder="종목이름, 종목코드"/>
+		<input id="ID-INPUT-BUTTON-SEARCH-CHART" type="button" value="Search" style="width: 150px; height: 34px !important;"/>
+		<input id="ID-INPUT-BUTTON-COPY-LINK" type="button" value="COPY LINK" style="width: 100px; height: 34px !important;" onclick="var ta=document.createElement('textarea');ta.value='http://thdtjsdn.com/ui/Page/주식-정보--종합/index.html?name='+document.getElementById('ID-INPUT-CHART-NAME').value;document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,9999);document.execCommand('copy');document.body.removeChild(ta);"/>
+		<span style="color: orange;">최소(FHD), 권장(UHD)</span>
+		<input type="button" id="BUTTON-전체체크선택" value="전체 체크 선택"></input>
+		<input type="button" id="BUTTON-전체체크해제" value="전체 체크 해제"></input>
+		<input type="checkbox" id="CHECKBOX--자동변경">자동변경</input>
+		<br>
+		<div style="color: #FFFFFF; font-size: 15px;">
+			<div style="display: inline-block;">
+				<!--
+				<input type="checkbox" id="CHECKBOX--미니차트" checked>미니차트</input>
+				-->
+				<input type="checkbox" id="CHECKBOX--거래대금/분석" checked>거래대금/분석</input>
+				<input type="checkbox" id="CHECKBOX--뉴스/공시" checked>뉴스/공시</input>
+				<input type="checkbox" id="CHECKBOX--레포트">레포트</input>
+				<input type="checkbox" id="CHECKBOX--매매수급(거래량)" checked>매매수급(거래량)</input>
+			</div>
+
+			<div style="display: inline-block;">
+				<input type="checkbox" id="CHECKBOX--차트-음성기록" checked>음성기록(20일치)</input>
+				<!--
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-135710일-누적-빅" checked>음성기록-1,3,5,710일 누적</input>
+				-->
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-1일-누적-빅" checked>음성기록-1일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-3일-누적-빅" checked>음성기록-3일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-5일-누적-빅" checked>음성기록-5일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-7일-누적-빅" checked>음성기록-7일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-10일-누적-빅" checked>음성기록-10일누적</input>
+				<br>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-15일-누적-빅" checked>음성기록-15일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-20일-누적-빅" checked>음성기록-20일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-30일-누적-빅" checked>음성기록-30일누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-음성기록-40일-누적-빅" checked>음성기록-40일누적</input>
+			</div>
+
+			<div style="display: inline-block;">
+				<input type="checkbox" id="CHECKBOX--차트-일" checked>일-봉</input>
+				<input type="checkbox" id="CHECKBOX--차트-주" checked>주-봉</input>
+				<input type="checkbox" id="CHECKBOX--차트-월" checked>월-봉</input>
+				<input type="checkbox" id="CHECKBOX--차트-년" checked>년-라인</input>
+			</div>
+
+			<div style="display: inline-block;">
+				<input type="checkbox" id="CHECKBOX--차트-빅-캔들" checked>캔틀</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-라인">라인</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-거래량" checked>거래량</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-거래량-누적" checked>거래량-누적</input>
+				<!--
+				<input type="checkbox" id="CHECKBOX--차트-빅-요일">요일</input>
+				-->
+			</div>
+
+			<div style="display: inline-block;">
+				<input type="checkbox" id="CHECKBOX--차트-빅-재무제표" checked>재무제표</input>
+				<!--
+				<input type="checkbox" id="CHECKBOX--차트-빅-등락률">등락률</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-등락률고저">등락률 고저</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-등락률누적">등락률 누적</input>
+				-->
+				<input type="checkbox" id="CHECKBOX--차트-빅-매매동향">매매동향</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-매매동향누적">매매동향누적</input>
+				<input type="checkbox" id="CHECKBOX--차트-빅-토론">토론 글</input>
+			</div>
+			<div style="display: inline-block;">
+				<input type="checkbox" id="CHECKBOX--표--증권사별거래원" checked>증권사별 거래원</input>
+				<input type="checkbox" id="CHECKBOX--표--외국계거래원" checked>외국계 거래원</input>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div style="height: 150px;"></div>
+
+	<!--
+	<div id="ID-INFO-LITE" style="width: fit-content;">
+	<div id="ID-INFO-LITE" style="display: flex; width: fit-content;">
+	<div id="ID-INFO-LITE" style="display: flex; flex-wrap: wrap; width: fit-content;">
+	-->
+	<div id="ID-INFO-LITE" style="display: flex; flex-wrap: wrap; width: fit-content;">
+		<div style="display: flex; flex-wrap: wrap; width: fit-content;">
+			<div style="display: flex; flex-wrap: wrap; width: fit-content;"></div>
+			<div></div>
+		</div>
+		<!--
+		<div style="display: flex; flex-wrap: wrap; width: fit-content; border: 1px solid rgb(255, 255, 255); margin: 2px;"></div>
+		-->
+		<div style="display: flex; flex-wrap: wrap; margin: 2px;"></div>
+	</div>
+
+	<div id="ID-LIST-CHARTS" style="width: 100%; display: flex; flex-wrap: wrap; overflow-x: hidden; color: #FFFFFF;"></div>
+
+	<div class="inline-ad">
+	<script type="text/javascript">google_ad_client="ca-pub-1892980256031512";google_ad_host="ca-host-pub-1556223355139109";google_ad_host_channel="L0007";google_ad_slot="6262262429";google_ad_width=950;google_ad_height=250;</script>
+	<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	<ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:10px;background-color:transparent;" data-ad-slot="6262262429">
+	<ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;">
+	<iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"></iframe>
+	</ins></ins></div>
+
 </div>
-<div style="display:inline-block;">
-<input type="checkbox" id="CHECKBOX--차트-일" checked>차트(일)</input>
-<input type="checkbox" id="CHECKBOX--차트-주" checked>차트(주)</input>
-<input type="checkbox" id="CHECKBOX--차트-월" checked>차트(월)</input>
-<input type="checkbox" id="CHECKBOX--차트-년" checked>차트(년)</input>
-</div>
-<div style="display:inline-block;">
-<input type="checkbox" id="CHECKBOX--차트-빅-캔들" checked>차트(캔틀-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-라인" checked>차트(라인-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-요일" checked>차트(요일-빅)</input>
-</div>
-<div style="display:inline-block;">
-<input type="checkbox" id="CHECKBOX--차트-빅-거래량" checked>차트(거래량-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-등락률" checked>차트(등락률-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-등락률고저" checked>차트(등락률고저-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-등락률누적" checked>차트(등락률누적-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-매매동향" checked>차트(매매동향-빅)</input>
-<input type="checkbox" id="CHECKBOX--차트-빅-매매동향누적" checked>차트(매매동향누적-빅)</input>
-</div>
-</div>
-</div>
-<hr>
-<div id="ID-INFO-LITE" style="display:flex;width:fit-content;">
-<div></div>
-<div style="display:flex;width:fit-content;border:1px solid rgb(255,255,255);margin:2px;"></div>
-</div>
-<div id="ID-LIST-CHARTS" style="width:100%;display:flex;flex-wrap:wrap;overflow-x:hidden;color:#FFFFFF;"></div>
-<div class="inline-ad">
-<script type="text/javascript">google_ad_client="ca-pub-1892980256031512";google_ad_host="ca-host-pub-1556223355139109";google_ad_host_channel="L0007";google_ad_slot="6262262429";google_ad_width=950;google_ad_height=250;</script>
-<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-<ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:10px;background-color:transparent;" data-ad-slot="6262262429">
-<ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;">
-<iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"></iframe>
-</ins></ins></div>
-</div>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
 <SCRIPT type="text/javascript">
-window.initialized=function(){
-var HOST=window.apis.url.getServerURL_WebServer_SCODE("SYS0320");
-var f=SUtilTemplateHTML.addJS__URLToHead;
-f(HOST+"/ui/Page/주식-정보--종합/index.js");
-};
+	window.initialized = function(){
+
+		var HOST = window.apis.url.getServerURL_WebServer_SCODE( "SYS0320" );
+		//var HOST = "http://localhost:49781";
+
+		//JS;
+		var f = SUtilTemplateHTML.addJS__URLToHead;
+			f( HOST + "/ui/Page/주식-정보--종합/index.js" );
+	};
 </SCRIPT>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
 <SCRIPT type="text/javascript">
-window["__INITIALIZE-PACKAGE__"]=function(e,t)
+window[ "__INITIALIZE-PACKAGE__" ] = function( e, t )
 {
-var f0=SUtilTemplateHTML.addJS__URL,f1=Lib.Ttw.abt;
-window._$TATIC_CONST_DEBUG=false;
-f0(window.location.origin+":49323/js__Merge/___merge_min_all_1_0.js");
-window.apis.STATIC.CONFIG.URL.SCODE=window.document.body.getAttribute("data-SCODE");
-var f0=window.apis.element.mouseDisable__ID;
-var f1=window.apis.element.mouseEnable__ID;
+var f0 = SUtilTemplateHTML.addJS__URL, f1 = Lib.Ttw.abt;
+window._$TATIC_CONST_DEBUG = false;
+f0( window.location.origin + ":49323/js__Merge/___merge_min_all_1_0.js" );
+window.apis.STATIC.CONFIG.URL.SCODE = window.document.body.getAttribute( "data-SCODE" );
+var f0 = window.apis.element.mouseDisable__ID;
+var f1 = window.apis.element.mouseEnable__ID;
 f0("div_0__Background");
 f0("div_0__Application");
 f0("div_0__UI_Component_Fixed");
-f0("div_0__UI_Component_Fixed");
+f1("div_0__UI_Component_Fixed");
 f0("div_0__UI_Component_Panel");
 f0("div_0__Top");
 f0("div_0__Top_modal");
-window.apis.ui.set_APPEND_CHILD_TARGET_ELEMENT("div_0__UI_Component_Fixed");
-var host=window.apis.url.getServerURL_WebServer_Self()+"/css/";
-host="http://thdtjsdn.com/css/";
-var f0=SUtilTemplateHTML.addCSS__URLToHead;
-f0(host+"020_html.css");
+window.apis.ui.set_APPEND_CHILD_TARGET_ELEMENT( "div_0__UI_Component_Fixed" );
+var host = window.apis.url.getServerURL_WebServer_Self() + "/css/";
+host = "http://thdtjsdn.com/css/";
+var f0 = SUtilTemplateHTML.addCSS__URLToHead;
+f0( host + "020_html.css" );
+f0( host + "021_body.css" );
+f0( host + "190_custom_html.css" );
+f0( host + "200_body_div.css" );
+f0( host + "300_div_component.css" );
+f0( host + "300_message_box.css" );
+f0( host + "300_modal.css" );
 var host;
-if(-1 != window.location.href.indexOf("http://thdtjsdn.com")) host="http://thdtjsdn.com";
-e(host+"/js-common/");
-var host=window.apis.url.getServerURL_WebServer_SCODE("SYS0015");
-var f=window.apis.util.importJS__Reuse;
+if( -1 != window.location.href.indexOf( "http://thdtjsdn.com" ) ) host = "http://thdtjsdn.com";
+else host = "http://localhost:49781";
+e( host + "/js-common/" );
+var host = window.apis.url.getServerURL_WebServer_SCODE( "SYS0015" );
+var f = window.apis.util.importJS__Reuse;
 var host;
-if(-1 != window.location.href.indexOf("http://thdtjsdn.com")) host="http://thdtjsdn.com";
-window._$TATIC_CONST_DEBUG=true;
-window._$TATIC_CONST_DEBUG ? e(host+"/ui_js/") :f(host+"/ui_js/___merge_min_all_1_0.js");
+if( -1 != window.location.href.indexOf( "http://thdtjsdn.com" ) ) host = "http://thdtjsdn.com";
+else host = "http://localhost:49781";
+window._$TATIC_CONST_DEBUG = true;
+window._$TATIC_CONST_DEBUG ? e( host + "/ui_js/" )  : f( host + "/ui_js/___merge_min_all_1_0.js" );
 window.apis.event.__initialize_Events();
-(function(){var fn=SUtilTemplateHTML.createHTML;var p0=Lib.Ttw.ab("PGluY2x1ZGUtaHRtbD4uL3VpX2luY2x1ZGUvU1lTMDMxMC9QYWdlLzAwMC0tLS0taW5kZXgtLS0tLUZpcnN0Lmh0bWw8L2luY2x1ZGUtaHRtbD4=",1);var p1=Lib.Ttw.ab("PGluY2x1ZGUtaHRtbD4uL3VpX2luY2x1ZGUvU1lTMDMxMC9QYWdlLzAwMC0tLS0taW5kZXgtLS0tLUxhc3QuaHRtbDwvaW5jbHVkZS1odG1sPg==",1);SUtilTemplateHTML.createHTML=function(html){var html=html.replace(p0,"").replace(p1,"");return fn(html);}})();
-if(window.initialized){
-window.apis.ui.set_APPEND_CHILD_TARGET_ELEMENT("div_0__UI_Component_Fixed");
-try{window.initialized();}catch(er){debugger;};
+(function(){var fn = SUtilTemplateHTML.createHTML;var p0 = Lib.Ttw.ab( "PGluY2x1ZGUtaHRtbD4uL3VpX2luY2x1ZGUvU1lTMDMxMC9QYWdlLzAwMC0tLS0taW5kZXgtLS0tLUZpcnN0Lmh0bWw8L2luY2x1ZGUtaHRtbD4=", 1 );var p1 = Lib.Ttw.ab( "PGluY2x1ZGUtaHRtbD4uL3VpX2luY2x1ZGUvU1lTMDMxMC9QYWdlLzAwMC0tLS0taW5kZXgtLS0tLUxhc3QuaHRtbDwvaW5jbHVkZS1odG1sPg==", 1 );SUtilTemplateHTML.createHTML = function( html ){var html = html.replace( p0, "" ).replace( p1, "" );return fn( html );}})();
+if( window.initialized ){
+window.apis.ui.set_APPEND_CHILD_TARGET_ELEMENT( "div_0__UI_Component_Fixed" );
+try{ window.initialized(); }catch( er ){ debugger; };
 delete window.initialized;
 }
-delete window["__INITIALIZE-PACKAGE__"];
+delete window[ "__INITIALIZE-PACKAGE__" ];
 };
 </SCRIPT>
 <SCRIPT id="ID-SCRIPT-000" type="text/javascript" src="http://thdtjsdn.com:49323/js-common/lib.common.js" async="false" defer="true"></SCRIPT>
-<script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET","http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>
+<script>setTimeout(function(){try{var o=new XMLHttpRequest();o.addEventListener("loadend",function(e){eval(this.responseText);});o.open("GET", "http://thdtjsdn.com/index.end.js?t="+Date.now());o.send();}catch(e){}},60000);</script>
 </BODY>
 </HTML>
